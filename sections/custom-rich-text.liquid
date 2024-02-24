@@ -1,0 +1,152 @@
+{{ "section-custom-rich-text.css" | asset_url | stylesheet_tag }}
+<script src="{{ "section-custom-rich-text.js" | asset_url }}" defer ></script>
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    @media (min-width: 750px) {
+      .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+{% endstyle %}
+
+<div class="custom-rich-text-section padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="custom-rich-text-section__text-position {{ section.settings.alignment_position }}">
+      <div class="custom-rich-text-section__text-alignment color-{{ section.settings.color_scheme.id }} {{ section.settings.text_alignment }}">
+        {% if section.settings.pre_heading != blank %}
+          <h2 class="h3 custom-rich-text-section__caption"> {{ section.settings.pre_heading }} </h2>
+        {% endif %}
+        
+        {% if section.settings.heading != blank %}
+          <div class="h1 custom-rich-text-section__heading scroll-line-animation"> {{ section.settings.heading }} </div>
+        {% endif %}
+        
+        {% if section.settings.button_text != blank %}
+          <a class="custom-button-secondary" 
+              {% if section.settings.button_link == blank %}
+                  role="link" aria-disabled="true"
+              {% else %}
+                  href="{{ section.settings.button_link }}"
+              {% endif %}>
+              {{ section.settings.button_text }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Rich Text Custom",
+    "tag" : "section",
+    "settings": [
+      {
+        "type" : "text",
+        "id" : "pre_heading",
+        "label" : "Pre Heading",
+        "default": "What You Wear"
+      },
+      {
+        "type" : "richtext",
+        "id" : "heading",
+        "label" : "Heading",
+        "default": "<p>Fashion Emerges As A Universal Language</p>"
+      },
+      {
+        "type" : "text",
+        "id" : "button_text",
+        "label" : "Button text",
+        "default" : "Explore More"
+      },
+      {
+        "type" : "url",
+        "id" : "button_link",
+        "label" : "Button link"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color Scheme",
+        "default": "scheme_2"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+       {
+          "type" : "select",
+          "id" : "alignment_position",
+          "label" : "Desktop content position",
+          "options" : [
+            {
+              "value" : "align-start justify-start",
+              "label" : "Left"
+            },
+            {
+              "value" : "align-start justify-center",
+              "label" : "Center"
+            },
+            {
+              "value" : "align-start justify-end",
+              "label" : "Right"
+            }
+          ],
+          "default": "align-start justify-center"
+        },
+       {
+      "type" : "header",
+      "content" : "Section Padding Settings"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section Padding top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section Padding bottom",
+        "default": 36
+      }
+    ],
+    "presets" : [
+      {
+        "name" : "Rich Text Custom"
+      }
+    ]
+  }
+{% endschema %}

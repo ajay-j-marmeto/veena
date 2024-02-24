@@ -1,0 +1,108 @@
+.collections-list{
+  position: relative;
+}
+
+.collections-list__heading-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 20px; 
+}
+
+@media screen and (min-width: 750px){
+  .collections-list__heading-section{
+    flex-direction: row;
+    background: none;
+    margin-bottom: 30px;
+  }
+}
+
+.collections-list__content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.collections-list__slide img{
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+}
+
+.collections-list__slide:hover img{
+  transform: scale(1.08);
+}
+
+
+.collections-list .splide__arrow--next {
+    right: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    background: #000;
+    border-radius: 50% 0 0 50%;
+}
+
+
+.collections-list .splide__arrow svg {
+    fill: #fff;
+    height: 1.2em;
+    width: 1.2em;
+  z-index:2;
+}
+
+
+
+.collections-list .splide__arrow--prev {
+    left: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+    background: #000;
+    border-radius: 0 50% 50% 0;  
+}
+
+.collections-list .splide__arrow--prev:disabled, .collections-list .splide__arrow--next:disabled{
+  display: none;
+} 
+
+.collections-list .splide__arrow--prev::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent 50%, #D03C3F 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 0 50% 50% 0;
+}
+.collections-list .splide__arrow--next:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, transparent 50%, #D03C3F 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 50% 0 0 50%;
+}
+
+.collections-list .splide__arrow--prev:hover::before {
+    background-position: -100% 0;
+}
+
+.collections-list .splide__arrow--next:hover::before {
+    background-position: -100% 0;
+}
+
+.collections-list__text{
+  background: none;
+}

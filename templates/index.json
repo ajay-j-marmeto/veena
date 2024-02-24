@@ -1,75 +1,252 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "custom_hero_banner_slide_hJkkgD": {
+      "type": "custom-hero-banner-slide",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "banner_XinJtj": {
+          "type": "banner",
           "settings": {
-            "heading": "Browse our latest products",
-            "heading_size": "h0"
+            "desktop_image": "shopify:\/\/shop_images\/1.png",
+            "mobile_image": "shopify:\/\/shop_images\/1.png",
+            "banner_caption": "Women's Apparel",
+            "banner_heading": "<h1>Elevate your wardrobe with our  <a href=\"\/collections\/best-collections\" title=\"Best Collections\">limited-time<\/a> fashion offer! <\/h1>",
+            "banner_button_text": "Explore more",
+            "banner_button_link": "shopify:\/\/collections\/best-collections",
+            "banner_color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_alignment": "center",
+            "alignment_position": "align-end justify-center"
           }
         },
-        "button": {
-          "type": "buttons",
+        "banner_EqimEC": {
+          "type": "banner",
           "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "desktop_image": "shopify:\/\/shop_images\/4.png",
+            "mobile_image": "shopify:\/\/shop_images\/4.png",
+            "banner_caption": "Trendy Classics",
+            "banner_heading": "<h1>Discover Signature Look: Fashion Forward and Fabulous!<\/h1>",
+            "banner_button_text": "Explore more",
+            "banner_button_link": "shopify:\/\/collections\/best-collections",
+            "banner_color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_alignment": "left",
+            "alignment_position": "align-end justify-start"
+          }
+        },
+        "banner_kg73ib": {
+          "type": "banner",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/3.png",
+            "mobile_image": "shopify:\/\/shop_images\/3.png",
+            "banner_caption": "Modern Elegance",
+            "banner_heading": "<h1>Step into the World of Style with the Latest Fashion Trends Unveiled!<\/h1>",
+            "banner_button_text": "Explore more",
+            "banner_button_link": "shopify:\/\/collections\/best-collections",
+            "banner_color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_alignment": "center",
+            "alignment_position": "align-end justify-start"
           }
         }
       },
       "block_order": [
-        "heading",
-        "button"
+        "banner_XinJtj",
+        "banner_EqimEC",
+        "banner_kg73ib"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "slider_autoplay": true,
+        "slide_dots": true,
+        "slide_arrows": true,
+        "infinite_scroll": true,
+        "slide_drag": false,
+        "slide_animation": "fade",
+        "slider_autoplay_duration": 5,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "custom_rich_text_aRMmKR": {
+      "type": "custom-rich-text",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "color_scheme": "scheme-1",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "enable_quick_add": false,
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 44,
+        "pre_heading": "What You Wear",
+        "heading": "<h2>Fashion Emerges<br\/>As A Universal <a href=\"https:\/\/veena-theme-fashion.myshopify.com\/collections\" title=\"All collections\">Language<\/a><\/h2>",
+        "button_text": "Explore More",
+        "button_link": "shopify:\/\/collections\/best-collections",
+        "color_scheme": "",
+        "text_alignment": "center",
+        "alignment_position": "align-start justify-center",
+        "padding_top": 60,
+        "padding_bottom": 40
+      }
+    },
+    "custom_image_with_text_grid_8aq6TJ": {
+      "type": "custom-image-with-text-grid",
+      "blocks": {
+        "image_grid_WGjx7g": {
+          "type": "imageGrid",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4264.png",
+            "caption": "Women's",
+            "heading": "Women's Clothing Collection",
+            "description": "",
+            "button_text": "explore",
+            "button_link": "shopify:\/\/collections\/best-collections",
+            "color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_size": "h2",
+            "text_alignment": "center",
+            "alignment_position": "align-center justify-center"
+          }
+        },
+        "image_grid_4aFmnh": {
+          "type": "imageGrid",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4265.png",
+            "caption": "Fashion",
+            "heading": "Women's Sustainable Style Hub",
+            "description": "",
+            "button_text": "explore",
+            "button_link": "shopify:\/\/collections\/best-collections",
+            "color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_size": "h2",
+            "text_alignment": "center",
+            "alignment_position": "align-center justify-center"
+          }
+        }
+      },
+      "block_order": [
+        "image_grid_WGjx7g",
+        "image_grid_4aFmnh"
+      ],
+      "settings": {
+        "image_padding": "image-landscape",
+        "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "custom_collections_list_UQMErg": {
+      "type": "custom-collections-list",
+      "blocks": {
+        "collection_blocks_HNKfKN": {
+          "type": "collection-blocks",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/6.jpg",
+            "heading": "Accessories"
+          }
+        },
+        "collection_blocks_C7QRTF": {
+          "type": "collection-blocks",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/4.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/4.jpg",
+            "heading": "Men's Jacket"
+          }
+        },
+        "collection_blocks_6mRkkz": {
+          "type": "collection-blocks",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/1.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/1.jpg",
+            "heading": "Shoes"
+          }
+        },
+        "collection_blocks_NF4DCB": {
+          "type": "collection-blocks",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/hand-bag-collection.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/hand-bag-collection.jpg",
+            "heading": "Handbags"
+          }
+        },
+        "collection_blocks_m7AiTF": {
+          "type": "collection-blocks",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/5.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/5.jpg",
+            "heading": "Best Selling"
+          }
+        },
+        "collection_blocks_ryUw6L": {
+          "type": "collection-blocks",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/8.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/8.jpg",
+            "heading": "T shirt"
+          }
+        }
+      },
+      "block_order": [
+        "collection_blocks_HNKfKN",
+        "collection_blocks_C7QRTF",
+        "collection_blocks_6mRkkz",
+        "collection_blocks_NF4DCB",
+        "collection_blocks_m7AiTF",
+        "collection_blocks_ryUw6L"
+      ],
+      "settings": {
+        "section_heading": "Captivating Collection",
+        "section_button_text": "View All",
+        "section_button_link": "shopify:\/\/collections\/best-collections",
+        "color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+        "slider_autoplay": false,
+        "slide_dots": false,
+        "slide_arrows": true,
+        "infinite_scroll": false,
+        "slide_animation": "slide",
+        "slider_autoplay_duration": 3,
+        "text_alignment": "center",
+        "alignment_position": "align-center justify-center",
+        "padding_top": 60,
+        "padding_bottom": 0
+      }
+    },
+    "custom_image_with_text_grid_V76dag": {
+      "type": "custom-image-with-text-grid",
+      "blocks": {
+        "image_grid_Qk96q3": {
+          "type": "imageGrid",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_55.png",
+            "caption": "Men's",
+            "heading": "Introducing Our Distinguished Men's Clothing Collection",
+            "description": "",
+            "button_text": "explore",
+            "button_link": "shopify:\/\/collections\/best-collections",
+            "color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_size": "h2",
+            "text_alignment": "center",
+            "alignment_position": "align-end justify-center"
+          }
+        },
+        "image_grid_fAMrnb": {
+          "type": "imageGrid",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_56.png",
+            "caption": "Women's",
+            "heading": "Elevate Your Wardrobe With Our Women's Clothing Collection",
+            "description": "",
+            "button_text": "explore",
+            "button_link": "shopify:\/\/collections\/best-collections",
+            "color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+            "text_size": "h2",
+            "text_alignment": "center",
+            "alignment_position": "align-end justify-center"
+          }
+        }
+      },
+      "block_order": [
+        "image_grid_Qk96q3",
+        "image_grid_fAMrnb"
+      ],
+      "settings": {
+        "image_padding": "image-potrait",
+        "padding_top": 60,
+        "padding_bottom": 0
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "custom_hero_banner_slide_hJkkgD",
+    "custom_rich_text_aRMmKR",
+    "custom_image_with_text_grid_8aq6TJ",
+    "custom_collections_list_UQMErg",
+    "custom_image_with_text_grid_V76dag"
   ]
 }

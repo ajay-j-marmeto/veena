@@ -1,0 +1,131 @@
+.hero-banner-slider__slide {
+  position: relative;
+}
+
+.hero-banner-slider__image-container {
+  position: relative;
+  padding-bottom: 70%;
+}
+
+.hero-banner-slider__image-container img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-banner-slider__text-container {
+  display: flex;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.hero-banner-slider_text {
+  max-width: 54.5rem;
+  margin-bottom: 7rem;
+  background: none;
+}
+
+.hero-banner-slider .splide__arrows .splide__arrow--prev {
+  top: unset;
+  bottom: 2%;
+  transform: unset;
+  background: none;
+  cursor: pointer;
+  left: 30%;
+}
+
+.hero-banner-slider .splide__arrows .splide__arrow--prev svg,
+.hero-banner-slider .splide__arrows .splide__arrow--next svg {
+  fill: #fff;
+  height: 16px;
+  width: 16px;
+}
+
+.hero-banner-slider .splide__arrows .splide__arrow--next {
+  top: unset;
+  bottom: 2%;
+  transform: unset;
+  background: none;
+  cursor: pointer;
+  right: 30%;
+}
+
+.hero-banner-slider
+  .slider-counter__link--active.slider-counter__link--dots
+  .dot {
+  background-color: #fff;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.hero-banner-slider .splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  border: 1px solid white;
+}
+
+.hero-banner-slider .splide__pagination .is-active {
+  width: 25px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #fff;
+}
+
+.hero-banner-slider .splide__pagination {
+  position: absolute;
+  bottom: 5%;
+}
+
+.hero-banner-slider_heading {
+  margin: 15px 0 30px 0;
+}
+
+@media (min-width: 750px) {
+  .hero-banner-slider__image-container {
+    padding-bottom: 50%;
+  }
+
+  .hero-banner-slider .splide__arrows .splide__arrow--prev {
+    left: 44%;
+  }
+
+  .hero-banner-slider .splide__arrows .splide__arrow--next {
+    right: 44%;
+  }
+
+  .hero-banner-slider .splide__pagination {
+    bottom: 3%;
+  }
+
+  .hero-banner-slider_text {
+    padding: 20px 35px;  
+  }
+}
+
+@media (max-width: 749px) {
+  .hero-banner-slider__text-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-banner-slider_heading {
+    margin: 5px 0 10px 0;
+  }
+  
+  .hero-banner-slider_text {
+    text-align: center;
+    margin-bottom: 40px;
+    
+  }
+}

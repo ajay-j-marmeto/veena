@@ -1,0 +1,79 @@
+.custom-image-with-text-grid__position-rel{
+  position: relative;
+}
+
+.custom-image-with-text-grid__text-container{
+  position: absolute;
+  top:0;
+  width: 100%;
+  height: 100%;
+  display:flex;
+  padding: 10px;
+}
+
+.custom-image-with-text-grid__image-container{
+  position : relative;
+  padding-bottom : 70%;
+}
+
+.image-square{
+  padding-bottom: 100%;
+}
+
+.image-landscape{
+  padding-bottom: 65%;
+}
+
+.image-potrait{
+  padding-bottom: 120%;
+}
+
+.custom-image-with-text-grid__heading{
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 750px){
+
+  .image-landscape{
+  padding-bottom: 55%;
+  }
+  
+  .image-potrait{
+    padding-bottom: 110%;
+  }
+
+  .custom-image-with-text-grid__text-container{
+    padding: 24px;
+  }
+
+  .custom-image-with-text-grid__heading{
+    margin-bottom: 30px;
+  }
+}
+
+.custom-image-with-text-grid__image-container img{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+.custom-image-with-text-grid__position-rel:hover img{
+  transform: scale(1.05);
+}
+
+.custom-image-with-text-grid__caption{
+  list-style : disc;
+}
+
+.custom-image-with-text-grid__text-align{
+  max-width: 50rem;
+  background: none;
+}
+
+.custom-caption{
+  backdrop-filter: blur(0);
+}

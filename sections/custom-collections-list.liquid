@@ -1,0 +1,317 @@
+{{ "section-custom-collections-list.css" | asset_url | stylesheet_tag }}
+{% comment %} 
+<script src="{{ "custom-slider.js" | asset_url }}" defer></script> {% endcomment %}
+
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2  }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    @media (min-width: 750px) {
+      .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+{% endstyle %}
+
+
+{% capture slider-options-data %}
+  {
+    "autoplay" : {{ section.settings.slider_autoplay }},
+    "interval" : {{ section.settings.slider_autoplay_duration | times: 1000 }},
+    "type" : "{{ section.settings.slide_animation }}",
+    "pagination": {{ section.settings.slide_dots }},
+    "gap": "20px",
+    "perPage": 5,
+    "arrows" : {{ section.settings.slide_arrows }},
+    "rewind" : {{ section.settings.infinite_scroll }},
+    "breakpoints": {
+    "750": {
+      "perPage": 2
+    }
+    }
+  }
+{% endcapture %} 
+
+
+<div class="collections-list padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="collections-list__heading-section">
+      <h2 class="h1"> {{ section.settings.section_heading }} </h2>
+      <div>
+        {% if section.settings.section_button_text %}
+           <a class="custom-button-secondary" 
+              {% if section.settings.section_button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.section_button_link }}"
+              {% endif %}>
+            {{ section.settings.section_button_text }}
+          </a>
+        {% endif %}  
+      </div>
+    </div>
+    <custom-slider>
+      <section class="splide" aria-label="Testimonial Splide" data-slider-options='{{ slider-options-data }}'>
+        <div class="splide__track">
+          <ul class="splide__list">
+            {% for block in section.blocks %}
+              
+              <li class="splide__slide collections-list__slide custom-border-radius">
+                {% if block.settings.desktop_image != blank %}
+                  <div class="collections-list__image"> 
+                    {% render "responsive-image", desktopImage: block.settings.desktop_image, mobileImage: block.settings.mobile_image class:"media media--portrait" %}
+                  </div>
+                {% endif %}
+                <div class="collections-list__content {{ section.settings.alignment_position }}">
+                  <div class="collections-list__text {{ section.settings.text_alignment }} color-{{ section.settings.color_scheme }}">      
+                    {% if block.settings.heading != blank %}
+                      <h2 class="h2 collections-list__heading"> {{ block.settings.heading }} </h2>
+                    {% endif %}  
+                    
+                    {% if block.settings.button_text != blank %}
+                       <a class="custom-button-primary-transparent" 
+                          {% if block.settings.button_link == blank %}
+                              role="link" aria-disabled="true"
+                            {% else %}
+                              href="{{ block.settings.button_link }}"
+                          {% endif %}>
+                        {{ block.settings.button_text }}
+                      </a>
+                    {% endif %}  
+                  </div>
+                </div>
+              </li>
+            {% endfor %}  
+          </ul>
+        </div>
+      </section>
+    </custom-slider>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom Collections List",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Section heading",
+        "default": "Our Customers Review"
+      },
+      {
+        "type": "text",
+        "id": "section_button_text",
+        "label": "Section button text",
+        "default": "View All"
+      },
+      {
+        "type": "url",
+        "id": "section_button_link",
+        "label": "Section button link"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme"
+      },
+      {
+        "type" : "header",
+        "content" : "Slider settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_autoplay",
+        "label": "Slide autoplay",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_dots",
+        "label": "Show slide dots",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_arrows",
+        "label": "Show slide arrows",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "infinite_scroll",
+        "label": "Infinite scroll",
+        "default": true
+      },
+      {
+        "type" : "select",
+        "id": "slide_animation",
+        "label" : "Slide animation",
+        "options" : [
+          {
+            "value" : "loop",
+            "label" : "Loop"
+          },
+          {
+            "value" : "fade",
+            "label" : "Fade"
+          },
+          {
+            "value" : "slide",
+            "label" : "Slide"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "slider_autoplay_duration",
+        "label": "Slider autoplay duration",
+        "min" : 1,
+        "step":1,
+        "max" : 10,
+        "default": 3,
+        "unit": "sec"
+      },
+      {
+        "type" : "header",
+        "content" : "Alignment Settings"
+      },
+      {
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type" : "select",
+        "id" : "alignment_position",
+        "label" : "Desktop content position",
+        "options" : [
+          {
+            "value" : "align-start justify-start",
+            "label" : "Top left"
+          },
+          {
+            "value" : "align-start justify-center",
+            "label" : "Top center"
+          },
+          {
+            "value" : "align-start justify-end",
+            "label" : "Top right"
+          },
+          {
+            "value" : "align-center justify-start",
+            "label" : "Middle left"
+          },
+          {
+            "value" : "align-center justify-center",
+            "label" : "Middle center"
+          },
+          {
+            "value" : "align-center justify-end",
+            "label" : "Middle right"
+          },
+          {
+            "value" : "align-end justify-start",
+            "label" : "Bottom left"
+          },
+          {
+            "value" : "align-end justify-center",
+            "label" : "Bottom center"
+          },
+          {
+            "value" : "align-end justify-end",
+            "label" : "Bottom end"
+          }
+        ],
+        "default": "align-center justify-center"
+      },
+      {
+        "type" : "header",
+        "content" : "Section padding settings"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section padding top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section padding bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection-blocks",
+        "name": "Collection blocks",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Image (Mobile)"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Person Name"
+          },
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "default": "Shop Now"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button link"
+          }
+          
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Collections List"
+      }
+    ]
+  }
+{% endschema %}
