@@ -1,0 +1,142 @@
+.product-card {
+  position: relative;
+}
+
+.product-card__link {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.product-card__link:hover {
+  color: #d03c3f;
+}
+
+.product-card__vendor,
+.product-card__compare-price {
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.product-card__quick-view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.product-card__quick-view a {
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.product-card__content {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.product-card__left-tags {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+}
+
+.product-card__discount,
+.product-card__badge {
+  padding: 5px 10px;
+  background-color: #dd1d1d;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 20px;
+}
+
+.product-card__badge {
+  background-color: #22570e;
+}
+
+.product-card__inventory-quantity {
+  color: #008a00;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product-card__varient-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.product-card__color-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.product-card__color-radio {
+  display: none;
+}
+
+ul.product-card__options {
+  margin: 0 0 15px 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.product-card__option {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+span.product-card__swatch {
+  min-height: 30px;
+  min-width: 30px;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid lightgray;
+  cursor: pointer;
+}
+
+.product-card__option input[type='radio'] {
+  display: none;
+}
+
+.product-card__color-swatch {
+  border-radius: 50%;
+}
+
+.product-card__secondary-image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: opacity 0.3s ease;
+}
+
+.product-card__image{
+  position: relative;
+}
+
+.product-card__image:hover .product-card__secondary-image{
+  opacity: 1;
+}
+
+.product-card__inventory-low-quantity{
+  color: #d03c3f;
+  margin: 0;
+}

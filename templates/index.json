@@ -128,7 +128,9 @@
           "type": "collection-blocks",
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/6.jpg",
-            "heading": "Accessories"
+            "heading": "Accessories",
+            "button_text": "Shop Now",
+            "button_link": ""
           }
         },
         "collection_blocks_C7QRTF": {
@@ -136,7 +138,9 @@
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/4.jpg",
             "mobile_image": "shopify:\/\/shop_images\/4.jpg",
-            "heading": "Men's Jacket"
+            "heading": "Men's Jacket",
+            "button_text": "Shop Now",
+            "button_link": ""
           }
         },
         "collection_blocks_6mRkkz": {
@@ -144,7 +148,9 @@
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/1.jpg",
             "mobile_image": "shopify:\/\/shop_images\/1.jpg",
-            "heading": "Shoes"
+            "heading": "Shoes",
+            "button_text": "Shop Now",
+            "button_link": ""
           }
         },
         "collection_blocks_NF4DCB": {
@@ -152,7 +158,9 @@
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/hand-bag-collection.jpg",
             "mobile_image": "shopify:\/\/shop_images\/hand-bag-collection.jpg",
-            "heading": "Handbags"
+            "heading": "Handbags",
+            "button_text": "Shop Now",
+            "button_link": ""
           }
         },
         "collection_blocks_m7AiTF": {
@@ -160,7 +168,9 @@
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/5.jpg",
             "mobile_image": "shopify:\/\/shop_images\/5.jpg",
-            "heading": "Best Selling"
+            "heading": "Best Selling",
+            "button_text": "Shop Now",
+            "button_link": ""
           }
         },
         "collection_blocks_ryUw6L": {
@@ -168,7 +178,9 @@
           "settings": {
             "desktop_image": "shopify:\/\/shop_images\/8.jpg",
             "mobile_image": "shopify:\/\/shop_images\/8.jpg",
-            "heading": "T shirt"
+            "heading": "T shirt",
+            "button_text": "Shop Now",
+            "button_link": ""
           }
         }
       },
@@ -240,6 +252,36 @@
         "padding_top": 60,
         "padding_bottom": 0
       }
+    },
+    "custom_products_list_k3RkT7": {
+      "type": "custom-products-list",
+      "settings": {
+        "product_list": [
+          "full-sleeve-high-neck-t-shirt",
+          "full-sleeve-high-neck-t-shirt-1",
+          "mens-half-sleeve-t-shirt",
+          "mens-winter-hooded-jacket",
+          "women-shirt-beige-dress",
+          "women-solid-casual-jacket",
+          "womens-casual-jacket",
+          "womens-casual-sweaters"
+        ],
+        "section_heading": "Featured Collection",
+        "button_text": "See All Products",
+        "button_link": "shopify:\/\/collections\/all",
+        "slider_enable": false,
+        "card_caption": "",
+        "card_heading": "",
+        "card_button_text": "",
+        "card_button_link": "",
+        "color_scheme": "",
+        "text_size": "h2",
+        "text_alignment": "left",
+        "product_text_alignment": "left",
+        "alignment_position": "align-center justify-center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -247,6 +289,7 @@
     "custom_rich_text_aRMmKR",
     "custom_image_with_text_grid_8aq6TJ",
     "custom_collections_list_UQMErg",
-    "custom_image_with_text_grid_V76dag"
+    "custom_image_with_text_grid_V76dag",
+    "custom_products_list_k3RkT7"
   ]
 }

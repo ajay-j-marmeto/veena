@@ -1,0 +1,14 @@
+.product-list__section-heading-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 750px) {
+  .product-list__section-heading-container{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    
+  }
+}

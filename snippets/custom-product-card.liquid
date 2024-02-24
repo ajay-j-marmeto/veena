@@ -1,0 +1,171 @@
+
+{% liquid
+  assign current_varient = product.selected_or_first_available_variant
+  assign featured_image = current_varient.image | default: product.featured_image
+  assign secondary_image = product.images[1] | default: product.featured_image
+  assign discountPercentage = current_varient.compare_at_price | minus: current_varient.price | times: 100 | divided_by: current_varient.compare_at_price
+
+  assign new_badge = ''
+  for tag in product.tags
+    if tag contains 'New_'
+      assign new_badge = tag | split: '_' | last
+      break
+    endif
+  endfor
+%}
+
+<product-card class="product-card" data-product-handle="{{ product.url | within: collection }}" data-section-id="{{ section_id }}">
+  <a href="{{ product.url }}">
+    <div class="product-card__image custom-border-radius">
+      {% render 'responsive-image',
+        desktopImage: featured_image,
+        class: 'media media--portrait'
+      %}
+      <div class="product-card__secondary-image">
+        {% render "responsive-image", desktopImage: secondary_image, class:"media media--portrait" %}
+      </div>
+    </div>
+
+    <div class="product-card__quick-view">
+      <a href="#" class="custom-button-secondary_color"> Quick Look</a>
+    </div>
+
+    <div class="product-card__left-tags">
+      {% if new_badge != '' %}
+        <span class="product-card__badge">
+          {{ new_badge }}
+        </span>
+      {% endif %}
+
+      {% if discountPercentage > 0 %}
+        <span class="product-card__discount"> {{ discountPercentage }}% off </span>
+      {% endif %}
+    </div>
+  </a>
+
+  <div class="product-card__content">
+    {% comment %}
+    <div class="jdgm-widget jdgm-preview-badge">
+      {{ product.metafields.judgeme.badge }}
+    </div>
+    {% endcomment %}
+    <div class="product-card-varients">
+      {% form 'product', product %}
+        <input type="hidden" name="id" value="{{ current_varient.id }}">
+
+        {% unless product.has_only_default_variant %}
+          <ul class="product-card__options">
+            {% for product_option in product.options_with_values %}
+              {% assign downcased_option_name = product_option.name | handleize %}
+
+              <li>
+                {% comment %}
+                <label>{{ product_option.name }}</label>
+                  {% endcomment %}
+                <ul class="product-card__option">
+                  {% for option_value in product_option.values %}
+                    <li>
+                      {% assign downcased_option_value = option_value | handleize %}
+
+                      <label>
+                        <input
+                          type="radio"
+                          name="{{ product_option.name | handleize }}"
+                          value="{{ option_value }}"
+                          {% if product_option.selected_value == option_value %}
+                            checked
+                          {% endif %}
+                        >
+       
+                        {% if downcased_option_name == 'color' %}
+                          {% assign swatch_image = downcased_option_value | append: '.jpg' | file_url %}
+                          <span
+                            data-option-value = "{{ option_value }}"
+                            class="product-card__swatch product-card__color-swatch"
+                            style="background-color: {{ downcased_option_value }};background-image: url({{ swatch_image }});"
+                          >
+                          </span>
+                        {% comment %}
+                        {% else %}
+                          <span class="product-card__swatch"
+                            data-option-value = "{{ option_value }}"
+                            >{{ option_value }}</span>
+                          {% endcomment %}
+                        {% endif %}
+
+                      </label>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endunless %}
+      {% endform %}
+    </div>
+
+    <h2 class="h5 product-card__vendor">{{ product.vendor }}</h2>
+    <a class="h3 product-card__link" href="{{ current_varient.url }}"> {{ product.title }} </a>
+    <div class="product-card__prices">
+      {% if product.price_varies %}
+        <span class="h3"> From {{ product.price_min | money_with_currency }}</span>
+      {% else %}
+        <span class="h3"> {{ current_varient.price | money_with_currency }}</span>
+      {% endif %}
+
+      {% if current_varient.compare_at_price > current_varient.price %}
+        <s class="h4 product-card__compare-price"> {{ current_varient.compare_at_price | money_with_currency }} </s>
+      {% endif %}
+
+      {% if current_varient.inventory_quantity < 100 %}
+        <div class="product-card__inventory-quantity {% if current_varient.inventory_quantity < 11 %} product-card__inventory-low-quantity {% endif %}">
+          {% if current_varient.inventory_quantity < 11 %} Only {{ current_varient.inventory_quantity }} units left 
+            {% else %} 
+              {{ current_varient.inventory_quantity }} in stock
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- {%- if product.metafields.reviews.rating.value != blank -%}
+    {% liquid
+      assign rating_decimal = 0
+      assign decimal = product.metafields.reviews.rating.value.rating | modulo: 1
+      if decimal >= 0.3 and decimal <= 0.7
+        assign rating_decimal = 0.5
+      elsif decimal > 0.7
+        assign rating_decimal = 1
+      endif
+    %}
+    <div
+      class="rating"
+      role="img"
+      aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: product.metafields.reviews.rating.value, rating_max: product.metafields.reviews.rating.value.scale_max }}"
+    >
+      <span
+        aria-hidden="true"
+        class="rating-star"
+        style="--rating: {{ product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+      ></span>
+    </div>
+    <p class="rating-text caption">
+      <span aria-hidden="true">
+        {{- product.metafields.reviews.rating.value -}}
+        /
+        {{- product.metafields.reviews.rating.value.scale_max -}}
+      </span>
+    </p>
+    <p class="rating-count caption">
+      <span aria-hidden="true">({{ product.metafields.reviews.rating_count }})</span>
+      <span class="visually-hidden">
+        {{- product.metafields.reviews.rating_count }}
+        {{ 'accessibility.total_reviews' | t -}}
+      </span>
+    </p>
+  {%- endif -%} -->
+
+  <script>
+    {{ product.variants | json }}
+  </script>
+</product-card>

@@ -28,9 +28,12 @@
 
     {% render 'meta-tags' %}
 
+    
+    {{ 'snippet-custom-product-card.css' | asset_url | stylesheet_tag }}
     {{ 'splide.min.css' | asset_url | stylesheet_tag }}
     <script src="{{ "splide.min.js" | asset_url }}" defer></script>
-
+    
+    <script src="{{ 'snippet-product-card.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
