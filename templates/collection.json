@@ -11,6 +11,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
+        "menu": "",
         "products_per_page": 16,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
@@ -21,7 +22,7 @@
         "show_rating": false,
         "enable_quick_add": false,
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "vertical",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,

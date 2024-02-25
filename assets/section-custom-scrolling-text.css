@@ -14,7 +14,7 @@
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
-  animation: scroll-left 16s linear infinite;
+  animation: scroll-left 40s linear infinite;
 }
 
 .scrolling-banner__scrolling-wrapper:hover
@@ -34,7 +34,7 @@
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-110%);
+    transform: translateX(-220%);
   }
 }
 

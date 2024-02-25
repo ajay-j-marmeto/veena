@@ -88,3 +88,39 @@
 .visual-display--presentation-swatch .visual-display__image {
   object-fit: cover;
 }
+
+
+.facets__custom-checkbox{
+  border-radius: 50%;
+}
+
+summary a{
+  color:red;
+  text-decoration:none;
+  color:gray;
+  font-size:20px;
+  
+  
+}
+.nav-menu{
+  /* min-height: 260px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30rem;
+}
+.nav-menu > details > summary{
+  background-color:#F5F5F5;
+  border-radius: 13px;
+  padding: 8px 25px 8px 15px;
+  margin-bottom:10px;
+  width: 100%;
+  
+}
+.menu-border[open]{
+  border:1px solid gray;
+  border-radius:13px;
+  margin-bottom: 10px;
+
+  
+}

@@ -1,0 +1,327 @@
+{{ 'section-custom-featured-products-list.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2  }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    @media (min-width: 750px) {
+      .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{% endstyle %}
+
+{% capture slider-settings %}
+  {
+    "autoplay" : {{ section.settings.slider_autoplay }},
+    "interval" : {{ section.settings.slider_autoplay_duration | times: 1000 }},
+    "type" : "{{ section.settings.slide_animation }}",
+    "pagination": {{ section.settings.slide_dots }},
+    "gap": "20px",
+    "perPage": 3,
+    "perMove": 1,
+    "arrows" : {{ section.settings.slide_arrows }},
+    "rewind" : {{ section.settings.infinite_scroll }},
+    "breakpoints" : {
+        "750" : {"perPage" : 2}
+    }
+  }
+{% endcapture %}
+
+<div class="featured-product-list padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="featured-product-list__header-section">
+      {% if section.settings.section_heading != blank %}
+        <h2 class="h1 featured-product-list__section-heading">{{ section.settings.section_heading }}</h2>
+      {% endif %}
+
+      {% if section.settings.section_button_text != blank %}
+        <div>
+          <a
+            class="custom-button-secondary"
+            {% if section.settings.section_button_link == blank %}
+              role="link" aria-disabled="true"
+            {% else %}
+              href="{{ section.settings.section_button_link }}"
+            {% endif %}
+          >
+            {{ section.settings.section_button_text }}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="featured-product-list__featured-slider-section">
+      <div class="featured-product-list__featured-container custom-border-radius">
+        <div class="featured-product-list__image">
+          {% render 'responsive-image',
+            desktopImage: section.settings.featured_desktop_image,
+            mobileImage: section.settings.featured_mobile_image
+          %}
+        </div>
+        <div class="featured-product-list__featured-content {{ section.settings.alignment_position }}">
+          <div class="featured-product-list__featured-info {{ section.settings.text_alignment }} color-{{ section.settings.color_scheme }}">
+            {% if section.settings.featured_pre_heading != blank %}
+              <ul class="custom-caption">
+                <li class="h4 custom-caption__text">{{ section.settings.featured_pre_heading }}</li>
+              </ul>
+            {% endif %}
+            {% if section.settings.featured_heading != blank %}
+              <h2 class="h3 featured-product-list__featured-heading">{{ section.settings.featured_heading }}</h2>
+            {% endif %}
+            {% if section.settings.featured_description != blank %}
+              <div class="featured-product-list__featured-description">{{ section.settings.featured_description }}</div>
+            {% endif %}
+            {% if section.settings.featured_button_text != blank %}
+              <div>
+                <a
+                  class="custom-button-primary"
+                  {% if section.settings.featured_button_link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ section.settings.featured_button_link }}"
+                  {% endif %}
+                >
+                  {{ section.settings.featured_button_text }}
+                </a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div class="featured-product-list__product-slider">
+        <custom-slider>
+          <section class="splide" aria-label="Testimonial Splide" data-slider-options='{{ slider-settings }}'>
+            <div class="splide__track">
+              <ul class="splide__list">
+                {% for product in section.settings.product_list %}
+                  <li class="splide__slide">
+                    {% render 'custom-product-card', product: product, section_id: section.id %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </section>
+        </custom-slider>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Products List",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading",
+      "default": "New Arrivals"
+    },
+    {
+      "type": "text",
+      "id": "section_button_text",
+      "label": "Section button text",
+      "default": "View All"
+    },
+    {
+      "type": "url",
+      "id": "section_button_link",
+      "label": "Section button link"
+    },
+    {
+      "type": "header",
+      "content": "Featured product card settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_desktop_image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "featured_mobile_image",
+      "label": "Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "featured_pre_heading",
+      "label": "Pre Heading",
+      "default": "Pre Heading"
+    },
+    {
+      "type": "text",
+      "id": "featured_heading",
+      "label": "Heading",
+      "default": "Featured product heading"
+    },
+    {
+      "type": "richtext",
+      "id": "featured_description",
+      "label": "Description",
+      "default": "<p>Featured product description</p>"
+    },
+    {
+      "type": "text",
+      "id": "featured_button_text",
+      "label": "Featured button text",
+      "default": "Explore"
+    },
+    {
+      "type": "url",
+      "id": "featured_button_link",
+      "label": "Featured button link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme"
+    },
+    {
+      "type": "header",
+      "content": "Alignment Settings"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "alignment_position",
+      "label": "Desktop content position",
+      "options": [
+        {
+          "value": "align-start justify-start",
+          "label": "Top left"
+        },
+        {
+          "value": "align-start justify-center",
+          "label": "Top center"
+        },
+        {
+          "value": "align-start justify-end",
+          "label": "Top right"
+        },
+        {
+          "value": "align-center justify-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "align-center justify-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "align-center justify-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "align-end justify-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "align-end justify-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "align-end justify-end",
+          "label": "Bottom end"
+        }
+      ],
+      "default": "align-center justify-center"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "slider_autoplay",
+      "label": "Slide autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_dots",
+      "label": "Show slide dots",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_arrows",
+      "label": "Show slide arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll",
+      "label": "Infinite scroll",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "slider_autoplay_duration",
+      "label": "Slider autoplay duration",
+      "min": 1,
+      "step": 1,
+      "max": 10,
+      "default": 3,
+      "unit": "sec"
+    },
+    {
+      "type": "product_list",
+      "id": "product_list",
+      "label": "Products",
+      "limit": 8
+    },
+    {
+      "type": "header",
+      "content": "Section padding settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products List"
+    }
+  ]
+}
+{% endschema %}

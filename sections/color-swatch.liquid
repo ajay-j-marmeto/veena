@@ -1,0 +1,51 @@
+<style>
+  {% for block in section.blocks %}
+  .item-swatch [data-value="{{ block.settings.title }}"],
+  .item-swatch [data-value="{{ block.settings.title | downcase }}"],
+  .item-swatch [data-value="{{ block.settings.title | downcase | handle }}"],
+  .item-swatch [data-value="{{ block.settings.title | capitalize  }}"],
+  .swatch [data-value="{{ block.settings.title }}"] .bgImg,
+  .swatch [data-value="{{ block.settings.title | downcase }}"] .bgImg,
+  .swatch [data-value="{{ block.settings.title | capitalize  }}"] .bgImg,
+  .color-swatch-enabled[data-tag="{{ block.settings.title }}"] span,
+  .color-swatch-enabled[data-tag="{{ block.settings.title | downcase }}"] span,
+  .color-swatch-enabled[data-tag="{{ block.settings.title | capitalize }}"] span {
+    background-color: {{ block.settings.color_code }} !important;
+  }
+  {% endfor %}
+</style>
+
+{% schema %}
+ {
+   "name": "Color Settings",
+   "settings": [
+{
+    "type": "header",
+    "content": "Color Settings"
+},
+{
+  "type": "paragraph",
+  "content": "Add Color Settings here"
+}
+   ],
+   "blocks": [
+     {
+      "type": "colorSettings",
+      "name": "Color Settings",
+      "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Color Name"
+    },
+    {
+      "type": "color",
+      "id": "color_code",
+      "label": "Color Code",
+      "default": "#000000"
+    }
+]
+     }
+   ]
+}
+{% endschema %}

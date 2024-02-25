@@ -1496,3 +1496,7 @@ a.product__text {
     border: none;
   }
 }
+
+.shopify-payment-button__button{
+  background: #d03c3f;
+}

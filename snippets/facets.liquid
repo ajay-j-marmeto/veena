@@ -54,6 +54,94 @@
             {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
             {%- if filter_type == 'vertical' -%}
               <div class="active-facets active-facets-desktop">
+              <div class="nav-menu">
+            {% for link in linklists['sidebar-menu'].links %}
+              <details class="menu-border">
+                <summary >{{ link.title |  link_to: link.url }}  {% if link.links.size > 0 %}
+                  <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                  </svg>
+                  {% endif %}
+                </summary>
+                {% for sub_link in link.links %}
+                  <details >
+                    <summary>{{ sub_link.title | link_to: sub_link.url}}
+                    {% if sub_link.links.size > 0 %}
+                      <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                      </svg>
+                      {% endif %}
+                  </summary>
+                    {% for sub_sub_link in sub_link.links %}
+                      <details>
+                        <summary>{{ sub_sub_link.title |  link_to: sub_sub_link.url }}
+                        {% if sub_sub_link.links.size > 0 %}
+                          <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                          </svg>
+                          {% endif %}
+                      </summary>
+                      </details>
+                    {% endfor %}
+                  </details>
+                {% endfor %}
+              </details>
+            {% endfor %}
+          </div>
+              
+              {% comment %}
+              
+                <ul>
+                  {%- for link in linklists['sidebar-menu'].links -%}
+                    <li>
+                      <a
+                        href="{{ link.url }}"
+                        {% if link.active %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ link.title }}
+                      </a>
+
+                      {%- if link.links != blank -%}
+                        <ul>
+                          {%- for child_link in link.links -%}
+                            <li>
+                              <a
+                                href="{{ child_link.url }}"
+                                {% if child_link.active %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ child_link.title }}
+                              </a>
+
+                              {%- if child_link.links != blank -%}
+                                <ul>
+                                  {%- for grandchild_link in child_link.links -%}
+                                    <li>
+                                      <a
+                                        href="{{ grandchild_link.url }}"
+                                        {% if grandchild_link.active %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        {{ grandchild_link.title }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+
+              {% endcomment %}
+
                 <div class="active-facets-vertical-filter">
                   {%- unless results.filters == empty -%}
                     <h2
@@ -82,6 +170,7 @@
                       </a>
                     </facet-remove>
                   {%- endfor -%}
+
                   {% if filter.type == 'price_range' %}
                     {%- if filter.min_value.value != null or filter.max_value.value != null -%}
                       <facet-remove>
@@ -220,6 +309,7 @@
                                     disabled
                                   {% endif %}
                                 >
+                                {% assign swatch-color = filter.label | handleize %}
 
                                 {% if has_visual_display %}
                                   <div class="facets__visual-display-wrapper">
@@ -231,13 +321,33 @@
                                   </div>
                                 {% else %}
                                   <svg
-                                    width="1.6rem"
-                                    height="1.6rem"
                                     viewBox="0 0 16 16"
                                     aria-hidden="true"
                                     focusable="false"
+                                    class="facets__custom-checkbox"
+                                    {% if swatch-color == 'color' %}
+                                      width="3rem"
+                                      height="3rem"
+                                    {% else %}
+                                      style="border: 1px solid gray;"
+                                      width="1.6rem"
+                                      height="1.6rem"
+                                    {% endif %}
                                   >
-                                    <rect width="16" height="16" stroke="currentColor" fill="none" stroke-width="1"></rect>
+                                      <rect
+                                    width="16"
+                                    height="16"
+                                    stroke="currentColor"
+                                    {% if swatch-color == "color" %}
+                                      fill="{{ value.value }}"
+                                      stroke-width="0"
+                                      {% else %}
+                                      fill ="none"
+
+                                      stroke-width="0"
+                                    {% endif %}
+                                    >
+                                    </rect>
                                   </svg>
 
                                   <svg
@@ -248,6 +358,9 @@
                                     viewBox="0 0 11 7"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
+                                    {% if swatch-color == 'color' %}
+                                      style="display: none;"
+                                    {% endif %}
                                   >
                                     <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
                                       stroke="currentColor"
@@ -315,6 +428,7 @@
                                   viewBox="0 0 11 7"
                                   fill="none"
                                   xmlns="http://www.w3.org/2000/svg"
+                                  style="{% if filter.label == "Color" %} display:none;{% endif %}"
                                 >
                                   <path d="M1.5 3.5L2.83333 4.75L4.16667 6L9.5 1"
                                     stroke="currentColor"
@@ -650,9 +764,11 @@
         <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
       </summary>
       <facet-filters-form>
+        
         <form id="FacetFiltersFormMobile" class="mobile-facets">
           <div class="mobile-facets__inner gradient">
             <div class="mobile-facets__header">
+              
               <div class="mobile-facets__header-inner">
                 <h2 class="mobile-facets__heading medium-hide large-up-hide">
                   {%- if enable_filtering and enable_sorting -%}
@@ -682,10 +798,97 @@
                 </p>
               </div>
             </div>
+             
             <div
               id="FacetsWrapperMobile"
               class="mobile-facets__main has-submenu gradient"
             >
+              <div class="nav-menu">
+            {% for link in linklists['sidebar-menu'].links %}
+              <details class="menu-border">
+                <summary >{{ link.title |  link_to: link.url }}  {% if link.links.size > 0 %}
+                  <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                  </svg>
+                  {% endif %}
+                </summary>
+                {% for sub_link in link.links %}
+                  <details >
+                    <summary>{{ sub_link.title | link_to: sub_link.url}}
+                    {% if sub_link.links.size > 0 %}
+                      <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                      </svg>
+                      {% endif %}
+                  </summary>
+                    {% for sub_sub_link in sub_link.links %}
+                      <details>
+                        <summary>{{ sub_sub_link.title |  link_to: sub_sub_link.url }}
+                        {% if sub_sub_link.links.size > 0 %}
+                          <svg aria-hidden="true" focusable="false" class="icon icon-caret" viewBox="0 0 10 6">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor"></path>
+                          </svg>
+                          {% endif %}
+                      </summary>
+                      </details>
+                    {% endfor %}
+                  </details>
+                {% endfor %}
+              </details>
+            {% endfor %}
+          </div>
+
+              {% comment %}
+                <ul>
+                  {%- for link in linklists['sidebar-menu'].links -%}
+                    <li>
+                      <a
+                        href="{{ link.url }}"
+                        {% if link.active %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ link.title }}
+                      </a>
+
+                      {%- if link.links != blank -%}
+                        <ul>
+                          {%- for child_link in link.links -%}
+                            <li>
+                              <a
+                                href="{{ child_link.url }}"
+                                {% if child_link.active %}
+                                  aria-current="page"
+                                {% endif %}
+                              >
+                                {{ child_link.title }}
+                              </a>
+
+                              {%- if child_link.links != blank -%}
+                                <ul>
+                                  {%- for grandchild_link in child_link.links -%}
+                                    <li>
+                                      <a
+                                        href="{{ grandchild_link.url }}"
+                                        {% if grandchild_link.active %}
+                                          aria-current="page"
+                                        {% endif %}
+                                      >
+                                        {{ grandchild_link.title }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              {%- endif -%}
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+                {% endcomment %}
+                
               {%- if enable_filtering -%}
                 {%- for filter in results.filters -%}
                   {% liquid
@@ -1074,6 +1277,7 @@
   {% comment %} Sort, product count and filter pills at the end when filter is type of Drawer for the correct tabbing order {% endcomment %}
   {%- if enable_sorting and filter_type == 'drawer' -%}
     <facet-filters-form class="facets small-hide">
+      
       <form id="FacetSortDrawerForm" class="facets__form">
         <div class="facet-filters sorting caption small-hide">
           <div class="facet-filters__field">
@@ -1143,6 +1347,7 @@
   </div>
   {%- if filter_type == 'drawer' -%}
     <facet-filters-form class="facets facets-pill small-hide">
+     
       <form id="FacetFiltersPillsForm" class="facets__form">
         <div class="active-facets active-facets-desktop">
           {%- for filter in results.filters -%}

@@ -1,7 +1,7 @@
 {
   "current": {
     "logo": "shopify:\/\/shop_images\/n_Veena_b4163ae2-38d0-4101-a97f-5d0b8a36b668.png",
-    "logo_width": 80,
+    "logo_width": 100,
     "type_header_font": "harmonia_sans_n6",
     "heading_scale": 100,
     "type_body_font": "harmonia_sans_n4",
@@ -14,7 +14,7 @@
     "animations_hover_elements": "none",
     "buttons_border_thickness": 1,
     "buttons_border_opacity": 100,
-    "buttons_radius": 0,
+    "buttons_radius": 31,
     "buttons_shadow_opacity": 0,
     "buttons_shadow_horizontal_offset": 0,
     "buttons_shadow_vertical_offset": 4,

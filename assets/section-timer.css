@@ -1,0 +1,74 @@
+.custom-timer__wrapper {
+  display: flex;
+  width: 100%;
+}
+.custom-timer__text-wrapper {
+  width: 40%;
+}
+.custom-timer__time-wrapper {
+  width: 60%;
+}
+
+.custom-timer__time-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.custom-timer__button {
+  margin-top: 10px;
+}
+.custom-timer__card {
+  background: rgba(0, 0, 0, 0.05);
+  height: 139px;
+  width: 140px;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0.3px;
+  line-height: 28.8px;
+  text-align: center;
+}
+.custom-timer__time {
+  font-weight: 400;
+  font-size: 46px;
+}
+.custom-timer__description {
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+.custom-timer__stamp{
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (max-width: 750px) {
+  .custom-timer__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .custom-timer__text-wrapper {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .custom-timer__time-wrapper {
+    width: 90%;
+  }
+  .custom-timer__description {
+    font-size: 12px;
+  }
+  .custom-timer__card {
+    height: 61px;
+    width: 47px;
+    padding: 7px 0px;
+  }
+  .custom-timer__time {
+    font-weight: 200;
+    font-size: 20px;
+  }
+  .custom-timer__stamp{
+    font-size: 12px;
+  }
+}
