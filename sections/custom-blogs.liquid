@@ -1,0 +1,204 @@
+{{ "section-custom-blogs.css" | asset_url | stylesheet_tag }}
+
+
+{% style %}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% capture slider-options-data %}
+  {
+    "autoplay" : {{ section.settings.slider_autoplay }},
+    "interval" : {{ section.settings.slider_autoplay_duration | times: 1000 }},
+    "type" : "{{ section.settings.slide_animation }}",
+    "pagination": {{ section.settings.slide_dots }},
+    "gap": "20px",
+    "perPage": 2,
+    "arrows" : {{ section.settings.slide_arrows }},
+    "rewind" : {{ section.settings.infinite_scroll }},
+    "perMove": 1,
+    "breakpoints": {
+    "750": {
+      "perPage": 1,
+      "destroy": true
+    }
+    }
+  }
+{% endcapture %} 
+
+
+<div class="custom-blogs padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="custom-blogs__heading-section color-{{ section.settings.color_scheme }}">
+      {% if section.settings.section_heading != blank %}
+        <h2> {{ section.settings.section_heading }} </h2>   
+      {% endif %}  
+      
+      {% if section.settings.section_button_text != blank %}
+        <div class="">
+          <a class="custom-button-secondary_color" 
+            {% if section.settings.section_button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.section_button_link }}"
+            {% endif %}>
+            {{ section.settings.section_button_text }}
+          </a>
+        </div>    
+      {% endif %}  
+    </div>
+     <custom-slider>
+      <section class="splide" aria-label="Blogs Splide" data-slider-options='{{ slider-options-data }}'>
+        <div class="splide__track">
+          <ul class="splide__list custom-blogs__splide-wrapper">
+            {% for blogPost in section.settings.blog.articles %}
+              
+              <li class="splide__slide custom-blogs__slide color-{{ section.settings.color_scheme }}">  
+                  <div class="custom-blogs__image">  
+                    {% render "responsive-image", desktopImage: blogPost.image, class: "media media--square" %}
+                  </div>
+                  <div class="custom-blogs__blog-content">
+                    <div>
+                      {% if blogPost.tags != blank %}
+                        <div class="custom-blogs__tags color-{{ section.settings.color_scheme }}">
+                          {% for tag in blogPost.tags %}
+                            <a class="custom-blogs__tag" href="/blogs/news/tagged/{{ tag | handleize }}"> {{ tag }} </a>
+                          {% endfor %}  
+                        </div>            
+                      {% endif %}  
+                      <h2 class="h3 custom-blogs__title"> {{ blogPost.title }}</h2>
+                      <h2 class="h4 custom-blogs__author">Publish by: {{ blogPost.author }}</h2>
+                      <div class="h4 custom-blogs__info"> {{ blogPost.excerpt}} </div>
+                    </div>
+                    <div>
+                      <hr class="custom-blogs__hr-line"/>
+                      <div class="custom-blogs__read-more">    
+                        <a href="{{ blogPost.url }}">Read more</a>
+                        <div class="">{{ blogPost.created_at | date: '%B %d, %Y'}}</div>
+                      </div>
+                    </div>            
+                  </div>
+              </li>
+            {% endfor %}  
+          </ul>
+        </div>
+      </section>
+    </custom-slider>
+    
+  </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Custom Blogs",
+    "tag": "section",
+    "settings": [
+       {
+        "type": "blog",
+        "id": "blog",
+        "label": "Blogs"
+      },
+      {
+        "type": "text",
+        "id": "section_heading",
+        "label": "Section heading",
+        "default": "Let You Know"
+      },
+      {
+        "type": "text",
+        "id": "section_button_text",
+        "label": "Section button text",
+        "default": "View All"
+      },
+      {
+        "type": "url",
+        "id": "section_button_link",
+        "label": "Section button link"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "Color scheme"
+      },
+      {
+        "type" : "header",
+        "content" : "Slider settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "slider_autoplay",
+        "label": "Slide autoplay",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_dots",
+        "label": "Show slide dots",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "slide_arrows",
+        "label": "Show slide arrows",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "infinite_scroll",
+        "label": "Infinite scroll",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "slider_autoplay_duration",
+        "label": "Slider autoplay duration",
+        "min" : 1,
+        "step":1,
+        "max" : 10,
+        "default": 3,
+        "unit": "sec"
+      },
+      {
+          "type": "header",
+          "content": "Section padding"
+      },
+      {
+          "type": "range",
+          "id": "padding_top",
+          "label": "Padding top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 20
+      },
+      {
+          "type": "range",
+          "id": "padding_bottom",
+          "label": "Padding bottom",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "default": 20
+      }
+    ],
+    "presets": [
+       {
+         "name": "Custom Blogs"
+       }
+    ]
+  }
+{% endschema %}

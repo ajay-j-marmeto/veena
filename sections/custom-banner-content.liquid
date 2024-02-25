@@ -1,0 +1,234 @@
+{{ "section-custom-banner-content.css" | asset_url | stylesheet_tag }} 
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2  }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    @media (min-width: 750px) {
+      .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+{% endstyle %}
+
+<div class="banner-content padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="grid grid--1-col">
+      <div class="grid__item banner-content__position-rel custom-border-radius">
+        {% if section.settings.desktop_image != blank %}
+          <div class="banner-content__image {{ section.settings.image_padding }}">
+            {% render 'responsive-image',
+              desktopImage: section.settings.desktop_image,
+              mobileImage: section.settings.mobile_image
+            %}
+          </div>
+        {% else %}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag }}
+        {% endif %}
+
+        <div class="banner-content__text-container {{ section.settings.alignment_position }}">
+          <div class="banner-content__text-align {{ section.settings.text_alignment }} color-{{ section.settings.color_scheme }}">
+            {% if section.settings.caption != blank %}
+              <h2 class="h4">{{ section.settings.caption }}</h2>
+            {% endif %}
+
+            {% if section.settings.heading != blank %}
+              <h2 class="h1 banner-content__heading {{ section.settings.text_size }}">{{ section.settings.heading }}</h2>
+            {% endif %}
+
+            {% if section.settings.description != blank %}
+              <div class="h3 banner-content__description">{{ section.settings.description }}</div>
+            {% endif %}
+
+            {% if section.settings.button_text != blank %}
+              <a
+                class="custom-button-primary-transparent"
+                {% if section.settings.button_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                  href="{{ section.settings.button_link }}"
+                {% endif %}
+              >
+                {{ section.settings.button_text }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner Content",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Image (Mobile)"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "Caption",
+      "default": "Introduce"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "We Believe in the Power of Fashion"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>fashion emerges as the universal language that speaks volumes without words.<p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Shop more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme",
+      "default": "scheme_1"
+    },
+    {
+      "type": "select",
+      "id": "text_size",
+      "label": "Heading size",
+      "options": [
+        {
+          "value": "h3",
+          "label": "Small"
+        },
+        {
+          "value": "h2",
+          "label": "Medium"
+        },
+        {
+          "value": "h1",
+          "label": "Large"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "header",
+      "content": "Alignment Settings"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "alignment_position",
+      "label": "Desktop content position",
+      "options": [
+        {
+          "value": "align-start justify-start",
+          "label": "Top left"
+        },
+        {
+          "value": "align-start justify-center",
+          "label": "Top center"
+        },
+        {
+          "value": "align-start justify-end",
+          "label": "Top right"
+        },
+        {
+          "value": "align-center justify-start",
+          "label": "Middle left"
+        },
+        {
+          "value": "align-center justify-center",
+          "label": "Middle center"
+        },
+        {
+          "value": "align-center justify-end",
+          "label": "Middle right"
+        },
+        {
+          "value": "align-end justify-start",
+          "label": "Bottom left"
+        },
+        {
+          "value": "align-end justify-center",
+          "label": "Bottom center"
+        },
+        {
+          "value": "align-end justify-end",
+          "label": "Bottom end"
+        }
+      ],
+      "default": "align-center justify-center"
+    },
+    {
+      "type": "header",
+      "content": "Section padding settings"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner Content"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,27 @@
+
+{{'snippet-custom-color-hovering-button.css' |  asset_url |  stylesheet_tag}}
+
+{%  style  %}
+
+    .custom-color-hovering-button-{{sectionId}} {
+        background-color: {{backgroundColor}}
+    }
+
+    .custom-color-hovering-button-{{sectionId}}::before {
+        background-color: {{hoverColor}}
+    }
+
+    .custom-color-hovering-button-{{sectionId}} {
+        color: {{textColor}}
+    }
+
+    .custom-color-hovering-button-{{sectionId}}:hover {
+        color: {{hoverTextColor}}
+    }
+
+{% endstyle %}
+
+
+<a class="custom-color-hovering-button {{class}} custom-color-hovering-button-{{sectionId}} button" href={{buttonLink}}>
+    <span>{{buttonText}}</span>
+</a>

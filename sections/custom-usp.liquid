@@ -1,0 +1,147 @@
+{{ "section-custom-usp.css" | asset_url  | stylesheet_tag}}
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2  }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    @media (min-width: 750px) {
+      .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+{% endstyle %}
+
+
+<div class="custom-usp padding-{{ section.id }}">
+    <div class="page-width">
+      <div class="grid grid--1-col grid--4-col-desktop custom-usp__grid">
+        {% if section.blocks.size > 0  %}
+          {% for block in section.blocks %}
+            <div class="grid__item">
+                <div class="{{ block.settings.text_alignment }} custom-usp_text color-{{ block.settings.usp_color_scheme }}">
+                  {% if block.settings.svg_embed != blank %}
+                    <div class="custom-usp__icon">
+                      {{ block.settings.svg_embed }}
+                    </div>
+                  {% else %}
+                    {{ "image" | placeholder_svg_tag }}
+                  {% endif %}
+  
+                  {% if block.settings.heading != blank %}
+                    <h2 class="h3"> {{ block.settings.heading }} </h2>
+                  {% endif %}
+                
+                  {% if block.settings.description != blank %}
+                    <div class="h4 custom-usp__description"> {{ block.settings.description }} </div>
+                  {% endif %}
+            
+                </div>
+            </div>
+          {% endfor %}
+  
+        {% else %}
+          {% for i in (1..4) %}
+            <div class="grid__item">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endfor %}
+        {% endif %} 
+        
+      </div>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Custom USP",
+    
+    "settings": [
+      {
+      "type" : "header",
+      "content" : "Section Padding Settings"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section padding top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section Padding bottom",
+        "default": 36
+      }
+    ],
+    "blocks": [
+      {
+        "type" : "usp",
+        "name" : "usp",
+        "settings": [
+          {
+            "type": "html",
+            "id": "svg_embed",
+            "label": "SVG icon"
+          },
+          {
+            "type" : "text",
+            "id" : "heading",
+            "label" : "Heading",
+            "default" : "Daily deals"
+          },
+          {
+            "type" : "richtext",
+            "id" : "description",
+            "label" : "Description",
+            "default" : "<p>that bring a touch of excitement to your everyday shopping experience.<p>"
+          },
+          {
+            "type": "color_scheme",
+            "id": "usp_color_scheme",
+            "label": "Color Scheme",
+            "default": "scheme_1"
+          },
+          {
+          "type": "select",
+          "id": "text_alignment",
+          "label": "Text Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name" : "Custom USP"
+      }
+      
+    ]
+  }
+{% endschema %}

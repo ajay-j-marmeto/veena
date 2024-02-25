@@ -1,0 +1,147 @@
+{{ 'section-custom-faq.css' | asset_url |stylesheet_tag }}
+
+{% style %}
+      .padding-{{ section.id }}{
+          padding-top:{{section.settings.padding_top}}px;
+          padding-bottom:{{section.settings.padding_bottom}}px;
+      }
+
+      .faq-section{
+          background:{{section.settings.background_color}};
+      }
+
+      @media screen and (min-width:749px){
+        .padding-{{ section.id }}{
+            padding-top:{{section.settings.padding_top}}px;
+            padding-bottom:{{section.settings.padding_bottom}}px;
+        }
+      }
+
+      {%  for block in section.blocks %}
+        .plus-and-minus{{ block.id }}::before {
+            content: "+";
+            font-weight:bold;
+            font-size:25px;
+            display: inline-block;
+            text-align: center;
+
+        }
+        details[open] .plus-and-minus{{ block.id }}::before {
+            content: "-";
+        }
+      {% endfor %}
+
+{% endstyle %}
+
+<div class="faq-section padding-{{ section.id }}">
+    <div class="page-width">
+      <div class="faq-section__info">
+        {% if section.settings.section_title != blank or section.settings.section_description != blank %}
+          <h2 class="h1 faq-section__title">{{ section.settings.section_title }}</h2>
+          <div class="h4 faq-section__description">{{ section.settings.section_description }}</div>
+        {% endif %}
+      </div>
+      <div class="faq-section__faq-container">
+        {% for block in section.blocks %}
+          <div class="faq-section__faq">
+            {% if block.settings.faq_heading != blank and block.settings.faq_description != blank %}
+              <details id="block{{ block.id }}">
+                <summary class="faq-section__faq-summary">
+                  <div class="faq-section__faq-info">
+                    <h2 class="h3 faq-section__faq-count">{{ forloop.index }}.</h2>
+                    <h2 class="h3 faq-section__faq-heading">{{ block.settings.faq_heading }}</h2>
+                  </div>
+                  <div>
+                    <span class="plus-and-minus{{ block.id }} faq-section__plus-minus"></span>
+                  </div>
+                </summary>
+                <div class="faq-section__faq-description">
+                  {{ block.settings.faq_description }}
+                </div>
+              </details>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Custom FAQ",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#F5F5F5"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title",
+      "default": "FAQ"
+    },
+    {
+      "type": "richtext",
+      "id": "section_description",
+      "label": "Section description",
+      "default": "<p>Ensure that your FAQs are regularly updated based on common customer queries and changes in your business operations.</p>"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color Scheme"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 16
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ blocks",
+      "settings": [
+        {
+          "type": "text",
+          "id": "faq_heading",
+          "label": "FAQ question",
+          "default": "How can I track my order ?"
+        },
+        {
+          "type": "richtext",
+          "id": "faq_description",
+          "label": "FAQ description",
+          "default": "<p>Once your order has been processed and shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status and location of your package through our shipping carrier's website.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom FAQ"
+    }
+  ]
+}
+{% endschema %}

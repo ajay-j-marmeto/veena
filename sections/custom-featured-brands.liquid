@@ -1,0 +1,117 @@
+{{ "section-featured-brands.css" | asset_url | stylesheet_tag }}
+
+{% style %}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+{% capture slider-options-data %}
+  {
+    "autoplay" : false,
+    "type" : "loop",
+    "pagination" : false,
+    "perPage": 8,
+    "arrows" : false,
+    "rewind" : true,
+    "drag": true,
+    "perMove": 1,
+    "gap": "20px",
+    "dots": false,
+    "breakpoints":{
+    "749": {
+    "perPage": 3,
+    "autoplay": true
+    }
+    }
+  }
+{% endcapture %}
+
+<div class="featured-brands padding-{{section.id}} ">
+    <div class="page-width">
+      <custom-slider>
+        <section
+          class="splide custom-border-radius"
+          aria-label="Featured Brands Slide Show"
+          data-slider-options='{{ slider-options-data }}'
+        >
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% if section.blocks != blank %}
+                {% for block in section.blocks %}
+                  <li class="splide__slide">
+                    <div class="featured-brands__image">
+                      {% if block.settings.image != blank %}
+                        {% render "responsive-image" , desktopImage: block.settings.image %}
+                      {% endif %}  
+                    </div>
+                  </li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+          </div>
+        </section>
+      </custom-slider>
+    </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Featured Brands",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Padding top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Padding bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "default": 20
+      }  
+    ],
+    "blocks": [
+      {
+        "type":"featured-brands",
+        "name": "featured brands",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          } 
+        ]
+      }
+      
+    ],
+    "presets":[
+      {
+        "name": "Featured Brands"
+      }
+    ]
+  }
+{% endschema %}

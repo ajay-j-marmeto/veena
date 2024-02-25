@@ -1,0 +1,167 @@
+
+{{'section-custom-scrolling-text.css' |  asset_url |  stylesheet_tag}}
+
+{%  style  %}
+    .padding-{{section.id}} {
+        padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+        padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+    @media screen and (min-width: 750px) {
+        .padding-{{section.id}} {
+            padding-top: {{ section.settings.padding_top }}px;
+            padding-bottom: {{ section.settings.padding_bottom }}px;
+        }
+    }
+{% endstyle %}
+<div class="scrolling-banner padding-{{section.id}}">
+    <div class="scrolling-banner__scrolling-wrapper">
+        <div class="scrolling-banner__scrolling-items-wrapper">
+            {% for rotation in (1..2) %}
+                {% for block in section.blocks %}
+                    <div class="scrolling-banner__scrolling-item">
+                        <div class="scrolling-banner__icon-wrapper">
+                            {% if block.settings.scrolling_item_icon %}
+                                {{block.settings.scrolling_item_icon}}
+                            {% else %}
+                                {% render 'icon-unavailable' %}
+                            {% endif %}
+                        </div>
+                        <div class="scrolling-banner__scrolling-text">
+                            {{block.settings.scrolling_text}}
+                        </div>
+                        {% if block.settings.button_link !=blank %}
+                            {% if block.settings.display_button == "display-as-button" %}
+                                {% render 'custom-color-hovering-button',
+                                    class: {{block.settings.display_button}},
+                                    sectionId: {{section.id}},
+                                    textColor: {{block.settings.button_color}},
+                                    hoverTextColor: {{block.settings.button_hover_color}},
+                                    backgroundColor: {{block.settings.button_background_color}}
+                                    hoverColor: {{block.settings.button_hover_background_color}}, 
+                                    buttonLink: {{block.settings.button_url}},
+                                    buttonText: {{block.settings.button_text}}
+                                %}
+                            {% elsif block.settings.display_button == "display-as-text" %}
+                                <a class="scrolling-banner__plain-button" href={{block.settings.button_url}}>
+                                    <span>
+                                        {{block.settings.button_text}}
+                                    </span>
+                                </a>
+                            {% endif %}
+                        {% else %}
+                            <a role="link" aria-disabled="true">
+                                <span>
+                                    {{block.settings.button_text}}
+                                </span>
+                            </a>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+    "name": "Custom scrolling banner",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Section padding"
+        },
+        {
+            "type": "range",
+            "id": "padding_top",
+            "label": "Padding top",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        },
+        {
+            "type": "range",
+            "id": "padding_bottom",
+            "label": "Padding bottom",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "px",
+            "default": 20
+        }   
+    ],
+    "blocks": [
+        {
+            "name": "Scrolling item",
+            "type": "scrolling-item",
+            "settings": [
+                {
+                    "type": "html",
+                    "id": "scrolling_item_icon",
+                    "label": "Icon"
+                },
+                {
+                    "type": "richtext",
+                    "id": "scrolling_text",
+                    "label": "Text",
+                    "default": "<p>Scrolling text</p>"
+                },
+                {
+                    "type": "select",
+                    "id": "display_button",
+                    "label": "Button/Text",
+                    "options": [
+                        {
+                            "label": "Button",
+                            "value": "display-as-button"
+                        },
+                        {
+                            "label": "Text",
+                            "value": "display-as-text"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button text",
+                    "default": "Button text"
+                },
+                {
+                    "type": "color",
+                    "id": "button_color",
+                    "label": "Button color",
+                    "default": "#000000"
+                },
+                {
+                    "type": "color",
+                    "id": "button_background_color",
+                    "label": "Button background color"
+                },
+                {
+                    "type": "color",
+                    "id": "button_hover_color",
+                    "label": "Button on hover color"
+                },
+                {
+                    "type": "color",
+                    "id": "button_hover_background_color",
+                    "label": "Button on hover background color"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "Button link"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Custom scrolling banner"
+        }
+    ]
+}
+{% endschema %}

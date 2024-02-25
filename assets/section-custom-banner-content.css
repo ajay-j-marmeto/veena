@@ -1,0 +1,39 @@
+.banner-content__image{
+  position: relative;
+  padding-bottom: 35%;
+}
+
+.banner-content__image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.banner-content__text-align{
+  background: none;
+  max-width: 50rem;
+}
+
+.banner-content__position-rel{
+  position: relative;
+}
+
+.banner-content__text-container{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 24px;
+}
+
+.banner-content__description p {
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+}

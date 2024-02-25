@@ -282,6 +282,409 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_usp_QRQVeh": {
+      "type": "custom-usp",
+      "blocks": {
+        "usp_bchNTU": {
+          "type": "usp",
+          "settings": {
+            "svg_embed": "<svg width=\"32\" height=\"40\" viewbox=\"0 0 32 40\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n                <path d=\"M25.7446 13.383C23.4375 10.8734 21.4462 8.62656 21.4462 5.23227C21.4462 3.30164 21.8307 1.42938 21.8341 1.41109C21.9062 1.06547 21.8193 0.706172 21.5961 0.432656C21.3741 0.159063 21.04 0 20.6875 0C18.7042 0 13.0428 1.46828 13.0428 7.99141C13.0428 12.1605 12.1982 13.5227 11.8343 13.882C11.6295 14.0856 11.3559 14.2001 11.1339 14.1669C10.0548 14.1543 9.85102 12.6093 9.84414 12.5509C9.80062 12.1527 9.55578 11.8037 9.19523 11.6274C8.83477 11.4489 8.41242 11.4684 8.06797 11.6789C3.49617 14.4725 0.765625 19.3351 0.765625 24.6875C0.765625 33.0875 7.6 40 16 40C24.4 40 31.2344 33.0875 31.2344 24.6875C31.2344 19.3603 28.3173 16.1845 25.7446 13.383Z\" fill=\"url(#paint0_linear_1_3551)\" style=\"fill: url(#paint0_linear_1_3551)\"><\/path>\n                <path d=\"M14.8281 22.3433C14.8281 20.4047 13.2511 18.8276 11.3125 18.8276C9.37391 18.8276 7.79688 20.4047 7.79688 22.3433C7.79688 24.2819 9.37391 25.8589 11.3125 25.8589C13.2511 25.8589 14.8281 24.2819 14.8281 22.3433ZM10.1406 22.3433C10.1406 21.6967 10.6659 21.1714 11.3125 21.1714C11.9591 21.1714 12.4844 21.6967 12.4844 22.3433C12.4844 22.9898 11.9591 23.5151 11.3125 23.5151C10.6659 23.5151 10.1406 22.9898 10.1406 22.3433ZM20.6875 25.8589C18.7489 25.8589 17.1719 27.4359 17.1719 29.3745C17.1719 31.3131 18.7489 32.8901 20.6875 32.8901C22.6261 32.8901 24.2031 31.3131 24.2031 29.3745C24.2031 27.4359 22.6262 25.8589 20.6875 25.8589ZM20.6875 30.5464C20.0409 30.5464 19.5156 30.0211 19.5156 29.3745C19.5156 28.7279 20.0409 28.2026 20.6875 28.2026C21.3341 28.2026 21.8594 28.7279 21.8594 29.3745C21.8594 30.0211 21.3341 30.5464 20.6875 30.5464ZM21.4199 19.084C20.9141 18.6812 20.1782 18.7658 19.772 19.2671L10.397 30.9858C9.99297 31.4917 10.0754 32.2287 10.5801 32.6338C11.0838 33.0362 11.8201 32.9571 12.228 32.4507L21.603 20.7319C22.007 20.2261 21.9246 19.4891 21.4199 19.084Z\" fill=\"url(#paint1_linear_1_3551)\" style=\"fill: url(#paint1_linear_1_3551)\"><\/path>\n                <defs>\n                <lineargradient id=\"paint0_linear_1_3551\" x1=\"16\" y1=\"40\" x2=\"16\" y2=\"0\" gradientunits=\"userSpaceOnUse\">\n                <stop stop-color=\"#FD5900\"><\/stop>\n                <stop offset=\"1\" stop-color=\"#FFDE00\"><\/stop>\n                <\/lineargradient>\n                <lineargradient id=\"paint1_linear_1_3551\" x1=\"16\" y1=\"32.8901\" x2=\"16\" y2=\"18.8276\" gradientunits=\"userSpaceOnUse\">\n                <stop stop-color=\"#FFE59A\"><\/stop>\n                <stop offset=\"1\" stop-color=\"#FFFFD5\"><\/stop>\n                <\/lineargradient>\n                <\/defs>\n                <\/svg>",
+            "heading": "Daily deals",
+            "description": "<p>that bring a touch of excitement to your everyday shopping experience.<\/p><p><\/p>",
+            "usp_color_scheme": "scheme-1",
+            "text_alignment": "center"
+          }
+        },
+        "usp_wmPUTY": {
+          "type": "usp",
+          "settings": {
+            "svg_embed": "<svg width=\"36\" height=\"36\" viewbox=\"0 0 36 36\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n            <path d=\"M28.2853 0H4.28565C1.91875 0 0 1.91875 0 4.28565V29.9995C0 32.3664 1.91875 34.2852 4.28565 34.2852H28.2853C30.6522 34.2852 32.5709 32.3664 32.5709 29.9995V4.28565C32.5709 1.91875 30.6522 0 28.2853 0Z\" style=\"fill: #D5825F\"><\/path>\n            <path d=\"M23.1425 0V11.6055C23.142 11.9639 23.0291 12.313 22.8198 12.6039C22.6106 12.8948 22.3154 13.1128 21.9758 13.2273C21.6362 13.3417 21.2693 13.3469 20.9267 13.242C20.584 13.1372 20.2828 12.9276 20.0654 12.6427L19.9712 12.5141C19.5683 11.9827 19.3026 11.657 19.0198 11.657C18.6512 11.657 18.3598 12.0084 17.9655 12.5398C17.7986 12.8547 17.5593 13.1254 17.2672 13.3296C16.9751 13.5338 16.6386 13.6656 16.2855 13.7141C15.9296 13.6655 15.5882 13.5417 15.2838 13.3511C14.9793 13.1605 14.7189 12.9073 14.5198 12.6084C14.0913 12.1455 13.6455 11.657 13.1998 11.657C13.0713 11.657 12.9341 11.6998 12.5998 12.2398C12.4036 12.5565 12.1096 12.8006 11.7622 12.9352C11.4149 13.0698 11.0331 13.0876 10.6747 12.9859C10.3163 12.8842 10.0009 12.6685 9.77599 12.3715C9.55113 12.0745 9.42913 11.7124 9.42847 11.3398V0H23.1425Z\" style=\"fill: #FFD0BB\"><\/path>\n            <path d=\"M26.571 36.0002C31.7782 36.0002 35.9994 31.7789 35.9994 26.5717C35.9994 21.3646 31.7782 17.1433 26.571 17.1433C21.3638 17.1433 17.1426 21.3646 17.1426 26.5717C17.1426 31.7789 21.3638 36.0002 26.571 36.0002Z\" style=\"fill: #4DD82B\"><\/path>\n            <path d=\"M11.9997 25.7139H5.99983C5.77251 25.7139 5.55449 25.6236 5.39375 25.4628C5.233 25.3021 5.1427 25.0841 5.1427 24.8568C5.1427 24.6294 5.233 24.4114 5.39375 24.2507C5.55449 24.0899 5.77251 23.9996 5.99983 23.9996H11.9997C12.2271 23.9996 12.4451 24.0899 12.6058 24.2507C12.7666 24.4114 12.8569 24.6294 12.8569 24.8568C12.8569 25.0841 12.7666 25.3021 12.6058 25.4628C12.4451 25.6236 12.2271 25.7139 11.9997 25.7139Z\" style=\"fill: white\"><\/path>\n            <path d=\"M11.9997 29.1425H5.99983C5.77251 29.1425 5.55449 29.0522 5.39375 28.8914C5.233 28.7307 5.1427 28.5127 5.1427 28.2854C5.1427 28.058 5.233 27.84 5.39375 27.6793C5.55449 27.5185 5.77251 27.4282 5.99983 27.4282H11.9997C12.2271 27.4282 12.4451 27.5185 12.6058 27.6793C12.7666 27.84 12.8569 28.058 12.8569 28.2854C12.8569 28.5127 12.7666 28.7307 12.6058 28.8914C12.4451 29.0522 12.2271 29.1425 11.9997 29.1425Z\" style=\"fill: white\"><\/path>\n            <path d=\"M24.8568 28.285C24.6295 28.2849 24.4115 28.1946 24.2508 28.0338L21.6794 25.4625C21.5187 25.3017 21.4285 25.0837 21.4285 24.8565C21.4285 24.6292 21.5187 24.4112 21.6794 24.2505L24.2508 21.6791C24.4125 21.5229 24.629 21.4366 24.8537 21.4385C25.0785 21.4405 25.2934 21.5306 25.4524 21.6895C25.6113 21.8484 25.7014 22.0634 25.7034 22.2882C25.7053 22.5129 25.6189 22.7294 25.4628 22.8911L23.4974 24.8565L25.4628 26.8219C25.5826 26.9417 25.6642 27.0944 25.6973 27.2607C25.7303 27.4269 25.7134 27.5992 25.6485 27.7558C25.5837 27.9124 25.4738 28.0463 25.3329 28.1405C25.192 28.2347 25.0263 28.2849 24.8568 28.285Z\" style=\"fill: white\"><\/path>\n            <path d=\"M27.4281 25.7139H22.2854C22.058 25.7139 21.84 25.6236 21.6793 25.4628C21.5185 25.3021 21.4282 25.0841 21.4282 24.8568C21.4282 24.6294 21.5185 24.4114 21.6793 24.2507C21.84 24.0899 22.058 23.9996 22.2854 23.9996H27.4281C27.6555 23.9996 27.8735 24.0899 28.0342 24.2507C28.195 24.4114 28.2853 24.6294 28.2853 24.8568C28.2853 25.0841 28.195 25.3021 28.0342 25.4628C27.8735 25.6236 27.6555 25.7139 27.4281 25.7139Z\" style=\"fill: white\"><\/path>\n            <path d=\"M28.2852 30.8567H23.9996C23.7723 30.8567 23.5542 30.7664 23.3935 30.6056C23.2328 30.4449 23.1425 30.2269 23.1425 29.9995C23.1425 29.7722 23.2328 29.5542 23.3935 29.3935C23.5542 29.2327 23.7723 29.1424 23.9996 29.1424H28.2852C28.7399 29.1424 29.1759 28.9618 29.4974 28.6403C29.8189 28.3188 29.9995 27.8828 29.9995 27.4282C29.9995 26.9735 29.8189 26.5375 29.4974 26.216C29.1759 25.8945 28.7399 25.7139 28.2852 25.7139H23.9996C23.7723 25.7139 23.5542 25.6236 23.3935 25.4628C23.2328 25.3021 23.1425 25.0841 23.1425 24.8568C23.1425 24.6294 23.2328 24.4114 23.3935 24.2507C23.5542 24.0899 23.7723 23.9996 23.9996 23.9996H28.2852C29.1945 23.9996 30.0666 24.3609 30.7096 25.0038C31.3525 25.6468 31.7138 26.5189 31.7138 27.4282C31.7138 28.3375 31.3525 29.2095 30.7096 29.8525C30.0666 30.4955 29.1945 30.8567 28.2852 30.8567Z\" style=\"fill: white\"><\/path>\n            <\/svg>",
+            "heading": "Return Shipping",
+            "description": "<p>return shipping costs unless the item received is damaged, defective, or incorrect.<\/p>",
+            "usp_color_scheme": "scheme_1",
+            "text_alignment": "center"
+          }
+        },
+        "usp_PGpDBD": {
+          "type": "usp",
+          "settings": {
+            "svg_embed": "<svg width=\"39\" height=\"34\" viewbox=\"0 0 39 34\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n            <path d=\"M32.5501 8.95435H7.60422C7.09529 8.95435 6.6072 9.15652 6.24734 9.51638C5.88747 9.87625 5.6853 10.3643 5.6853 10.8733V13.4318H33.1897V9.59398C33.1897 9.42434 33.1223 9.26165 33.0024 9.14169C32.8824 9.02174 32.7197 8.95435 32.5501 8.95435Z\" style=\"fill: #1B67CC\"><\/path>\n            <path d=\"M28.0727 0H12.7214C12.3682 0 12.0818 0.286376 12.0818 0.639638V13.4324C12.0818 13.7857 12.3682 14.072 12.7214 14.072H28.0727C28.426 14.072 28.7124 13.7857 28.7124 13.4324V0.639638C28.7124 0.286376 28.426 0 28.0727 0Z\" style=\"fill: #4CBFBF\"><\/path>\n            <path d=\"M25.5142 4.47714C25.1751 4.47675 24.8499 4.34185 24.6101 4.10202C24.3702 3.86219 24.2353 3.53703 24.2349 3.19787C24.235 3.11386 24.2184 3.03068 24.1863 2.95306C24.1542 2.87545 24.107 2.80492 24.0476 2.74552C23.9882 2.68612 23.9177 2.63901 23.8401 2.60687C23.7625 2.57474 23.6793 2.55821 23.5953 2.55823H17.1989C17.0293 2.55823 16.8666 2.62562 16.7466 2.74557C16.6267 2.86553 16.5593 3.02822 16.5593 3.19787C16.559 3.53705 16.4241 3.86224 16.1842 4.10208C15.9444 4.34191 15.6192 4.4768 15.28 4.47714C15.1104 4.47714 14.9477 4.54453 14.8277 4.66449C14.7078 4.78444 14.6404 4.94714 14.6404 5.11678V13.4321C14.6404 13.6017 14.7078 13.7644 14.8277 13.8844C14.9477 14.0043 15.1104 14.0717 15.28 14.0717H25.5142C25.5982 14.0717 25.6814 14.0552 25.759 14.0231C25.8366 13.9909 25.9072 13.9438 25.9666 13.8844C26.026 13.825 26.0731 13.7545 26.1052 13.6769C26.1374 13.5993 26.1539 13.5161 26.1539 13.4321V5.11678C26.1539 5.03277 26.1374 4.94959 26.1052 4.87197C26.0731 4.79436 26.026 4.72384 25.9666 4.66444C25.9072 4.60504 25.8366 4.55792 25.759 4.52579C25.6814 4.49365 25.5982 4.47712 25.5142 4.47714Z\" style=\"fill: #3BA5AD\"><\/path>\n            <path d=\"M20.3972 10.2339C19.5493 10.2349 18.7364 10.5722 18.1368 11.1717C17.5372 11.7713 17.2 12.5842 17.199 13.4321C17.199 13.6017 17.2664 13.7644 17.3863 13.8844C17.5063 14.0043 17.669 14.0717 17.8386 14.0717H22.9557C23.0397 14.0717 23.1229 14.0552 23.2005 14.0231C23.2781 13.9909 23.3487 13.9438 23.4081 13.8844C23.4675 13.825 23.5146 13.7545 23.5467 13.6769C23.5788 13.5993 23.5954 13.5161 23.5954 13.4321C23.5944 12.5842 23.2571 11.7713 22.6575 11.1717C22.058 10.5722 21.2451 10.2349 20.3972 10.2339Z\" style=\"fill: #2E8C99\"><\/path>\n            <path d=\"M34.469 12.7917H7.60422C7.09529 12.7917 6.6072 12.5895 6.24734 12.2297C5.88747 11.8698 5.6853 11.3817 5.6853 10.8728V33.2601C5.6853 33.4298 5.75269 33.5925 5.87265 33.7124C5.9926 33.8324 6.1553 33.8998 6.32494 33.8998H34.469C34.9779 33.8998 35.466 33.6976 35.8259 33.3377C36.1857 32.9779 36.3879 32.4898 36.3879 31.9808V14.7106C36.3879 14.2017 36.1857 13.7136 35.8259 13.3538C35.466 12.9939 34.9779 12.7917 34.469 12.7917Z\" style=\"fill: #3083DC\"><\/path>\n            <path d=\"M38.307 19.1887H34.1493C33.0467 19.1887 31.9892 19.6268 31.2094 20.4065C30.4297 21.1862 29.9917 22.2437 29.9917 23.3464C29.9917 24.449 30.4297 25.5066 31.2094 26.2863C31.9892 27.066 33.0467 27.504 34.1493 27.504H38.307C38.391 27.504 38.4742 27.4875 38.5518 27.4554C38.6294 27.4232 38.6999 27.3761 38.7593 27.3167C38.8187 27.2573 38.8658 27.1868 38.898 27.1092C38.9301 27.0316 38.9466 26.9484 38.9466 26.8644V19.8284C38.9466 19.7444 38.9301 19.6612 38.898 19.5836C38.8658 19.5059 38.8187 19.4354 38.7593 19.376C38.6999 19.3166 38.6294 19.2695 38.5518 19.2374C38.4742 19.2052 38.391 19.1887 38.307 19.1887Z\" style=\"fill: #1B67CC\"><\/path>\n            <path d=\"M34.1491 24.9461C35.0323 24.9461 35.7482 24.2302 35.7482 23.347C35.7482 22.4639 35.0323 21.7479 34.1491 21.7479C33.266 21.7479 32.55 22.4639 32.55 23.347C32.55 24.2302 33.266 24.9461 34.1491 24.9461Z\" style=\"fill: #0F51BA\"><\/path>\n            <path d=\"M14.8083 17.7838C12.3505 17.5591 10.0227 16.5785 8.14517 14.9766C8.02978 14.8789 7.88348 14.8253 7.73229 14.8253C7.58109 14.8253 7.43479 14.8789 7.3194 14.9766C5.44184 16.5785 3.11406 17.5591 0.656294 17.7838C0.493892 17.794 0.341472 17.8656 0.230065 17.9842C0.118658 18.1028 0.0566413 18.2594 0.0566406 18.4222L0.0566406 23.9628C0.0588448 26.1929 0.795713 28.3601 2.1533 30.1294C3.51088 31.8986 5.41355 33.1713 7.56707 33.7507C7.6755 33.7798 7.78971 33.7798 7.89814 33.7507C10.0515 33.1712 11.954 31.8984 13.3115 30.1292C14.6689 28.3599 15.4057 26.1928 15.4079 23.9628V18.4222C15.4079 18.2594 15.3459 18.1028 15.2345 17.9842C15.1231 17.8656 14.9707 17.794 14.8083 17.7838Z\" style=\"fill: #FFCB5B\"><\/path>\n            <path d=\"M12.9834 19.4608C11.2325 19.0647 9.57257 18.3407 8.09113 17.327C7.98532 17.2553 7.86042 17.2169 7.73258 17.2169C7.60474 17.2169 7.47984 17.2553 7.37403 17.327C5.89258 18.3407 4.2326 19.0647 2.48178 19.4608C2.33859 19.4914 2.21024 19.5702 2.11815 19.6841C2.02607 19.7979 1.97583 19.9399 1.97583 20.0864V23.962C1.97503 25.6742 2.50963 27.3439 3.5048 28.7372C4.49997 30.1306 5.9059 31.1779 7.52581 31.7326C7.66006 31.7784 7.8057 31.7784 7.93995 31.7326C9.55972 31.1778 10.9655 30.1304 11.9605 28.7371C12.9556 27.3437 13.4901 25.6742 13.4893 23.962V20.0864C13.4893 19.9399 13.4391 19.798 13.347 19.6841C13.2549 19.5702 13.1265 19.4914 12.9834 19.4608Z\" style=\"fill: #C86300\"><\/path>\n            <path d=\"M7.09278 26.1194C7.00877 26.1195 6.92557 26.103 6.84796 26.0709C6.77036 26.0387 6.69987 25.9915 6.64056 25.932L5.36128 24.6527C5.30113 24.5935 5.2533 24.523 5.22054 24.4452C5.18778 24.3674 5.17075 24.2839 5.17042 24.1995C5.17009 24.1151 5.18647 24.0314 5.21862 23.9534C5.25076 23.8753 5.29804 23.8044 5.35773 23.7447C5.41742 23.6851 5.48833 23.6378 5.56637 23.6056C5.64442 23.5735 5.72806 23.5571 5.81246 23.5574C5.89687 23.5578 5.98038 23.5748 6.05817 23.6075C6.13597 23.6403 6.20651 23.6881 6.26573 23.7483L7.09278 24.5753L9.19911 22.469C9.25843 22.4093 9.32895 22.3618 9.40663 22.3294C9.48431 22.297 9.56763 22.2803 9.6518 22.2802C9.73597 22.28 9.81934 22.2965 9.89713 22.3286C9.97492 22.3608 10.0456 22.408 10.1051 22.4675C10.1646 22.527 10.2118 22.5977 10.2439 22.6755C10.2761 22.7533 10.2926 22.8366 10.2924 22.9208C10.2923 23.005 10.2755 23.0883 10.2431 23.166C10.2107 23.2437 10.1633 23.3142 10.1036 23.3735L7.545 25.932C7.48569 25.9915 7.4152 26.0387 7.33759 26.0709C7.25998 26.103 7.17679 26.1195 7.09278 26.1194Z\" style=\"fill: white\"><\/path>\n            <\/svg>",
+            "heading": "secure payment",
+            "description": "<p>We accept a variety of secure payment methods, including major credit cards.<\/p>",
+            "usp_color_scheme": "scheme_1",
+            "text_alignment": "center"
+          }
+        },
+        "usp_J4JVt7": {
+          "type": "usp",
+          "settings": {
+            "svg_embed": "<svg width=\"42\" height=\"36\" viewbox=\"0 0 42 36\" fill=\"none\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\">\n            <path d=\"M20.1283 11.0195C20.3359 16.2516 24.5715 20.5702 29.7621 20.9855C31.2155 21.0685 32.6689 20.9024 33.9977 20.4872C34.7036 20.238 37.3197 21.5668 38.8146 22.3143C39.1883 22.4804 39.6451 22.1482 39.479 21.7329C38.9391 20.2796 38.1502 17.9126 38.5239 17.4974C40.3095 15.4627 41.3476 12.722 41.14 9.73221C40.7662 4.50005 36.4061 0.264491 31.1324 0.0153405C24.9452 -0.31686 19.8376 4.79072 20.1283 11.0195Z\" style=\"fill: #F5C0C0\"><\/path>\n            <path d=\"M29.9696 19.9885C29.6374 27.38 23.6994 33.4842 16.3494 34.0655C14.2732 34.1901 12.28 33.9409 10.3698 33.3596C9.41473 33.0274 5.719 34.8545 3.5597 35.9341C3.0614 36.1833 2.397 35.685 2.64615 35.1036C3.43512 33.0274 4.51477 29.7469 4.01647 29.124C1.48344 26.2588 0.0715915 22.397 0.320742 18.1614C0.860568 10.8115 7.0478 4.83186 14.4393 4.49966C23.1595 4.04289 30.3434 11.2682 29.9696 19.9885Z\" style=\"fill: #FF7171\"><\/path>\n            <path d=\"M11.3665 15.2554H19.0071C19.5054 15.2554 19.9622 14.7986 19.9622 14.3003C19.9622 13.802 19.5054 13.3452 19.0071 13.3452H11.3665C10.8682 13.3452 10.4114 13.802 10.4114 14.3003C10.3283 14.7986 10.7851 15.2554 11.3665 15.2554Z\" style=\"fill: white\"><\/path>\n            <path d=\"M19.0068 23.2285H11.3662C10.8679 23.2285 10.4111 23.6853 10.4111 24.1836C10.4111 24.6819 10.8679 25.1387 11.3662 25.1387H19.0068C19.5051 25.1387 19.9619 24.6819 19.9619 24.1836C20.0034 23.6853 19.5466 23.2285 19.0068 23.2285Z\" style=\"fill: white\"><\/path>\n            <path d=\"M22.9102 18.2449H7.42138C6.92308 18.2449 6.46631 18.7017 6.46631 19.2C6.46631 19.6983 6.92308 20.155 7.42138 20.155H22.8272C23.3255 20.155 23.7823 19.6983 23.7823 19.2C23.8653 18.7017 23.4085 18.2449 22.9102 18.2449Z\" style=\"fill: white\"><\/path>\n            <\/svg>",
+            "heading": "Help center",
+            "description": "<p>Absolutely, providing 24\/7 support is a great way to enhance customer satisfaction.<\/p>",
+            "usp_color_scheme": "scheme_1",
+            "text_alignment": "center"
+          }
+        }
+      },
+      "block_order": [
+        "usp_bchNTU",
+        "usp_wmPUTY",
+        "usp_PGpDBD",
+        "usp_J4JVt7"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "custom_lookbook_HFmHDF": {
+      "type": "custom-lookbook",
+      "blocks": {
+        "lookbook_block_BEE638": {
+          "type": "lookbook-block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/1_86583ec4-835c-45cd-999c-b7e8b1bdc86e.jpg",
+            "heading": "Women's Winter Clothes",
+            "description": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.<\/p>",
+            "button_text": "Discover More",
+            "button_link": "",
+            "lookbook_color_scheme": "scheme_1",
+            "tops_top_position": 18,
+            "tops_left_position": 32,
+            "top_product": "full-sleeve-high-neck-t-shirt-1",
+            "bottoms_top_position": 70,
+            "bottoms_left_position": 30,
+            "bottom_product": "lean-dean-plain-stone"
+          }
+        },
+        "lookbook_block_TEGpiJ": {
+          "type": "lookbook-block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/2_a11b3061-4da9-4c80-ad4a-2ed8e9b0280f.jpg",
+            "heading": "Our Men's Winter Clothes",
+            "description": "<p>welcome to our Men's Winter Clothes Collection, where every piece is a statement in comfort and style.<\/p>",
+            "button_text": "Discover More",
+            "button_link": "shopify:\/\/collections\/best-collections",
+            "lookbook_color_scheme": "scheme_1",
+            "tops_top_position": 15,
+            "tops_left_position": 30,
+            "top_product": "full-sleeve-high-neck-t-shirt",
+            "bottoms_top_position": 53,
+            "bottoms_left_position": 17,
+            "bottom_product": "lean-dean-dry-gentle-worn"
+          }
+        },
+        "lookbook_block_PhAHA3": {
+          "type": "lookbook-block",
+          "settings": {
+            "desktop_image": "shopify:\/\/shop_images\/3_e98fbf29-76ef-498a-837a-517c37dafb8d.jpg",
+            "heading": "Women's Outdoor Clothes Collection",
+            "description": "<p>Embrace the beauty of nature with gear that complements your adventurous spirit.<\/p>",
+            "button_text": "Discover More",
+            "button_link": "shopify:\/\/collections\/best-collections",
+            "lookbook_color_scheme": "scheme_1",
+            "tops_top_position": 10,
+            "tops_left_position": 35,
+            "top_product": "women-shirt-beige-dress",
+            "bottoms_top_position": 60,
+            "bottoms_left_position": 35,
+            "bottom_product": "womens-casual-sweaters"
+          }
+        }
+      },
+      "block_order": [
+        "lookbook_block_BEE638",
+        "lookbook_block_TEGpiJ",
+        "lookbook_block_PhAHA3"
+      ],
+      "settings": {
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_featured_brands_Kc9fCH": {
+      "type": "custom-featured-brands",
+      "blocks": {
+        "featured_brands_M4Xmja": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/8.png"
+          }
+        },
+        "featured_brands_KYKr4A": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_cd395017-1471-444b-a792-aee354390d67.png"
+          }
+        },
+        "featured_brands_73TEtF": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_97056f97-b5a0-46f5-aa2e-d315f39f0bde.png"
+          }
+        },
+        "featured_brands_ME8M9a": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/7.png"
+          }
+        },
+        "featured_brands_wLh78p": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5.png"
+          }
+        },
+        "featured_brands_aibd6L": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_526ac6af-9bcf-4f5a-a1f0-3b004c6d93b3.png"
+          }
+        },
+        "featured_brands_NFTj6K": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6.png"
+          }
+        },
+        "featured_brands_MkVyVm": {
+          "type": "featured-brands",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_26caca81-ef1b-413a-b2e8-dacb4042a47f.png"
+          }
+        }
+      },
+      "block_order": [
+        "featured_brands_M4Xmja",
+        "featured_brands_KYKr4A",
+        "featured_brands_73TEtF",
+        "featured_brands_ME8M9a",
+        "featured_brands_wLh78p",
+        "featured_brands_aibd6L",
+        "featured_brands_NFTj6K",
+        "featured_brands_MkVyVm"
+      ],
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "custom_banner_content_DVhECr": {
+      "type": "custom-banner-content",
+      "settings": {
+        "desktop_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/4_0d5cc573-820a-4e7b-8f22-af8438216522.jpg",
+        "caption": "Introduce",
+        "heading": "We Believe in the Power of Fashion",
+        "description": "<p>fashion emerges as the universal language that speaks volumes without words.<\/p><p><\/p>",
+        "button_text": "Shop more",
+        "button_link": "shopify:\/\/collections\/best-collections",
+        "color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
+        "text_size": "h1",
+        "text_alignment": "center",
+        "alignment_position": "align-end justify-center",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_testimonial_rJeATm": {
+      "type": "custom-testimonial",
+      "blocks": {
+        "testimonia_blocks_Qg47WG": {
+          "type": "testimonia-blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1_2db38707-707e-4fd6-ab12-35397e8935de.jpg",
+            "heading": "Emma Watson",
+            "designation": "Fashion Blogger",
+            "comment": "<p>\"Absolutely love the trendy collection! The quality is unmatched, and each piece tells a unique style story. My followers can't get enough. His empathy, patience and expertise in fostering a positive environment is truly commendable.\"<\/p>"
+          }
+        },
+        "testimonia_blocks_ikqWzy": {
+          "type": "testimonia-blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2_0b300886-b49e-4ef1-a786-f0b7f7ab2f2d.jpg",
+            "heading": "James Harper",
+            "designation": "Fashion Editor",
+            "comment": "<p>\"As a fashion editor, I've seen it all. This store stands out with its curated selection and attention to detail. The clothing is not just fashion; it's art in motion. His effective communication and ability to motivate and guide the sales team is second to none.\"<\/p>"
+          }
+        },
+        "testimonia_blocks_B4gbzH": {
+          "type": "testimonia-blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3_b85a25e7-eff6-49ab-9fc7-ecdf71bb4ef1.jpg",
+            "heading": "Sarah Mitchell",
+            "designation": "Stylist",
+            "comment": "<p>\"A go-to destination for my clients. The diversity in styles is impressive, catering to every taste. The quality and elegance never disappoint. Her quick response and innovative solutions make him an invaluable asset to our team.\"<\/p>"
+          }
+        },
+        "testimonia_blocks_LKPx9y": {
+          "type": "testimonia-blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/4_e6c9abf8-cab4-4c51-8b5c-b87f6878ea97.jpg",
+            "heading": "Alex Rodriguez",
+            "designation": "Fashion Enthusiast",
+            "comment": "<p>\"Being a fashion enthusiast, I'm always on the lookout for unique pieces. This store exceeds expectations with its exceptional customer service. Her attention to detail, and ability to meet deadlines have made every project a success.\"<\/p>"
+          }
+        },
+        "testimonia_blocks_mpK8xT": {
+          "type": "testimonia-blocks",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5_8692d143-4fac-48d0-9ba7-4bf86ec25a15.jpg",
+            "heading": "Grace Turner",
+            "designation": "Influencer",
+            "comment": "<p>\"Obsessed with my recent purchases! The store's fashion-forward approach aligns perfectly with my style. The pieces are Instagram-worthy. His commitment to resolving issues have greatly contributed to our customer satisfaction levels.\"<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonia_blocks_Qg47WG",
+        "testimonia_blocks_ikqWzy",
+        "testimonia_blocks_B4gbzH",
+        "testimonia_blocks_LKPx9y",
+        "testimonia_blocks_mpK8xT"
+      ],
+      "settings": {
+        "section_heading": "Our Customers Review",
+        "slider_autoplay": false,
+        "slide_dots": false,
+        "slide_arrows": true,
+        "infinite_scroll": false,
+        "slide_animation": "slide",
+        "slider_autoplay_duration": 3000,
+        "text_alignment": "center",
+        "color_scheme": "scheme-1",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_blogs_y9QpaB": {
+      "type": "custom-blogs",
+      "settings": {
+        "blog": "news",
+        "section_heading": "Let You Know",
+        "section_button_text": "View All",
+        "section_button_link": "",
+        "color_scheme": "",
+        "slider_autoplay": false,
+        "slide_dots": false,
+        "slide_arrows": true,
+        "infinite_scroll": false,
+        "slider_autoplay_duration": 3,
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_faq_TfnAQJ": {
+      "type": "custom-faq",
+      "blocks": {
+        "faq_UBTKwz": {
+          "type": "faq",
+          "settings": {
+            "faq_heading": "How can I track my order ?",
+            "faq_description": "<p>Once your order has been processed and shipped, you will receive a confirmation email with a tracking number. You can use this tracking number to monitor the status and location of your package through our shipping carrier's website.<\/p>"
+          }
+        },
+        "faq_Xp3884": {
+          "type": "faq",
+          "settings": {
+            "faq_heading": "What is your return policy?",
+            "faq_description": "<p>We offer a hassle-free return policy. If you're not completely satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please visit our Returns & Exchanges page for more details on the process and any eligibility criteria.<\/p>"
+          }
+        },
+        "faq_DL46CE": {
+          "type": "faq",
+          "settings": {
+            "faq_heading": "Are the product images accurate representations of the items?",
+            "faq_description": "<p>Yes, we strive to provide accurate and high-quality images of our products. However, please note that colors may vary slightly due to differences in monitor settings. If you have any specific questions about a product, feel free to contact our customer support team.<\/p>"
+          }
+        },
+        "faq_bBJFCc": {
+          "type": "faq",
+          "settings": {
+            "faq_heading": "How do I determine my size?",
+            "faq_description": "<p>To find the right size, please refer to our detailed size guide available on each product page. Measurements may vary by product, so it's essential to check the specific sizing information provided. If you have further questions or need assistance, our customer support team is here to help.<\/p>"
+          }
+        },
+        "faq_rVrHcW": {
+          "type": "faq",
+          "settings": {
+            "faq_heading": "What payment methods do you accept?",
+            "faq_description": "<p>We accept a variety of payment methods, including major credit cards (Visa, MasterCard, American Express), PayPal, and other secure payment options. During the checkout process, you can choose the payment method that suits you best.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_UBTKwz",
+        "faq_Xp3884",
+        "faq_DL46CE",
+        "faq_bBJFCc",
+        "faq_rVrHcW"
+      ],
+      "settings": {
+        "background_color": "#f5f5f5",
+        "section_title": "FAQ",
+        "section_description": "<p>Ensure that your FAQs are regularly updated based on common customer queries and changes in your business operations.<\/p>",
+        "color_scheme": "",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "custom_scrollable_text_4wnyRF": {
+      "type": "custom-scrollable-text",
+      "blocks": {
+        "scrolling_item_NxjJNj": {
+          "type": "scrolling-item",
+          "settings": {
+            "scrolling_item_icon": "<svg class=\"icon icon-accordion\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"20\" height=\"20\" viewbox=\"0 0 20 20\">\n      <path d=\"M5.81971 2.09623C5.66962 2.09623 5.54176 2.15186 5.44395 2.25357L1.21145 6.65441C1.1088 6.76918 1.05429 6.90939 1.05429 7.05112C1.05429 7.20712 1.10783 7.34015 1.20568 7.44189L3.32991 9.65061C3.44515 9.76252 3.57826 9.81363 3.71113 9.81363C3.85775 9.81363 3.9834 9.76402 4.08701 9.65628L4.09094 9.6522L4.7024 9.02972C4.85658 8.87275 5.08721 8.82933 5.28453 8.92013C5.48186 9.01093 5.60604 9.21761 5.59798 9.44182L5.31373 17.3532C5.31817 17.6495 5.55481 17.8928 5.84081 17.8928H6.18836L14.1803 17.9038C14.4659 17.9035 14.7026 17.6607 14.7074 17.3648L14.4021 9.4433C14.3934 9.21885 14.5174 9.01164 14.7148 8.92044C14.9122 8.82925 15.1432 8.87254 15.2976 9.02968L15.9059 9.6489C16.0215 9.76199 16.1553 9.81363 16.2889 9.81363C16.4354 9.81363 16.561 9.76407 16.6646 9.65628L18.7886 7.44788C18.8912 7.33314 18.9457 7.19288 18.9457 7.05112C18.9457 6.89515 18.8922 6.76218 18.7943 6.66041L14.5618 2.25956C14.4515 2.15289 14.3167 2.09623 14.1803 2.09623H12.6411C12.5341 2.09623 12.3259 2.19376 12.1903 2.3422L12.181 2.35239C11.5962 2.9605 10.8184 3.29107 9.99479 3.29107C9.1624 3.29107 8.38522 2.95368 7.75232 2.28271L7.74644 2.27647C7.63884 2.1587 7.50017 2.09623 7.35906 2.09623H5.81971ZM4.69845 1.47842C5.00127 1.16356 5.40048 1 5.81971 1H7.35906C7.80667 1 8.21475 1.19917 8.50754 1.51779C8.94944 1.98502 9.45762 2.19485 9.99479 2.19485C10.5398 2.19485 11.0467 1.97904 11.4314 1.5813C11.6973 1.29312 12.1609 1 12.6411 1H14.1803C14.6114 1 15.0018 1.18292 15.2913 1.46809L15.3017 1.47828L19.5398 5.88527C19.8426 6.20007 20 6.61513 20 7.05112C20 7.49942 19.824 7.90545 19.5498 8.20642L19.54 8.21718L17.4101 10.4314C17.0921 10.7621 16.6905 10.9099 16.2889 10.9099C16.0115 10.9099 15.7438 10.8349 15.5054 10.6946L15.7613 17.3337C15.7616 17.341 15.7617 17.3483 15.7617 17.3557C15.7617 18.2613 15.0513 19 14.1803 19L6.18836 18.989H5.84081C4.96982 18.989 4.25938 18.2503 4.25938 17.3447C4.25938 17.3379 4.2595 17.331 4.25974 17.3242L4.49783 10.6977C4.25265 10.8427 3.98187 10.9099 3.71113 10.9099C3.29738 10.9099 2.90507 10.743 2.59955 10.4412L2.58975 10.4316L0.460183 8.21704C0.157401 7.90221 0 7.48707 0 7.05112C0 6.60279 0.176044 6.19683 0.450248 5.89588L0.460047 5.88513L4.69845 1.47842Z\"><\/path>\n    <\/svg>",
+            "scrolling_text": "<p>Men's Clothing Collection<\/p>",
+            "display_button": "display-as-text",
+            "button_text": "Explore",
+            "button_color": "#000000",
+            "button_background_color": "",
+            "button_hover_color": "",
+            "button_hover_background_color": "",
+            "button_link": "#"
+          }
+        },
+        "scrolling_item_6i9btW": {
+          "type": "scrolling-item",
+          "settings": {
+            "scrolling_item_icon": "<svg class=\"icon icon-accordion\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"20\" height=\"20\" viewbox=\"0 0 20 20\">\n      <path d=\"M5.81971 2.09623C5.66962 2.09623 5.54176 2.15186 5.44395 2.25357L1.21145 6.65441C1.1088 6.76918 1.05429 6.90939 1.05429 7.05112C1.05429 7.20712 1.10783 7.34015 1.20568 7.44189L3.32991 9.65061C3.44515 9.76252 3.57826 9.81363 3.71113 9.81363C3.85775 9.81363 3.9834 9.76402 4.08701 9.65628L4.09094 9.6522L4.7024 9.02972C4.85658 8.87275 5.08721 8.82933 5.28453 8.92013C5.48186 9.01093 5.60604 9.21761 5.59798 9.44182L5.31373 17.3532C5.31817 17.6495 5.55481 17.8928 5.84081 17.8928H6.18836L14.1803 17.9038C14.4659 17.9035 14.7026 17.6607 14.7074 17.3648L14.4021 9.4433C14.3934 9.21885 14.5174 9.01164 14.7148 8.92044C14.9122 8.82925 15.1432 8.87254 15.2976 9.02968L15.9059 9.6489C16.0215 9.76199 16.1553 9.81363 16.2889 9.81363C16.4354 9.81363 16.561 9.76407 16.6646 9.65628L18.7886 7.44788C18.8912 7.33314 18.9457 7.19288 18.9457 7.05112C18.9457 6.89515 18.8922 6.76218 18.7943 6.66041L14.5618 2.25956C14.4515 2.15289 14.3167 2.09623 14.1803 2.09623H12.6411C12.5341 2.09623 12.3259 2.19376 12.1903 2.3422L12.181 2.35239C11.5962 2.9605 10.8184 3.29107 9.99479 3.29107C9.1624 3.29107 8.38522 2.95368 7.75232 2.28271L7.74644 2.27647C7.63884 2.1587 7.50017 2.09623 7.35906 2.09623H5.81971ZM4.69845 1.47842C5.00127 1.16356 5.40048 1 5.81971 1H7.35906C7.80667 1 8.21475 1.19917 8.50754 1.51779C8.94944 1.98502 9.45762 2.19485 9.99479 2.19485C10.5398 2.19485 11.0467 1.97904 11.4314 1.5813C11.6973 1.29312 12.1609 1 12.6411 1H14.1803C14.6114 1 15.0018 1.18292 15.2913 1.46809L15.3017 1.47828L19.5398 5.88527C19.8426 6.20007 20 6.61513 20 7.05112C20 7.49942 19.824 7.90545 19.5498 8.20642L19.54 8.21718L17.4101 10.4314C17.0921 10.7621 16.6905 10.9099 16.2889 10.9099C16.0115 10.9099 15.7438 10.8349 15.5054 10.6946L15.7613 17.3337C15.7616 17.341 15.7617 17.3483 15.7617 17.3557C15.7617 18.2613 15.0513 19 14.1803 19L6.18836 18.989H5.84081C4.96982 18.989 4.25938 18.2503 4.25938 17.3447C4.25938 17.3379 4.2595 17.331 4.25974 17.3242L4.49783 10.6977C4.25265 10.8427 3.98187 10.9099 3.71113 10.9099C3.29738 10.9099 2.90507 10.743 2.59955 10.4412L2.58975 10.4316L0.460183 8.21704C0.157401 7.90221 0 7.48707 0 7.05112C0 6.60279 0.176044 6.19683 0.450248 5.89588L0.460047 5.88513L4.69845 1.47842Z\"><\/path>\n    <\/svg>",
+            "scrolling_text": "<p>Women's Clothing Collection<\/p>",
+            "display_button": "display-as-button",
+            "button_text": "Button text",
+            "button_color": "#000000",
+            "button_background_color": "",
+            "button_hover_color": "#ffffff",
+            "button_hover_background_color": "#000000",
+            "button_link": "#"
+          }
+        },
+        "scrolling_item_PF69pU": {
+          "type": "scrolling-item",
+          "settings": {
+            "scrolling_item_icon": "<svg class=\"icon icon-accordion\" aria-hidden=\"true\" focusable=\"false\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"20\" height=\"20\" viewbox=\"0 0 20 20\">\n      <path d=\"M10 2.62639L8.54072 7.33639C8.34848 7.95687 7.79714 8.37696 7.17504 8.37696H2.45272L6.27316 11.2879C6.77645 11.6714 6.98704 12.3511 6.7948 12.9716L5.33552 17.6816L9.15596 14.7706C9.65925 14.3872 10.3408 14.3872 10.844 14.7706L14.6645 17.6816L13.2052 12.9716C13.013 12.3511 13.2236 11.6714 13.7268 11.2879L17.5473 8.37696H12.825C12.2029 8.37696 11.6515 7.95687 11.4593 7.33639L10 2.62639ZM10.4552 0.846855C10.3119 0.384382 9.68806 0.384382 9.54477 0.846855L7.63027 7.02616C7.56619 7.23298 7.38241 7.37301 7.17504 7.37301H0.979572C0.515888 7.37301 0.323098 7.99527 0.698226 8.28109L5.71047 12.1001C5.87823 12.2279 5.94843 12.4545 5.88435 12.6613L3.96984 18.8406C3.82656 19.3031 4.33129 19.6877 4.70642 19.4019L9.71865 15.5828C9.88642 15.455 10.1136 15.455 10.2813 15.5828L15.2936 19.4019C15.6687 19.6877 16.1734 19.3031 16.0302 18.8406L14.1157 12.6613C14.0516 12.4545 14.1218 12.2279 14.2895 12.1001L19.3018 8.28109C19.6769 7.99527 19.4841 7.37301 19.0204 7.37301H12.825C12.6176 7.37301 12.4338 7.23298 12.3697 7.02616L10.4552 0.846855Z\" fill-rule=\"evenodd\"><\/path>\n    <\/svg>",
+            "scrolling_text": "<p>New Collection<\/p>",
+            "display_button": "display-as-button",
+            "button_text": "GRAB THIS OFFER",
+            "button_color": "#000000",
+            "button_background_color": "",
+            "button_hover_color": "",
+            "button_hover_background_color": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "scrolling_item_NxjJNj",
+        "scrolling_item_6i9btW",
+        "scrolling_item_PF69pU"
+      ],
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -290,6 +693,14 @@
     "custom_image_with_text_grid_8aq6TJ",
     "custom_collections_list_UQMErg",
     "custom_image_with_text_grid_V76dag",
-    "custom_products_list_k3RkT7"
+    "custom_products_list_k3RkT7",
+    "custom_usp_QRQVeh",
+    "custom_lookbook_HFmHDF",
+    "custom_featured_brands_Kc9fCH",
+    "custom_banner_content_DVhECr",
+    "custom_testimonial_rJeATm",
+    "custom_blogs_y9QpaB",
+    "custom_faq_TfnAQJ",
+    "custom_scrollable_text_4wnyRF"
   ]
 }

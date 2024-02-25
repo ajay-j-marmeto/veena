@@ -24,9 +24,39 @@
   padding: 15px;
 }
 
-.product-card__quick-view a {
+.product-card__quick-view span {
   padding: 5px 10px;
   font-size: 14px;
+  display: none;
+}
+
+.product-card__quick-view-icon svg{
+  display: block;
+  fill: #fff;
+  width: 19px;
+  height: 19px;
+}
+
+.product-card__quick-view-icon{
+  padding: 10px;
+  border-radius: 50%;
+  background: #000;
+}
+.product-card__quick-view a{
+  text-decoration: none;
+
+}
+
+@media screen and (min-width: 750px) {
+  .product-card__quick-view span{
+    display: block;
+  }
+  
+
+  .product-card__quick-view-icon{
+    display: none;
+  }
+
 }
 
 .product-card__content {

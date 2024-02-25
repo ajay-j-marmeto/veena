@@ -1,0 +1,284 @@
+{{ "section-custom-lookbook.css" | asset_url | stylesheet_tag }}
+
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2  }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+  @media (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  {% for block in section.blocks %}
+    .lookbook__tops-postion-{{ block.id }}{
+      top: {{ block.settings.tops_top_position }}%;
+      left: {{ block.settings.tops_left_position }}%;
+    }
+
+    .lookbook__bottoms-postion-{{ block.id }}{
+      top: {{ block.settings.bottoms_top_position }}%;
+      left: {{ block.settings.bottoms_left_position }}%;
+    }
+  
+  {% endfor %} 
+
+{% endstyle %}
+
+<div class="lookbook padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="grid grid--1-col grid--3-col-desktop">
+      {% for block in section.blocks %}
+        <div class="grid__item">
+          <div class="lookbook__image-container">
+            <div class="lookbook__image global-media-settings">
+              {% if block.settings.desktop_image != blank %}
+                {% render "responsive-image" desktopImage:block.settings.desktop_image, mobileImage: block.settings.mobile_image  %}
+              {% else %}
+                {{ "collection-1" | placeholder_svg_tag  }}
+              {% endif %}  
+            </div>
+             
+              <div class="lookbook__dot-container lookbook__tops-postion-{{ block.id }}">
+                <div class="lookbook__dots">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 11 11" fill="none" class="icon-circle">
+                	<circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="#000"></circle>
+                  </svg>
+                </div>              
+                <div class="lookbook__product-container">
+                  {% assign topProduct=all_products[block.settings.top_product] %}
+                  <div class="lookbook__product-image">
+                    {% if topProduct.featured_image != blank %}
+                      {% render "responsive-image" desktopImage:topProduct.featured_image, mobileImage: topProduct.featured_image  %}
+                    {% endif %}  
+                  </div>
+                    <div class="lookbook__product-content">
+                      {% if topProduct.title != blank %}
+                          <a href="{{ topProduct.url }}">
+                            <h2 class="h6 lookbook__product-title">
+                                {{ topProduct.title }} 
+                            </h2>
+                          </a>
+                      {% endif %} 
+                      
+                      {% if topProduct.price != blank %}
+                        <h2 class="h6 lookbook__product-price"> {{ topProduct.price | money_with_currency }} </h2>
+                      {% endif %}  
+                      
+                      {% if topProduct.compare_at_price != blank %}
+                        <h2 class="h6 lookbook__product-compare-price"> {{ topProduct.compare_at_price | money_with_currency }} </h2>
+                      {% endif %}  
+                    </div>
+                </div>
+              </div>
+            
+              <div class="lookbook__dot-container lookbook__bottoms-postion-{{ block.id }}">
+                <div class="lookbook__dots">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 11 11" fill="none" class="icon-circle">
+                	<circle class="icon-circle" cx="5.5" cy="5.5" r="5.5" fill="#000"></circle>
+                  </svg>
+                </div>
+                <div class="lookbook__product-container">
+                  {% assign bottomProduct=all_products[block.settings.bottom_product] %}
+                  <div class="lookbook__product-image">
+                    {% if bottomProduct.featured_image != blank %}
+                      {% render "responsive-image" desktopImage:bottomProduct.featured_image, mobileImage: bottomProduct.featured_image  %}
+                    {% endif %}  
+                  </div>
+                    <div class="lookbook__product-content">
+                      {% if bottomProduct.title != blank %}
+                        <a href="{{ bottomProduct.url }}">
+                          <h2 class="h6 lookbook__product-title"> {{ bottomProduct.title }} </h2>
+                        </a>
+                      {% endif %} 
+                      
+                      {% if bottomProduct.price != blank %}
+                        <h2 class="h6 lookbook__product-price"> {{ bottomProduct.price | money_with_currency }} </h2>
+                      {% endif %}  
+                      
+                      {% if bottomProduct.compare_at_price != blank %}
+                        <h2 class="h6 lookbook__product-compare-price"> {{ bottomProduct.compare_at_price | money_with_currency }} </h2>
+                      {% endif %}  
+                    </div>
+                </div>
+              </div>
+          </div>
+
+
+          
+          <div class="lookbook__content color-{{ block.settings.lookbook_color_scheme }}">
+            {% if block.settings.heading != blank %}
+              <h2 class="lookbook__heading"> {{ block.settings.heading }} </h2>
+            {% endif %}  
+            
+            {% if block.settings.description != blank %}
+              <div class="h3 lookbook__description"> {{ block.settings.description }} </div>
+            {% endif %}  
+        
+            {% if block.settings.button_text != blank %}
+              <a class="custom-button-secondary_color" 
+                {% if block.settings.button_link == blank %}
+                    role="link" aria-disabled="true"
+                {% else %}
+                    href="{{ block.settings.button_link }}"
+                {% endif %}>
+                {{ block.settings.button_text }}
+              </a>  
+            {% endif %}  
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Lookbook",
+    "tag" : "section",
+    "settings": [
+      {
+      "type" : "header",
+      "content" : "Section padding settings"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section padding top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "unit": "px",
+        "label": "Section padding bottom",
+        "default": 36
+      }
+    ],
+    "blocks":[
+      {
+        "type": "lookbook-block",
+        "name": "Lookbook block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "desktop_image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Image (Mobile)"
+          },
+          
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Women's Winter Clothes"
+          },
+          
+          {
+            "type": "richtext",
+            "id": "description",
+            "label": "Description",
+            "default": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.</p>"
+          },
+          
+          {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button text",
+            "default": "Discover More"
+          },
+          
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          },
+          {
+            "type": "color_scheme",
+            "id": "lookbook_color_scheme",
+            "label": "Color Scheme",
+            "default": "scheme_1"
+          },
+          {
+            "type": "header",
+            "content": "Lookbook first dot settings"
+          },
+          {
+            "type" : "range",
+            "id" : "tops_top_position",
+            "label" : "Distance from top",
+            "min" : 10,
+            "max" : 100,
+            "step" : 1,
+            "default" : 30,
+            "info" : "The distance measured in %"
+          },
+          {
+            "type" : "range",
+            "id" : "tops_left_position",
+            "label" : "Distance from left",
+            "min" : 10,
+            "max" : 100,
+            "step" : 1,
+            "default" : 20,
+            "info" : "The distance measured in %"
+          },          
+          {
+            "type" : "product",
+            "id" : "top_product",
+            "label" : "Choose top product"
+          },
+          {
+            "type": "header",
+            "content": "Lookbook second dot settings"
+          },
+          {
+            "type" : "range",
+            "id" : "bottoms_top_position",
+            "label" : "Distance from top",
+            "min" : 10,
+            "max" : 100,
+            "step" : 1,
+            "default" : 40,
+            "info" : "The distance mesured in %"
+          },
+          {
+            "type" : "range",
+            "id" : "bottoms_left_position",
+            "label" : "Distance from left",
+            "min" : 10,
+            "max" : 100,
+            "step" : 1,
+            "default" : 30,
+            "info" : "The distance measured in %"
+          },         
+          {
+            "type" : "product",
+            "id" : "bottom_product",
+            "label" : "Choose bottom product"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Lookbook"
+      }
+    ]
+  }
+{% endschema %}
