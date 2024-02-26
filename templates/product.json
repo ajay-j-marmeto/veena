@@ -39,6 +39,24 @@
             "show_gift_card_recipient": true
           }
         },
+        "icon_with_text_DzmAQw": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "heart",
+            "image_1": "shopify:\/\/shop_images\/1_1.svg",
+            "heading_1": "Daily deals",
+            "icon_2": "return",
+            "image_2": "shopify:\/\/shop_images\/2.svg",
+            "heading_2": "Return policy",
+            "icon_3": "truck",
+            "image_3": "shopify:\/\/shop_images\/3.svg",
+            "heading_3": "secure payment",
+            "icon_4": "star",
+            "image_4": "shopify:\/\/shop_images\/4.svg",
+            "heading_4": "Help center 24\/7"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -58,6 +76,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "icon_with_text_DzmAQw",
         "description",
         "share"
       ],
@@ -79,6 +98,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
@@ -94,10 +114,25 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "product-recommendations": {
+      "type": "marmeto-product-recommendations",
+      "settings": {
+        "enable_product_recommendations": true,
+        "title": "You may also like"
+      }
+    },
+    "recently-viewed-products": {
+      "type": "wizaah-recently-viewed-products",
+      "settings": {
+        "title": "Recently viewed"
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "product-recommendations",
+    "recently-viewed-products"
   ]
 }

@@ -1,0 +1,76 @@
+{%- capture section_settings -%}
+{
+  "productId": {{ product.id | json }}
+}
+{%- endcapture -%}
+
+<script src="{{ 'wizaah-recently-viewed-products.js' | asset_url }}" defer="defer"></script>
+
+<div 
+  data-section-id="{{ section.id }}" 
+  data-section-type="wizaah-recently-viewed-products" 
+  data-section-settings='{{ section_settings }}'
+>
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2>{{ section.settings.title | escape }}</h2>      
+    {%- endif -%}
+  
+    <div class="recentlyviewed__container">
+      {%- if template.name == 'search' -%}
+        <div class="grid grid--1-col grid--4-col-desktop">
+          {%- assign parsed_terms = search.terms | split: ' OR ' -%}
+          {%- for parsed_term in parsed_terms -%}
+            {%- assign id = parsed_term | split: 'id:' | last | times: 1 -%}
+
+            {%- for product in search.results -%}
+              {%- if product.id == id -%}        	  
+                <div class="grid__item">
+									{% render "custom-product-card", product: product, section_id: section.id %}
+								</div>
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+
+{%- comment -%} 
+  By default the section is hidden as we do not know if there are product yet
+{%- endcomment -%}
+{%- if template.name != 'search' or search.results_count == 0 -%}
+  <style>    
+    #shopify-section-{{ section.id }} {
+      display: none;
+    }
+  </style>
+{%- endif -%}
+
+
+{% schema %}
+  {
+    "name": "Recently viewed products",
+	"tag": "section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Only be visible if at least one product has been viewed."
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Recently viewed"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Recently viewed products"
+      }
+    ]
+  }
+{% endschema %}

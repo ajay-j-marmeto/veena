@@ -64,6 +64,7 @@
     {% endcomment %}
     <div class="product-card-varients">
       {% form 'product', product %}
+        
         <input type="hidden" name="id" value="{{ current_varient.id }}">
 
         {% unless product.has_only_default_variant %}
