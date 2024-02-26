@@ -26,7 +26,8 @@
 :is(
     .visual-display-parent:hover .visual-display--presentation-swatch,
     .visual-display-parent.active .visual-display--presentation-swatch,
-    .visual-display-parent:has(:focus-visible) .visual-display--presentation-swatch
+    .visual-display-parent:has(:focus-visible)
+      .visual-display--presentation-swatch
   ) {
   outline-style: solid;
 }
@@ -44,10 +45,12 @@
 }
 
 /* Focus state */
-.visual-display-parent:has(:focus-visible) .visual-display--presentation-swatch {
+.visual-display-parent:has(:focus-visible)
+  .visual-display--presentation-swatch {
   outline-width: 0.2rem;
   outline-color: rgb(var(--color-foreground), 0.4);
-  box-shadow: 0 0 0 0.6rem rgb(var(--color-background)), 0 0 0 0.8rem rgba(var(--color-foreground), 0.5),
+  box-shadow: 0 0 0 0.6rem rgb(var(--color-background)),
+    0 0 0 0.8rem rgba(var(--color-foreground), 0.5),
     0 0 1.2rem 0.4rem rgba(var(--color-foreground), 0.3);
 }
 
@@ -56,7 +59,8 @@
   .visual-display-parent:focus-within .visual-display--presentation-swatch {
     outline-offset: 0.2rem;
     outline: 0.2rem solid rgb(var(--color-foreground), 0.4);
-    box-shadow: 0 0 0 0.6rem rgb(var(--color-background)), 0 0 0 0.8rem rgba(var(--color-foreground), 0.5),
+    box-shadow: 0 0 0 0.6rem rgb(var(--color-background)),
+      0 0 0 0.8rem rgba(var(--color-foreground), 0.5),
       0 0 1.2rem 0.4rem rgba(var(--color-foreground), 0.3);
   }
 }
@@ -89,11 +93,10 @@
   object-fit: cover;
 }
 
-
-.facets__custom-checkbox{
+.facets__custom-checkbox {
   border-radius: 50%;
 }
-
+/* 
 summary a{
   color:red;
   text-decoration:none;
@@ -103,7 +106,6 @@ summary a{
   
 }
 .nav-menu{
-  /* min-height: 260px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,4 +125,30 @@ summary a{
   margin-bottom: 10px;
 
   
+} */
+
+.custom-side-navbar-links {
+  width: 30rem;
+  border: 1px solid red;
+  list-style-type: none;
+}
+
+.custom-side-navbar-links ul {
+  padding: 0;
+}
+
+.custom-side-navbar-links li {
+  margin-bottom: 7px;
+  list-style-type: none;
+  width: 100%;
+}
+
+.custom-side-navbar-link a {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 25px 8px 15px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  text-decoration: none;
 }

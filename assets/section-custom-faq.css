@@ -1,3 +1,9 @@
+.faq-section__faq{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+
+}
+
 .faq-section__info{
   margin-bottom: 30px;
   max-width: 500px;
