@@ -35,6 +35,14 @@
   transform: scale(1.08);
 }
 
+.collections-list__heading{
+  transition: color 0.3s ease;
+}
+
+.collections-list__heading:hover{
+  color: #D03C3F;
+}
+
 
 .collections-list .splide__arrow--next {
     right: 0;

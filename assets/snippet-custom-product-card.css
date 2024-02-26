@@ -170,3 +170,23 @@ span.product-card__swatch {
   color: #d03c3f;
   margin: 0;
 }
+
+input[type=radio]:checked+.product-card__swatch {
+  box-shadow: 0 0 0 1px #d03c3f;
+}
+
+span.product-card__swatch {
+  min-height: 5px;
+  min-width: 5px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 3px solid white;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  margin: 2px;
+  line-height: 1;
+}

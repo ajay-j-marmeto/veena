@@ -1311,6 +1311,7 @@ class VariantSelects extends HTMLElement {
         if (this.currentVariant.id !== requestedVariantId) return;
 
         const html = new DOMParser().parseFromString(responseText, "text/html");
+        document.querySelector(".product__description").innerHTML = html.querySelector(".product__description").innerHTML
         const destination = document.getElementById(
           `price-${this.dataset.section}`
         );
