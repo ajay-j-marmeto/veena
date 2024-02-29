@@ -9,12 +9,20 @@
           "type": "announcement",
           "settings": {
             "text": "Welcome to our store",
-            "link": "shopify:\/\/collections\/best-collections"
+            "link": ""
+          }
+        },
+        "announcement_Q8AdnJ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to our store",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_Q8AdnJ"
       ],
       "settings": {
         "color_scheme": "scheme-5",
