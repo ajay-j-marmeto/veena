@@ -8,14 +8,14 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Qualify for complimentary shipping on orders totaling $50 or more.",
             "link": ""
           }
         },
         "announcement_Q8AdnJ": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Flash Sale Alert: Save Big for the Next 24 Hours!",
             "link": ""
           }
         }
