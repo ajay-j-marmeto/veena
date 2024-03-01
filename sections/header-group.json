@@ -8,17 +8,25 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Qualify for complimentary shipping on orders totaling $50 or more.",
+            "link": ""
+          }
+        },
+        "announcement_Q8AdnJ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Flash Sale Alert: Save Big for the Next 24 Hours!",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "announcement-bar-0",
+        "announcement_Q8AdnJ"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "show_line_separator": true,
+        "color_scheme": "scheme-5",
+        "show_line_separator": false,
         "show_social": false,
         "auto_rotate": false,
         "change_slides_speed": 5,
