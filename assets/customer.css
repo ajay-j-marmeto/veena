@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 750px) {
   .customer:not(.account):not(.order) {
-    max-width: 47.8rem;
+    max-width: 60%;
   }
 }
 
@@ -19,6 +19,9 @@
 
 .customer form {
   margin-top: 4rem;
+  max-width: 50rem;
+  margin: auto;
+  padding: 20px;
 }
 
 .customer button {
@@ -753,3 +756,94 @@ li[data-address] > h2 {
 .addresses form > div:nth-of-type(7) + div[id] {
   margin-top: 1.5rem;
 }
+
+.custom-login-page{
+  /* border: 1px solid red; */
+  background: #f5f5f5;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.custom-login-field{
+  background: none;
+}
+
+.field a{
+  text-decoration: none;
+}
+
+p.email_title {
+  display: flex;
+  align-items: center;
+}
+
+p.email_title:before {
+  margin: 0 15px 0 0;
+  content: "";
+    width: 10%;
+    height: 1px;
+    background: rgba(0,0,0, .2);
+    width: 50%;
+  }
+  
+  p.email_title:after {
+    margin: 0 0 0 15px;
+    content: "";
+      width: 10%;
+      height: 1px;
+      background: rgba(0,0,0, .2);
+  width: 50%;
+}
+
+
+.custom-signin-button button{
+  width: 100%;
+}
+
+
+
+
+.custom-create-button a{
+  width: 100%;
+  text-decoration: none;
+  border: 1px solid gray;
+}
+
+
+.custom-create-button a::after{
+  background: none;
+}
+
+.custom-create-button a:hover{
+  color: #fff;
+}
+
+.custom-forgot .custom-formgot-text{
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* ---------------------- */
+
+.custom-register-section{
+  background: #f5f5f5;
+  border-radius: 16px;
+}
+
+.custom-field{
+  margin-top: 20px;
+}
+
+.custom-field p{
+  display: block;
+  margin: 0;
+  text-align: left;
+  font-size: 16px;
+  margin: 1px;
+}
+
+.custom-create-account-btn button{
+  width: 100%;
+}
+

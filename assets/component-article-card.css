@@ -155,6 +155,12 @@
 }
 
 .tab-item-active{
-  background: yellow;
-  color: black;
+  color: #fff;
+}
+
+.tab-item-active::before{
+  background-color: #000;
+}
+.tab-item-active::after{
+  background-color: #d03c3f;
 }

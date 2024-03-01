@@ -19,16 +19,17 @@
 
 {%- paginate blog.articles by 6 -%}
   <div class="main-blog page-width section-{{ section.id }}-padding">
+
     <ul class="tab-list">
       <li>
-        <a class="tab-link custom-button-secondary_color {% if page.url == blog.url %}custom-button-secondary{% endif %}" href="{{ blog.url }}"> All Posts </a>
+        <a class="tab-link custom-button-secondary_color {% if current_tags == blank %}tab-item-active{% endif %}" href="{{ blog.url }}"> All Posts </a>
       </li>
       {% if page.url == blog.url %}custom-button-secondary{% endif %}
       {% for tag in blog.all_tags %}
         {% if tag contains 'custom' %}
           {% assign tag_name = tag | split: '_' | last %}
           <li class="tab-button">
-            <a class="tab-link custom-button-secondary_color" href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag_name }}</a>
+            <a class="tab-link custom-button-secondary_color {% if current_tags contains tag %}tab-item-active{% endif %}" href="{{ blog.url }}/tagged/{{ tag | handleize }}">{{ tag_name }}</a>
           </li>
         {% endif %}
       {% endfor %}

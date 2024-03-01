@@ -58,7 +58,7 @@
       {%- endif -%}
 
       <button>
-        {{ 'customer.login_page.submit' | t }}
+        {{ 'customer.login_page.submit' | t }} 
       </button>
 
       <a href="#login">
@@ -67,10 +67,13 @@
     {%- endform -%}
   </div>
 
-  <h1 id="login" tabindex="-1">
-    {{ 'customer.login_page.title' | t }}
-  </h1>
-  <div>
+  <div class="custom-login-page">
+  
+
+    <h1 id="login" tabindex="-1">
+      {{ 'customer.login_page.title' | t }}
+    </h1>
+    <div>
     {%- if recover_success == true -%}
       <h3 class="form__message" tabindex="-1" autofocus>
         <svg aria-hidden="true" focusable="false" viewBox="0 0 13 13">
@@ -132,20 +135,31 @@
           </label>
         </div>
 
-        <a href="#recover">
-          {{ 'customer.login_page.forgot_password' | t }}
-        </a>
+        <div class="custom-forgot">
+          <a href="#recover" class="custom-formgot-text">
+            {{ 'customer.login_page.forgot_password' | t }}
+          </a>
+        </div>
       {%- endif -%}
 
-      <button>
-        {{ 'customer.login_page.sign_in' | t }}
-      </button>
+      <div class="custom-signin-button">
+        <button>    
+          {{ 'customer.login_page.sign_in' | t }}
+        </button>
+      </div>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+      <p class="email_title">Or</p>
+
+      <div class="custom-create-button">
+        
+        <a href="{{ routes.account_register_url }}" class="custom-button-secondary_color">
+          {{ 'customer.login_page.create_account' | t }}
+        </a>
+      </div>
     {%- endform -%}
   </div>
+
+</div>
 
   {%- if shop.checkout.guest_login -%}
     <div>

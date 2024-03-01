@@ -518,3 +518,26 @@
 
 
 
+.custom-cart-drawer-delete-icon{
+  border: none;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.custom-cart-drawer-delete-icon .icon-remove {
+  height: 1.5rem;
+  width: 1.5rem;
+  fill: #fff;
+}
+
+.custom-cart-drawer-view-cart{
+  display: grid;
+  width: 100%;
+}
+
+.custom-cart-drawer-footer{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  gap: 10px;
+}

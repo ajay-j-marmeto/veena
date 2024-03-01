@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="customer register section-{{ section.id }}-padding">
+<div class="customer register section-{{ section.id }}-padding custom-register-section">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
       <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -49,7 +49,11 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+    
+    <div class="custom-field">
+    <p>FirstName</p>
     <div class="field">
+      
       <input
         type="text"
         name="customer[first_name]"
@@ -60,10 +64,14 @@
         autocomplete="given-name"
         placeholder="{{ 'customer.register.first_name' | t }}"
       >
-      <label for="RegisterForm-FirstName">
-        {{ 'customer.register.first_name' | t }}
-      </label>
+        <label for="RegisterForm-FirstName">
+          {{ 'customer.register.first_name' | t }}
+        </label>
+        
+      </div>
     </div>
+    <div class="custom-field">
+      <p>LastName</p>
     <div class="field">
       <input
         type="text"
@@ -79,6 +87,8 @@
         {{ 'customer.register.last_name' | t }}
       </label>
     </div>
+    <div class="custom-field">
+      <p>Email</p>
     <div class="field">
       <input
         type="email"
@@ -101,6 +111,8 @@
         {{ 'customer.register.email' | t }}
       </label>
     </div>
+    </div>
+    </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
         <svg aria-hidden="true" focusable="false">
@@ -110,6 +122,8 @@
         {{ form.errors.messages.email }}.
       </span>
     {%- endif -%}
+    <div class="custom-field">
+      <p>Password</p>
     <div class="field">
       <input
         type="password"
@@ -126,6 +140,7 @@
         {{ 'customer.register.password' | t }}
       </label>
     </div>
+    </div>
     {%- if form.errors contains 'password' -%}
       <span id="RegisterForm-password-error" class="form__message">
         <svg aria-hidden="true" focusable="false">
@@ -135,9 +150,16 @@
         {{ form.errors.messages.password }}.
       </span>
     {%- endif -%}
-    <button>
-      {{ 'customer.register.submit' | t }}
-    </button>
+    <div class="custom-create-account-btn">
+      <button>
+        {{ 'customer.register.submit' | t }}
+      </button>
+    </div>
+
+    <div>Have an account? 
+    <a href="/account/login" class="link underlined-link">Log in</a> to checkout faster.
+  </div>
+    
   {%- endform -%}
 </div>
 
