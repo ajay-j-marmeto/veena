@@ -1,0 +1,24 @@
+<script src="{{ 'snippet-custom-drawer-timer.js' | asset_url }}" defer="defer"></script>
+{{ 'snippet-custom-drawer-timer.css' | asset_url | stylesheet_tag }}
+
+<div  class="drawer-timer custom-border-radius">
+    <div class = "drawer-timer__card ">
+        <span class = "h3 drawer-timer__time" id="daysDrawer" >00</span>
+        <span class = "h5 drawer-timer__stamp">Days</span>
+    </div>
+    <span class = "h5 drawer-timer__colon">:</span>
+    <div class = "drawer-timer__card ">
+        <h2 class = "h3 drawer-timer__time" id="hoursDrawer">00</h2>
+        <span class = "h5 drawer-timer__stamp">Hours</span>
+    </div>
+    <span class = "h5 drawer-timer__colon">:</span>
+    <div class = "drawer-timer__card ">
+        <span class = "h3 drawer-timer__time" id="minutesDrawer">00</span>
+        <span class = "h5 drawer-timer__stamp">Mins</span>
+    </div>
+    <span class = "h5 drawer-timer__colon">:</span>
+    <div class = "drawer-timer__card ">
+        <span class = "h3 drawer-timer__time" id="secondsDrawer">00</span>
+        <span class = "h5 drawer-timer__stamp">Sec</span>
+    </div>
+</div>     

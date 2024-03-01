@@ -207,6 +207,7 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
+                
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
@@ -225,8 +226,10 @@
                   </details>
                 </div>
 
-              
+                
+                
               {%- when 'quantity_selector' -%}
+                
              
                 <div
                   id="Quantity-Form-{{ section.id }}"
@@ -461,6 +464,8 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+
+              
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,

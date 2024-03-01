@@ -17,16 +17,17 @@
 
 .drawer__inner {
   height: 100%;
-  width: 40rem;
+  width: 50rem;
   max-width: calc(100vw - 3rem);
-  padding: 0 1.5rem;
-  border: 0.1rem solid rgba(var(--color-foreground), 0.2);
+  /* padding: 0 1.5rem; */
+  /* border: 0.1rem solid rgba(var(--color-foreground), 0.2); */
   border-right: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
   transition: transform var(--duration-default) ease;
+  border-top-left-radius: 16px;
 }
 
 .drawer__inner-empty {
@@ -70,7 +71,7 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 .drawer__header {
   position: relative;
-  padding: 1.5rem 0;
+  padding: 0 0 1.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -190,6 +191,7 @@ cart-drawer {
 cart-drawer-items {
   overflow: auto;
   flex: 1;
+  padding: 0 20px;
 }
 
 @media screen and (max-height: 650px) {

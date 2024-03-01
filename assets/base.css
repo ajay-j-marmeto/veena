@@ -3792,3 +3792,65 @@ details-disclosure > details {
 }
 
 /* Scroll Line Animation End */
+
+
+/* Free shipping indicator progress bar */
+
+.shipping-bar {
+  width: 100%;
+  /* border-radius: 2rem; */
+  border-top-left-radius: 16px;
+  background:#d03c3f;
+  padding: 0.75rem 2rem;
+  /* margin: 1.5rem 0 0.5rem; */
+}
+
+.shipping-bar__heading{
+  color: #fff;
+  font-size: 22px;
+}
+
+.cart-drawer__black {
+  color: #ffffff;
+}
+.shipping-bar .shipping-bar__container {
+  height: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  position: relative;
+  margin: 1.4rem 0 0.75rem;
+}
+.shipping-bar .shipping-bar__filled {
+  height: 100%;
+  border-radius: 1rem;
+  transition: all .75s ease-in-out;
+  background-color: #00d964;;
+}
+.shipping-bar .shipping__icon {
+  position: absolute;
+  transition: all .75s ease-in-out;
+  transform: translate(-70%,-45%) rotate(30deg);
+}
+
+.shipping-bar__message{
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.free-shipping-highlight{
+  animation: shipColor 3s linear infinite;
+}
+
+@keyframes shipColor {
+  0% {
+    color: #fff;
+}
+50% {
+    color: #0cae61;
+}
+100% {
+    color: #fff;
+}
+  
+}

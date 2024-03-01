@@ -54,7 +54,7 @@
             {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
             {%- if filter_type == 'vertical' -%}
               <div class="active-facets active-facets-desktop">
-                {% comment %}
+               
                 <div class="nav-menu">
                   {% for link in linklists['sidebar-menu'].links %}
                     <details class="menu-border">
@@ -93,9 +93,9 @@
                     </details>
                   {% endfor %}
                 </div>
-                 {% endcomment %}
+               
  
-               {% comment %} ---------------------- {% endcomment %}
+               {% comment %}
                 <div class="custom-side-navbar-links">
                   <ul>
                     {%- for link in linklists['sidebar-menu'].links -%}
@@ -146,7 +146,7 @@
                     {%- endfor -%}
                   </ul>
                 </div>  
-              {% comment %} -------------------------------- {% endcomment %}
+              {% endcomment %}
 
                 <div class="active-facets-vertical-filter">
                   {%- unless results.filters == empty -%}

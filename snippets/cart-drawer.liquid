@@ -18,6 +18,7 @@
 </style>
 
 <cart-drawer class="drawer{% if cart == empty %} is-empty{% endif %}">
+  
   <div id="CartDrawer" class="cart-drawer">
     <div id="CartDrawer-Overlay" class="cart-drawer__overlay"></div>
     <div
@@ -60,7 +61,8 @@
         </div>
       {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        {%  render 'free-shipping'  %}
+        {% comment %} <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2> {% endcomment %}
         <button
           class="drawer__close"
           type="button"
@@ -84,8 +86,9 @@
           <div id="CartDrawer-CartItems" class="drawer__contents js-contents">
             {%- if cart != empty -%}
               <div class="drawer__cart-items-wrapper">
+                {% render "custom-drawer-timer" %}
                 <table class="cart-items" role="table">
-                  <thead role="rowgroup">
+                  {% comment %} <thead role="rowgroup">
                     <tr role="row">
                       <th id="CartDrawer-ColumnProductImage" role="columnheader">
                         <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
@@ -110,7 +113,7 @@
                         <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
                       </th>
                     </tr>
-                  </thead>
+                  </thead> {% endcomment %}
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
@@ -160,7 +163,7 @@
                             </div>
                           {%- endif -%}
 
-                          {%- if item.product.has_only_default_variant == false
+                          {% comment %} {%- if item.product.has_only_default_variant == false
                             or item.properties.size != 0
                             or item.selling_plan_allocation != null
                           -%}
@@ -202,7 +205,7 @@
                             </dl>
 
                             <p class="product-option">{{ item.selling_plan_allocation.selling_plan.name }}</p>
-                          {%- endif -%}
+                          {%- endif -%} {% endcomment %}
 
                           <ul
                             class="discounts list-unstyled"
