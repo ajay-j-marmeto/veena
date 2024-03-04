@@ -1,0 +1,44 @@
+.customer-address__address-page{
+  display: flex;
+  width: 100%;
+  column-gap: 16px;
+}
+
+.customer-address__address-section{
+  padding: 26px 11px 11px;
+  background: #fcfcfc;
+  width: 100%;
+}
+
+.customer-address__address-heading{
+  display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+}
+
+.customer-address__add-address button{
+  min-width: 190px;
+  height: 44px;
+  border-radius: 4px;
+  background:  #895e59;
+  display: flex;
+  font-size: 22px;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* border-radius: 0; */
+  border: none;
+  box-shadow: none;
+  
+}
+
+.customer-address__add-address button::after{
+  box-shadow: none;
+
+}
+
+.customer-address__add-address button:hover::after{
+  box-shadow: none;
+  border: none;
+}

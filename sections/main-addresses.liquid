@@ -1,4 +1,5 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
+{{ 'custom-customer-address.css' | asset_url | stylesheet_tag }}
 
 <script src="{{ 'customer.js' | asset_url }}" defer></script>
 
@@ -18,10 +19,12 @@
 
 <div class="customer addresses section-{{ section.id }}-padding" data-customer-addresses>
 
-  <div class="customer__account-page-tabs">
-    {% render "custom-customer-pages" %}
+  <div class="customer-address__address-page page-width">
+    <div>
+      {% render "custom-customer-pages" %}
+    </div>
 
-    <div class="customer__details-section">
+    <div class="customer-address__address-section">
       {%- paginate customer.addresses by 5 -%}  
         <div>
           
@@ -30,18 +33,22 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
             </symbol>
           </svg>
-          <h1>{{ 'customer.addresses.title' | t }}</h1>
-          <a href="{{ routes.account_url }}">
+          <div class="customer-address__address-heading">
+            {% render "custom-icon-customer", icon-name: "location" %}
+            <h1>Address Book</h1>
+          </div>
+          {% comment %} <a href="{{ routes.account_url }}">
             {{ 'customer.account.return' | t }}
-          </a>
+          </a> {% endcomment %}
     
-          <div data-address>
+          <div data-address class="customer-address__add-address">
             <button
               type="button"
               aria-expanded="false"
               aria-controls="AddAddress"
             >
-              {{ 'customer.addresses.add_new' | t }}
+              {% render "custom-icon-customer", icon-name: "plus" %}
+            {{ 'customer.addresses.add_new' | t }}
             </button>
             <div id="AddAddress">
               <h2 id="AddressNewHeading">{{ 'customer.addresses.add_new' | t }}</h2>
