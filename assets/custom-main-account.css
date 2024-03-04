@@ -1,0 +1,48 @@
+.customer__account-page-tabs{
+  display: flex;
+  width: 100%;
+}
+
+.customer__details-section{
+  width: 100%;
+}
+
+.customer__account-page{
+  padding: 22px 28px 33px;
+  
+}
+
+.customer__heading{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.customer__heading svg{
+  width: 35px;
+  height: 35px;
+}
+
+.customer__name{
+  padding-top: 18px;
+    padding-bottom: 14px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.customer__email,.customer__address{
+  padding: 10px 24px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  border: 1px solid  #d0bbba;
+}
+.customer__email p a{
+  padding-bottom: 9px;
+  text-transform: capitalize;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.customer__address p{
+  margin: 0;
+}

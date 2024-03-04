@@ -1,0 +1,61 @@
+
+{{ "snippet-custom-customer-pages.css" | asset_url | stylesheet_tag }}
+
+<div class="account-page-tabs  page">
+  <a href="/account">
+    <div class="account-page-account-btn account  tabs-hover">
+      <span class="account-btn-logo"> 
+        
+        {% render "custom-icon-customer", icon-name:"account" %}
+        
+      </span> 
+      <div class="account-btn-logo-name">Account Details</div>
+    </div>
+  </a>
+  <a href="/pages/orders">
+    <div class="account-page-account-btn order  active  tabs-hover">
+      <span class="account-btn-logo"> 
+      
+      {% render "custom-icon-customer", icon-name:"orders" %}
+    </span> 
+    <div class="account-btn-logo-name">My Orders</div>
+  </div>
+</a>
+<a href="/account/addresses">
+  <div class="account-page-account-btn addresses  tabs-hover">
+    <span class="account-btn-logo"> 
+    {% render "custom-icon-customer", icon-name:"address" %}
+    
+  </span> 
+  <div class="account-btn-logo-name">View Address</div>
+</div>
+</a>
+<a href="/pages/swym-wishlist?">
+  <div class="account-page-account-btn tabs-hover">
+    <span class="account-btn-logo"> 
+    
+    {% render "custom-icon-customer", icon-name:"wishlist" %}
+  </span> 
+  <div class="account-btn-logo-name">Wishlist</div>
+</div>
+</a>
+<a href="/pages/faq">
+  <div class="account-page-account-btn  tabs-hover">
+    <span class="account-btn-logo"> 
+    
+    {% render "custom-icon-customer", icon-name:"need-help" %}
+  </span> 
+  <div class="account-btn-logo-name">Need Help?</div>
+</div>
+</a>
+
+<a href="/account/logout" class="signout-account-page">
+  <div class="account-page-account-btn signout  tabs-hover">
+    <span class="account-btn-logo"> 
+    
+    {% render "custom-icon-customer", icon-name:"account" %}
+      </span> 
+      <div class="account-btn-logo-name">Sign Out</div>
+    </div>
+    </a>
+</div>

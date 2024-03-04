@@ -1,4 +1,5 @@
-{{ 'customer.css' | asset_url | stylesheet_tag }}
+{% comment %} {{ 'customer.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{{ 'custom-main-account.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -15,7 +16,36 @@
 {%- endstyle -%}
 
 <div class="customer account section-{{ section.id }}-padding">
-  <div>
+  <div class="customer__account-page-tabs page-width">
+    {% render "custom-customer-pages" %}
+    <div class="customer__details-section">
+      <div class="customer__account-page">
+        <div class="customer__heading">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 14 18" fill="none" class="svg-account-logo">
+            <path d="M7.13832 7.73089C9.35049 7.73089 11.1438 5.9983 11.1438 3.86105C11.1438 1.7238 9.35049 -0.00878906 7.13832 -0.00878906C4.92614 -0.00878906 3.13281 1.7238 3.13281 3.86105C3.13281 5.9983 4.92614 7.73089 7.13832 7.73089Z" fill="black"></path>
+            <path d="M7.13851 9.44238C3.48834 9.44238 0.529297 12.2157 0.529297 15.637C0.529297 16.4923 1.22266 17.1856 2.07796 17.1856H12.1991C13.0543 17.1856 13.7478 16.4923 13.7478 15.637C13.7478 12.2157 10.7887 9.44238 7.13851 9.44238Z" fill="black"></path>
+          </svg>
+          <h2>My Account</h2>
+        </div>
+        <div class="">
+          <h2 class="customer__name">{{ customer.name }}</h2>
+        </div>
+        <div class="customer__email">
+          <p>
+            <a href="mailto:{{ customer.email }}">{{ customer.email }}</a>
+          </p>
+        </div>
+        <div class="customer__address">
+          <p>{{ customer.email }}</p>
+          <p>{{ customer.default_address | format_address }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  {% comment %} <div>
     <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
     <a href="{{ routes.account_logout_url }}">
       <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 19">
@@ -147,7 +177,7 @@
         {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
       </a>
     </div>
-  </div>
+  </div> {% endcomment %}
 </div>
 
 {% schema %}
