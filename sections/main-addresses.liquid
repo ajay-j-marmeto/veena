@@ -184,9 +184,9 @@
             </div>
           </div>
     
-          <ul role="list">
+          <ul role="list" class="customer-address__address-list">
             {%- for address in customer.addresses -%}
-              <li data-address>
+              <li data-address class="customer-address__each-address">
                 {%- if address == customer.default_address -%}
                   <h2>{{ 'customer.addresses.default' | t }}</h2>
                 {%- endif -%}

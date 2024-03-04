@@ -42,3 +42,19 @@
   box-shadow: none;
   border: none;
 }
+
+.addresses ul{
+  text-align: left;
+}
+
+.customer-address__address-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.customer-address__each-address{
+  border-radius: 8px;
+  border: 1px solid  #424544;
+  padding: 36.31px 23px 37px 24px;
+  margin-top: 24px;
+}
