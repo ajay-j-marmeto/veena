@@ -1,0 +1,14 @@
+.custom-header__links{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 30px;
+}
+
+.custom-header__links ul{
+  margin: 0;
+}
+
+.header__menu-item svg{
+  display: none;
+}
