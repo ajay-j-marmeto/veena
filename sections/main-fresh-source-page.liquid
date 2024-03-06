@@ -1,1 +1,219 @@
-<h1>hi jay</h1>
+
+{% style %}
+  .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top | divided_by: 2  }}px;
+      padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+    }
+
+    @media (min-width: 750px) {
+      .padding-{{ section.id }} {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+
+{% endstyle %}
+
+
+{% capture slider-options-data %}
+  {
+    "autoplay" : {{ section.settings.slider_autoplay }},
+    "interval" : {{ section.settings.slider_autoplay_duration | times:1000 }},
+    "type" : "{{ section.settings.slide_animation }}",
+    "pagination" : {{ section.settings.slide_dots }},
+    "arrows" : {{ section.settings.slide_arrows }},
+    "rewind" : {{ section.settings.infinite_scroll }},
+    "drag": {{ section.settings.slide_drag }},
+    "perPage": 4,
+    "gap" : "30px"
+  }
+{% endcapture %}
+
+
+<div class="fresh-source padding-{{ section.id }}">
+  <div class="page-width">
+    <div class="fresh-source__heading-section">
+      {% if section.settings.section_heading != blank %}
+        <h2> {{ section.settings.section_heading }} </h2>
+      {% endif %}
+    </div>
+    <div class="fresh-source__collection-tabs">
+      <div>
+        <ul>
+          {% for block in section.blocks %}
+            <li class="fresh-source__tabs" data-index="{{ block.id }}">
+              <div class="" data-collection-title={{ block.settings.collection_title }}>
+                {{ block.settings.collection_title }}
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        {% for block in section.blocks %}
+        <custom-slider class="fresh-source__content" data-index="{{ block.id }}">
+          <section
+            class="splide custom-border-radius"
+            aria-label="Slide Show"
+            data-slider-options='{{ slider-options-data }}'>
+            <div class="splide__track">
+              <ul class="splide__list">
+            
+                  {% for product in block.settings.products_collection.products %}
+                    <li class="splide__slide">
+                      {% render "custom-product-card", product: product %}
+                    </li>
+                  {% endfor %}
+             
+                </ul>
+              </div>
+            </section>
+          </custom-slider>
+        {% endfor %}
+      </div>
+    
+    </div>
+  
+  </div>
+</div>
+
+
+<script>
+	document.querySelectorAll(".fresh-source__tabs").forEach(element=>{
+		element.addEventListener("click",function(e){
+			e.preventDefault();
+			document.querySelectorAll(".fresh-source__content").forEach(container => {
+				if (element.dataset.index === container.dataset.index ){
+					container.classList.add("active")
+					element.classList.add("active")
+				}else{
+					container.classList.remove("active")
+				}
+				console.log(container.dataset.index)
+			})
+		})
+	})
+</script>
+
+
+{% schema %}
+{
+  "name": "fresh-source",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Section heading",
+      "id": "section_heading",
+      "default": "Fresh From The Source"
+    },
+    {
+      "type": "header",
+      "content": "Slider settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "slider_autoplay",
+      "label": "Slide autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_dots",
+      "label": "Show slide dots",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_arrows",
+      "label": "Show slide arrows",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite_scroll",
+      "label": "Infinite scroll",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "slide_drag",
+      "label": "Enable drag",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "slide_animation",
+      "label": "Slide animation",
+      "options": [
+        {
+          "value": "loop",
+          "label": "Loop"
+        },
+        {
+          "value": "fade",
+          "label": "Fade"
+        },
+        {
+          "value": "slide",
+          "label": "Slide"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "slider_autoplay_duration",
+      "label": "Slider autoplay duration",
+      "min": 1,
+      "step": 1,
+      "max": 10,
+      "default": 3,
+      "unit": "sec"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Section padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_tab",
+      "name": "collection tab",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Collection title",
+          "id": "collection_title"
+        },
+        {
+          "type": "collection",
+          "label": "Choose products collection",
+          "id": "products_collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "fresh-source"
+    }
+  ]
+}
+{% endschema %}
+
