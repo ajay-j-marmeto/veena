@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-fresh-source-page",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
