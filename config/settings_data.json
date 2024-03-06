@@ -138,8 +138,8 @@
           "megamenu_GrA3gY": {
             "type": "megamenu",
             "settings": {
-              "desktop_image": "shopify:\/\/shop_images\/men.jpg",
-              "text": "Men"
+              "text": "Men",
+              "desktop_image": "shopify:\/\/shop_images\/men.jpg"
             }
           }
         },

@@ -501,7 +501,7 @@
 {
   "name": "t:sections.header.name",
   "class": "section-header",
-  "max_blocks": 3,
+  "max_blocks": 50,
   "settings": [
     {
       "type": "select",
@@ -691,6 +691,11 @@
       "name": "image",
       "settings": [
         {
+          "type": "text",
+          "id": "text",
+          "label": "Link text"
+        },
+        {
           "type": "image_picker",
           "id": "desktop_image",
           "label": "Image"
@@ -699,11 +704,6 @@
           "type": "image_picker",
           "id": "mobile_image",
           "label": "Image (Mobile)"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Link text"
         }
       ]
     }

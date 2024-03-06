@@ -6,36 +6,36 @@
         "collection_tab_Pg4HAg": {
           "type": "collection_tab",
           "settings": {
-            "collection_title": "SYRUPS",
+            "collection_title": "Top Collection",
             "products_collection": "best-collections"
           }
         },
         "collection_tab_HFGkrc": {
           "type": "collection_tab",
           "settings": {
-            "collection_title": "JAMS & SPREADS",
+            "collection_title": "Shirts",
             "products_collection": "shirts"
           }
         },
         "collection_tab_4jCTiR": {
           "type": "collection_tab",
           "settings": {
-            "collection_title": "FRUIT CHEWS",
+            "collection_title": "Smart Products",
             "products_collection": "smart-products"
           }
         },
         "collection_tab_MbGP9V": {
           "type": "collection_tab",
           "settings": {
-            "collection_title": "SNACKS",
-            "products_collection": "best-collections"
+            "collection_title": "T-Shirts",
+            "products_collection": "t-shirts"
           }
         },
         "collection_tab_4bYCe7": {
           "type": "collection_tab",
           "settings": {
-            "collection_title": "CHOCOLATES",
-            "products_collection": "best-collections"
+            "collection_title": "Smart Speakers",
+            "products_collection": "smart-speakers"
           }
         }
       },
@@ -48,12 +48,12 @@
       ],
       "settings": {
         "section_heading": "Fresh From The Source",
-        "slider_autoplay": true,
+        "slider_autoplay": false,
         "slide_dots": true,
         "slide_arrows": true,
         "infinite_scroll": false,
         "slide_drag": false,
-        "slide_animation": "loop",
+        "slide_animation": "slide",
         "slider_autoplay_duration": 3,
         "padding_top": 36,
         "padding_bottom": 36

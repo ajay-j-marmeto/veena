@@ -1,3 +1,4 @@
+{{ "custom-main-fresh-source-page.css" | asset_url | stylesheet_tag }}
 
 {% style %}
   .padding-{{ section.id }} {
@@ -39,19 +40,19 @@
     </div>
     <div class="fresh-source__collection-tabs">
       <div>
-        <ul>
+        <ul class="fresh-source__tabs-list">
           {% for block in section.blocks %}
-            <li class="fresh-source__tabs" data-index="{{ block.id }}">
-              <div class="" data-collection-title={{ block.settings.collection_title }}>
+            <li class="fresh-source__tabs {% if forloop.index == 1 %}active-tab {% endif %} " data-index="{{ block.id }}">
+             
                 {{ block.settings.collection_title }}
-              </div>
+             
             </li>
           {% endfor %}
         </ul>
       </div>
       <div>
         {% for block in section.blocks %}
-        <custom-slider class="fresh-source__content" data-index="{{ block.id }}">
+        <custom-slider class="fresh-source__content {% if forloop.index == 1 %}active {% endif %}" data-id="{{ block.id }}">
           <section
             class="splide custom-border-radius"
             aria-label="Slide Show"
@@ -80,19 +81,16 @@
 
 <script>
 	document.querySelectorAll(".fresh-source__tabs").forEach(element=>{
-		element.addEventListener("click",function(e){
-			e.preventDefault();
+		element.addEventListener("click",()=>{
+      document.querySelectorAll(".fresh-source__tabs").forEach(each => each.classList.remove('active-tab'))
+      document.querySelectorAll(".fresh-source__content").forEach(each=> each.classList.remove('active'))
 			document.querySelectorAll(".fresh-source__content").forEach(container => {
-				if (element.dataset.index === container.dataset.index ){
-					container.classList.add("active")
-					element.classList.add("active")
-				}else{
-					container.classList.remove("active")
-				}
-				console.log(container.dataset.index)
-			})
+				if (element.dataset.index === container.dataset.id ){
+          element.classList.add('active-tab')
+          container.classList.add('active')
+        }
 		})
-	})
+	})})
 </script>
 
 
