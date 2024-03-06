@@ -131,6 +131,26 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "new-custom-header": {
+        "type": "new-custom-header",
+        "blocks": {
+          "megamenu_GrA3gY": {
+            "type": "megamenu",
+            "settings": {
+              "desktop_image": "shopify:\/\/shop_images\/men.jpg",
+              "text": "Men"
+            }
+          }
+        },
+        "block_order": [
+          "megamenu_GrA3gY"
+        ],
+        "settings": {
+          "logo_image": "shopify:\/\/shop_images\/n_Veena_b4163ae2-38d0-4101-a97f-5d0b8a36b668.png",
+          "show_icons": true,
+          "menu_links": "levis-header-menu"
+        }
       }
     },
     "content_for_index": [

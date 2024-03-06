@@ -65,6 +65,14 @@
             "heading_4": "Help center 24\/7"
           }
         },
+        "pincode_checker_6dkPGT": {
+          "type": "pincode_checker",
+          "settings": {
+            "button_text": "Check For Delivery",
+            "pincode_available_message": "We Deliver to this Location",
+            "pincode_unavailable_message": "Currently Unavailable in this Location"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -86,6 +94,7 @@
         "quantity_selector",
         "buy_buttons",
         "icon_with_text_DzmAQw",
+        "pincode_checker_6dkPGT",
         "description",
         "share"
       ],

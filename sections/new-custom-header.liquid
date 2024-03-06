@@ -1,0 +1,183 @@
+{% style %}
+
+  .section-header__header{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .section-header__nav-list{
+    display: flex;
+  }
+
+
+
+  .section-header__nav-links ul li a{
+    text-decoration: none;
+  }
+
+  .section-header__nav-links .mega-menu__content{
+    position: relative;
+  }
+/* 
+  .menu-child-link-list,.menu-grand-child-link-list{
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .section-header__links-image{
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+{% endstyle %}
+
+
+
+<header class="section-header">
+  <div class="page-width section-header__header">
+    <nav class="section-header__nav-links">
+      <ul class="section-header__nav-list">
+        {% for link in section.settings.menu_links.links %}
+          {% comment %} <li>
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+            
+            <ul class="menu-child-link-list">
+              {% for child_link in link.links %}
+                <li>
+                  <a href="{{ child_link.url }}"> {{ child_link.title }} </a>
+                  
+                  <ul class="menu-grand-child-link-list">
+                    {% for grand_child_link in child_link.links %}
+                      <li>
+                        <a href="{{ grand_child_link.url }}"> {{ grand_child_link.title }} </a>
+                      </li>    
+                    {% endfor %}
+                  </ul>
+                </li>    
+              {% endfor %}
+            </ul>
+            
+          </li> {% endcomment %}
+
+          <header-menu>
+            <details class="mega-menu">
+              <summary class="header__menu-item list-menu__item link focus-inset">
+                <span
+                  {%- if link.child_active %}
+                    class="header__active-menu-item"
+                  {% endif %}
+                >
+                  {{- link.title | escape -}}
+                </span>
+                {% render 'icon-caret' %}
+              </summary>
+              <div class="section-header__links-image">           
+                <div class="mega-menu__content">
+                  <ul class="mega-menu__list">
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a href="{{ childlink.url }}" class="mega-menu__link">
+                          {{ childlink.title | escape }}
+                        </a>
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled" role="list">
+                            {%- for grandchildlink in childlink.links -%}
+                              <li>
+                                <a href="{{ grandchildlink.url }}" class="mega-menu__link">
+                                  {{ grandchildlink.title | escape }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                <div>
+                  {% for block in section.blocks %}
+                    {% if block.settings.text == link.title %}
+                      <img src="{{ block.settings.desktop_image | image_url  }}" width="250" height="auto">
+                    {% endif %}
+                  {% endfor %}
+                </div>
+            </div>
+            </details>
+          </header-menu>
+          
+        {% endfor %} 
+      </ul>
+    </nav>
+    <div class="section-header__logo">
+      {% if section.settings.logo_image != blank %}
+       
+        <img src="{{ section.settings.logo_image | image_url  }}" width="50" height="auto">
+        
+      {% else %}
+        <span class="h2">{{ shop.name }}</span>  
+      {% endif %}
+    </div>
+    <div class="section-header">icons</div>
+  </div>
+</header>
+
+
+
+
+{% schema %}
+{
+  "name": "header",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "label": "logo image",
+      "id": "logo_image"
+    },
+    {
+      "type": "checkbox",
+      "label": "show icons",
+      "id": "show_icons"
+    },
+    {
+      "type": "link_list",
+      "label": "menu links",
+      "id": "menu_links"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "megamenu",
+      "name": "megamenu",
+      "settings": [
+        {
+          "type": "image_picker",
+          "label": "desktop image",
+          "id": "desktop_image"
+        },
+        {
+          "type": "image_picker",
+          "label": "mobile image",
+          "id": "mobile_image"
+        },
+        {
+          "type": "text",
+          "label": "text",
+          "id": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "My New Section"
+    }
+  ]
+}
+{% endschema %}
+

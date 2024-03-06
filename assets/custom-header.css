@@ -10,5 +10,5 @@
 }
 
 .header__menu-item svg{
-  display: none;
+  display: block;
 }

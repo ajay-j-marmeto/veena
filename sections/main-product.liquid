@@ -1,3 +1,5 @@
+<script src="{{ 'pincode-checker.js' | asset_url }}" defer="defer"></script>
+
 <section
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -440,6 +442,8 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
+                
+         
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener no-js-hidden quick-add-hidden"
@@ -505,7 +509,11 @@
                         white-space: nowrap;
                       }
                 </style>
+               
 
+                <div class="pincode-checker">
+                  {% render "custom-pincode-checker" %}
+                  </div>
                 {%- unless shop.enabled_payment_types == empty -%}
                   <span class="visuallyhidden">Supported payment methods</span>
 
@@ -523,6 +531,7 @@
                     </div>
                   </div>
                 {%- endunless -%}
+               
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   {% liquid
@@ -2377,6 +2386,30 @@
           "default": "Heading",
           "label": "t:sections.main-product.blocks.icon_with_text.settings.heading_4.label",
           "info": "t:sections.main-product.blocks.icon_with_text.settings.heading.info"
+        }
+      ]
+    },
+    {
+      "type": "pincode_checker",
+      "name":"Pincode checker",
+      "settings":[
+        {
+          "type": "text",
+          "id":"button_text",
+          "label":"Button label",
+          "default": "Check For Delivery"
+        },
+         {
+          "type": "text",
+          "id":"pincode_available_message",
+          "label":"Pincode available message",
+          "default": "We Deliver to this Location"
+        },
+         {
+          "type": "text",
+          "id":"pincode_unavailable_message",
+          "label":"Pincode unavailable message",
+          "default": "Currently Unavailable in this Location"
         }
       ]
     }
