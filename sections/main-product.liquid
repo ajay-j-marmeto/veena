@@ -514,6 +514,7 @@
                 <div class="pincode-checker">
                   {% render "custom-pincode-checker" %}
                   </div>
+                  
                 {%- unless shop.enabled_payment_types == empty -%}
                   <span class="visuallyhidden">Supported payment methods</span>
 
@@ -530,6 +531,7 @@
                       </ul>
                     </div>
                   </div>
+                 
                 {%- endunless -%}
                
               {%- when 'rating' -%}
@@ -568,6 +570,7 @@
                       {{ 'accessibility.total_reviews' | t -}}
                     </span>
                   </p>
+                  
                 {%- endif -%}
               {%- when 'complementary' -%}
                 <product-recommendations

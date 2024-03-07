@@ -1,4 +1,4 @@
-{% comment %} {{ 'custom-image-grid.css' |  asset_url |  stylesheet_tag }}  {% endcomment %}
+{{ "section-custom-bundle.css" | asset_url | stylesheet_tag }}
 
 {% style %}
   .padding-{{ section.id }} {
@@ -12,19 +12,32 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
    }
+
+   
 {% endstyle %}
 
-{% if section.blocks.size > 0  %}
-    <div class="custom-image-grid padding-{{ section.id }}">
-        <div class="page-width">
-            <div class="grid grid--2-col grid--4-col-desktop">
-                {% for block in section.blocks %}
-                    {% render 'custom-product-card', product: block.settings.product, section_id: section.id %}
-                {% endfor %} 
-            </div>
-        </div>
-    </div>
-{% endif %}
+<div class="custom-bundle padding-{{ section.id }}">
+  <div class="page-width">
+    <h2>{{ section.settings.section_heading }}</h2>
+    <ul class="custom-bundle__products-list grid grid--4-col-desktop">
+      {% for product in product.metafields.custom.custom_bundle.value %}
+        <li class="grid__item custom-bundle__list-item">
+          <div class="custom-bundle__image">
+            {% render 'responsive-image',
+              desktopImage: product.featured_image,
+            %}
+          
+          </div>
+          <h2 class="h3">{{ product.title }}</h2>
+          <div class="custom-bundle__checkbox">
+            <input type="checkbox">
+          </div>
+          <h2 class="h3">{{ product.price  | money_with_currency }}</h2>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 
 {% schema %}
@@ -32,6 +45,11 @@
   "name": "Custom Bundle",
   "tag" : "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading"
+    },
     {
       "type": "header",
       "content": "Adjust Section padding"
@@ -55,19 +73,6 @@
       "unit": "px",
       "label": "Padding bottom",
       "default": 36
-    }
-  ],
-  "blocks": [
-    {
-      "type": "product",
-      "name": "Bundle Product",
-      "settings": [
-         {
-            "type": "product",
-            "id": "product",
-            "label": "Product"
-         }
-      ]
     }
   ],
   "presets": [

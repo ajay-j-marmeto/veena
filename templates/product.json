@@ -135,6 +135,7 @@
     },
     "product-recommendations": {
       "type": "marmeto-product-recommendations",
+      "disabled": true,
       "settings": {
         "enable_product_recommendations": true,
         "title": "You may also like"
@@ -142,8 +143,17 @@
     },
     "recently-viewed-products": {
       "type": "wizaah-recently-viewed-products",
+      "disabled": true,
       "settings": {
         "title": "Recently viewed"
+      }
+    },
+    "custom_bundle_c9XcQq": {
+      "type": "custom-bundle",
+      "settings": {
+        "section_heading": "Frequently Bought Together",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
@@ -151,6 +161,7 @@
     "main",
     "related-products",
     "product-recommendations",
-    "recently-viewed-products"
+    "recently-viewed-products",
+    "custom_bundle_c9XcQq"
   ]
 }
