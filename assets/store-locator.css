@@ -1,0 +1,68 @@
+.store-locator__section-heading{
+  text-align: center;
+}
+
+.store-locator__input-container{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  /* max-width: 90rem; */
+  /* margin: 0 auto; */
+  color: #fffaf6;
+
+}
+
+.store-locator__input{
+  width: 100%;
+  margin-top: 25px;
+}
+
+.store-locator__input select{
+  min-width: 250px;
+  height: 40px;
+}
+
+.store-locator__input-container button{
+  background-color: black;
+  border-radius: none;
+}
+
+.store-locator__locations{
+  padding-bottom: 25px;
+}
+
+.store-locator__list-item{
+  list-style-type: none;
+  padding: 20px;
+  background-color: #fffaf6;
+  border-radius: 16px;
+}
+
+.store-locator__heading{
+  font-size: 22px;
+  text-transform: capitalize;
+}
+
+.store-locator__place{
+  font-size: 15px;
+  margin: 10px 0 30px 0;
+  color: #72716f;
+}
+
+.store-locator__timer,.store-locator__phone{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.loction-call{
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+}
+
