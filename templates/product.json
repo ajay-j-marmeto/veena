@@ -83,6 +83,12 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "custom_bundle_fgAVUx": {
+          "type": "custom_bundle",
+          "settings": {
+            "bundle_heding": "Frequently Bought Together"
+          }
         }
       },
       "block_order": [
@@ -96,7 +102,8 @@
         "icon_with_text_DzmAQw",
         "pincode_checker_6dkPGT",
         "description",
-        "share"
+        "share",
+        "custom_bundle_fgAVUx"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -150,6 +157,7 @@
     },
     "custom_bundle_c9XcQq": {
       "type": "custom-bundle",
+      "disabled": true,
       "settings": {
         "section_heading": "Frequently Bought Together",
         "padding_top": 36,

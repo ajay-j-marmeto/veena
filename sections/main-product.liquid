@@ -1,4 +1,6 @@
+{{ 'section-custom-bundle.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'pincode-checker.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'custom-bundle.js' | asset_url }}" defer="defer"></script>
 
 <section
   id="MainProduct-{{ section.id }}"
@@ -209,7 +211,6 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
               {%- when 'collapsible_tab' -%}
-                
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
@@ -228,11 +229,7 @@
                   </details>
                 </div>
 
-                
-                
               {%- when 'quantity_selector' -%}
-                
-             
                 <div
                   id="Quantity-Form-{{ section.id }}"
                   class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
@@ -442,8 +439,7 @@
                     </volume-pricing>
                   {%- endif -%}
                 </div>
-                
-         
+
               {%- when 'popup' -%}
                 <modal-opener
                   class="product-popup-modal__opener no-js-hidden quick-add-hidden"
@@ -469,7 +465,6 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
-              
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -479,42 +474,41 @@
                   show_pickup_availability: true
                 -%}
                 <style>
-                  .payment-cards{
+                  .payment-cards {
                     border-radius: 10px;
-                    border: 1px solid rgba(0,0,0,.1);
+                    border: 1px solid rgba(0, 0, 0, 0.1);
                     display: flex;
                     justify-content: space-between;
                     padding: 8px 10px;
                     align-items: center;
                   }
-                  .payment-cards-options{
-                      display: flex;
-                      align-items: center;
-                      list-style-type: none;
-                      margin: 0;
+                  .payment-cards-options {
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+                    margin: 0;
                   }
 
-                      .icon {
-                        width: 3.125em;
-                      }
-                      .visuallyhidden {
-                        border: 0;
-                        clip: rect(0 0 0 0);
-                        height: 1px;
-                        margin: -1px;
-                        overflow: hidden;
-                        padding: 0;
-                        position: absolute;
-                        width: 1px;
-                        white-space: nowrap;
-                      }
+                  .icon {
+                    width: 3.125em;
+                  }
+                  .visuallyhidden {
+                    border: 0;
+                    clip: rect(0 0 0 0);
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    width: 1px;
+                    white-space: nowrap;
+                  }
                 </style>
-               
 
                 <div class="pincode-checker">
-                  {% render "custom-pincode-checker" %}
-                  </div>
-                  
+                  {% render 'custom-pincode-checker' %}
+                </div>
+
                 {%- unless shop.enabled_payment_types == empty -%}
                   <span class="visuallyhidden">Supported payment methods</span>
 
@@ -531,9 +525,8 @@
                       </ul>
                     </div>
                   </div>
-                 
                 {%- endunless -%}
-               
+
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   {% liquid
@@ -570,8 +563,32 @@
                       {{ 'accessibility.total_reviews' | t -}}
                     </span>
                   </p>
-                  
                 {%- endif -%}
+              {% when 'custom_bundle' %}
+                {% if product.metafields.custom.custom_bundle.value != blank %}
+                  <div>
+                    <h2 class="h3">{{ block.settings.bundle_heding }}</h2>
+                    <div class="">
+                      <ul class="custom-bundle__products-list grid grid--3-col-desktop">
+                        {% for product in product.metafields.custom.custom_bundle.value %}
+                          <li class="grid__item custom-bundle__list-item">
+                            {% render 'custom-product-card', product: product %}
+                            <div class="custom-bundle__checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-bundle__checkbox-input"
+                                data-product-id="{{ product.selected_or_first_available_variant.id }}"
+                              >
+                            </div>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                      <div>
+                        <button class="button" id="custom-add-to-cart">Add To Cart</button>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
               {%- when 'complementary' -%}
                 <product-recommendations
                   class="complementary-products quick-add-hidden no-js-hidden{% if block.settings.make_collapsible_row %} is-accordion{% endif %}{% if block.settings.enable_quick_add %} complementary-products-contains-quick-add{% endif %}"
@@ -2394,25 +2411,37 @@
     },
     {
       "type": "pincode_checker",
-      "name":"Pincode checker",
-      "settings":[
+      "name": "Pincode checker",
+      "settings": [
         {
           "type": "text",
-          "id":"button_text",
-          "label":"Button label",
+          "id": "button_text",
+          "label": "Button label",
           "default": "Check For Delivery"
         },
-         {
+        {
           "type": "text",
-          "id":"pincode_available_message",
-          "label":"Pincode available message",
+          "id": "pincode_available_message",
+          "label": "Pincode available message",
           "default": "We Deliver to this Location"
         },
-         {
+        {
           "type": "text",
-          "id":"pincode_unavailable_message",
-          "label":"Pincode unavailable message",
+          "id": "pincode_unavailable_message",
+          "label": "Pincode unavailable message",
           "default": "Currently Unavailable in this Location"
+        }
+      ]
+    },
+    {
+      "type": "custom_bundle",
+      "name": "Custom Product Bundle",
+      "settings": [
+        {
+          "type": "text",
+          "id": "bundle_heding",
+          "label": "Bundle Heading",
+          "default": "Frequently Bought Together"
         }
       ]
     }
