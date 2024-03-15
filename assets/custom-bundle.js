@@ -74,6 +74,12 @@
 // let items = [];
 document.querySelector("#custom-add-to-cart").addEventListener("click", () => {
   let productItems = [];
+  let mainProductId = document.querySelector("#custom-add-to-cart").dataset
+    .mainProduct;
+  let mainProductqty = document.querySelector("#custom-add-to-cart").dataset
+    .mainProductQuantity;
+  console.log("updated main product", mainProductId, mainProductqty);
+
   document
     .querySelectorAll(".custom-bundle__checkbox-input:checked")
     .forEach((item) => {
@@ -84,6 +90,8 @@ document.querySelector("#custom-add-to-cart").addEventListener("click", () => {
         });
       }
     });
+  productItems.push({ id: mainProductId, quantity: mainProductqty });
+
   console.log(productItems);
 
   const cart =

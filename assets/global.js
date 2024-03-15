@@ -212,6 +212,10 @@ class QuantityInput extends HTMLElement {
 
   validateQtyRules() {
     const value = parseInt(this.input.value);
+
+    let mainProductQty = document.querySelector("#custom-add-to-cart");
+    mainProductQty.dataset.mainProductQuantity = value;
+
     if (this.input.min) {
       const min = parseInt(this.input.min);
       const buttonMinus = this.querySelector(".quantity__button[name='minus']");
@@ -227,10 +231,13 @@ class QuantityInput extends HTMLElement {
     const price = document.getElementById(`price-${this.dataset.section}`);
     // const qty = document.querySelector('[data-cart-quantity]').value;
     // console.log(qty);
-    const currentPrice = price.querySelector('.price-item').textContent;
-    const finalPrice = value*parseInt(currentPrice.split("Rs. ")[1].split('.')[0].replace(/,/g, ''));
+    const currentPrice = price.querySelector(".price-item").textContent;
+    const finalPrice =
+      value *
+      parseInt(currentPrice.split("Rs. ")[1].split(".")[0].replace(/,/g, ""));
     // console.log((parseInt(currentPrice.split("Rs. ")[1].split('.')[0].replace(/,/g, ''))));
-    addButtonText.textContent = window.variantStrings.addToCart + " Rs. " + finalPrice;
+    addButtonText.textContent =
+      window.variantStrings.addToCart + " Rs. " + finalPrice;
   }
 }
 
@@ -1307,6 +1314,10 @@ class VariantSelects extends HTMLElement {
       ? this.dataset.originalSection
       : this.dataset.section;
 
+    let mainProductId = document.querySelector("#custom-add-to-cart");
+
+    mainProductId.dataset.mainProduct = requestedVariantId;
+
     fetch(
       `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
         this.dataset.originalSection
@@ -1320,7 +1331,8 @@ class VariantSelects extends HTMLElement {
         if (this.currentVariant.id !== requestedVariantId) return;
 
         const html = new DOMParser().parseFromString(responseText, "text/html");
-        document.querySelector(".product__description").innerHTML = html.querySelector(".product__description").innerHTML
+        document.querySelector(".product__description").innerHTML =
+          html.querySelector(".product__description").innerHTML;
         const destination = document.getElementById(
           `price-${this.dataset.section}`
         );
