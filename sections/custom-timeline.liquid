@@ -1,0 +1,168 @@
+<script src="{{ "custom-timeline.js" |  asset_url }}" defer></script>
+{{   "custom-timeline.css" | asset_url | stylesheet_tag }}
+
+<div class="section-timeline-{{ section.id }}">
+  <div class="timeline-wrapper">
+    <div class="timeline-background-wrapper">
+      <div id="thumbnail-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            {% for block in section.blocks %}
+              <li class="splide__slide {% cycle 'margin-top', 'odd' as row_class %}">
+                <img class="timeline-logo" src="https://www.orientelectric.com/theme/Orient/img/bg-as-tn.png" alt="timeline" height="30" width="30" />
+                <div class="thumbnail-slider__timeline-description">
+                    <h2>{{ block.settings.timeline_year }}</h2>
+                    <div>{{ block.settings.timeline_text }}</div>
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="main-slider" class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          {% for block in section.blocks %}
+            <li class="splide__slide">
+              <div class="main-slider__timeline-text-wrapper">
+                  <h2><strong>{{ block.settings.timeline_year }}</strong></h2>
+                  <div>{{ block.settings.timeline_text }}</div>
+              </div>
+              <div class="main-slider__timeline-description">{{ block.settings.timeline_description }}</div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "timeline",
+  "tag": "section",
+  "settings": [
+    {
+        "type": "header",
+        "content": "Slideshow options"
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_autoplay",
+        "label": "Enable autoplay",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_dots",
+        "label": "Enable dots",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "rewind_slides",
+        "label": "Enable rewind",
+        "default": false
+    },
+    {
+        "type": "checkbox",
+        "id": "enable_arrows",
+        "label": "Enable arrows",
+        "default": true
+    },
+    {
+        "type": "select",
+        "id": "slide_animation",
+        "label": "Slider animation",
+        "options": [
+            {
+                "value": "fade",
+                "label": "Fade"
+            },
+            {
+                "value": "loop",
+                "label": "Loop"
+            },
+            {
+                "value": "slide",
+                "label": "Slide"
+            }
+        ],
+        "default": "loop"
+    },
+    {
+        "type": "range",
+        "id": "slides_per_page",
+        "label": "Slides per page",
+        "min": 1,
+        "max": 12,
+        "default": 1
+    },
+    {
+        "type": "range",
+        "id": "slides_per_move",
+        "label": "Slides per move",
+        "min": 1,
+        "max": 12,
+        "default": 1
+    },
+    {
+        "type": "header",
+        "content": "Section padding details"
+    },
+    {
+      "type": "range",
+      "label": "Padding top",
+      "id": "padding_top",
+      "default": 20,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "label": "Padding bottom",
+      "id": "padding_bottom",
+      "default": 20,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "timeline_item",
+      "name": "Timeline item",
+      "settings": [
+        {
+          "type": "text",
+          "label": "Timeline year",
+          "id": "timeline_year",
+          "default": "Year"
+        },
+        {
+          "type": "text",
+          "label": "Timeline text",
+          "id": "timeline_text",
+          "default": "Your timeline text goes here"
+        },
+        {
+          "type": "text",
+          "label": "Timeline description",
+          "id": "timeline_description",
+          "default": "Your timeline description goes here"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Timeline"
+    }
+  ]
+}
+{% endschema %}

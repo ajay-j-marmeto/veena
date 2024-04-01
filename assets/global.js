@@ -213,8 +213,8 @@ class QuantityInput extends HTMLElement {
   validateQtyRules() {
     const value = parseInt(this.input.value);
 
-    let mainProductQty = document.querySelector("#custom-add-to-cart");
-    mainProductQty.dataset.mainProductQuantity = value;
+    // let mainProductQty = document.querySelector("#custom-add-to-cart");
+    // mainProductQty.dataset.mainProductQuantity = value;
 
     if (this.input.min) {
       const min = parseInt(this.input.min);
@@ -231,13 +231,13 @@ class QuantityInput extends HTMLElement {
     const price = document.getElementById(`price-${this.dataset.section}`);
     // const qty = document.querySelector('[data-cart-quantity]').value;
     // console.log(qty);
-    const currentPrice = price.querySelector(".price-item").textContent;
-    const finalPrice =
-      value *
-      parseInt(currentPrice.split("Rs. ")[1].split(".")[0].replace(/,/g, ""));
-    // console.log((parseInt(currentPrice.split("Rs. ")[1].split('.')[0].replace(/,/g, ''))));
-    addButtonText.textContent =
-      window.variantStrings.addToCart + " Rs. " + finalPrice;
+    // const currentPrice = price.querySelector(".price-item").textContent;
+    // const finalPrice =
+    //   value *
+    //   parseInt(currentPrice.split("Rs. ")[1].split(".")[0].replace(/,/g, ""));
+    // // console.log((parseInt(currentPrice.split("Rs. ")[1].split('.')[0].replace(/,/g, ''))));
+    // addButtonText.textContent =
+    //   window.variantStrings.addToCart + " Rs. " + finalPrice;
   }
 }
 

@@ -1,0 +1,114 @@
+
+.timeline-wrapper {
+    display: flex;  
+    flex-direction: column;
+    background-color: rgb(55, 55, 55);
+    padding: 10% 5px;
+  }
+  
+  
+  .timeline-background-wrapper {
+    background-image: url("https://www.orientelectric.com/theme/Orient/img/bg-aboutslider-nav.png");
+    height: 20px;
+    position: relative ;
+  }
+  
+  
+  #thumbnail-slider .splide__slide:nth-child(even) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  
+  .splide__track--nav > .splide__list > .splide__slide, .splide__track--nav > .splide__list > .splide__slide.is-active {
+    border: none;
+  }
+  
+  .timeline-logo {
+    width: 35px;
+    height: 25px;
+  }
+  
+  #main-slider {
+    padding: 0 30px;
+    margin-top: 150px;
+  }
+  
+  .main-slider__timeline-text-wrapper {
+    color: #e85a29;
+  }
+  
+  .main-slider__timeline-text-wrapper h2 {
+    color: #e85a29;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 84px;
+  }
+  
+  .main-slider__timeline-text-wrapper div {
+      width: 300px;
+      font-size: 20px;
+      line-height: 22px;
+      color: #e85a29;
+      text-transform: uppercase;
+      font-family: bold;
+      font-weight: 400;
+  }
+  
+  .main-slider__timeline-description {
+    font-size: 16px;
+    color: #999;
+    font-weight: 300;
+    line-height: 26px;
+  }
+  
+  #thumbnail-slider {
+    top: -8px;
+    position: absolute;
+    width:100%
+  }
+  
+  #thumbnail-slider .splide__track--nav > .splide__list > .splide__slide.is-active {
+    color: #e85a29;
+  }
+  
+  #thumbnail-slider .splide__track--nav > .splide__list > .splide__slide{
+    color:#919191;
+  }
+  
+  #main-slider .splide__slide {
+    display: flex;
+    gap: 40px;
+  }
+  
+  #thumbnail-slider .splide__track{
+    top: -122px;
+  }
+  
+  .margin-top{
+    margin-top: 9%;
+  }
+  
+  @media screen and (max-width:768px){
+    .timeline-background-wrapper{
+      display:none;
+    }
+    #main-slider .splide__slide {
+      flex-direction:column;
+  }
+  }
+  
+  @media screen and (min-width:1024px){
+    .margin-top{
+      margin-top: 10%;
+    }
+  }
+  
+  @media screen and (min-width:1440px){
+    .margin-top{
+      margin-top: 8.6%;
+    }
+  }
+  
+  .thumbnail-slider__timeline-description h2{
+    color: inherit;
+  }

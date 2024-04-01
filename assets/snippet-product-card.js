@@ -40,6 +40,30 @@ class ProductCard extends HTMLElement {
 
 customElements.define("product-card", ProductCard);
 
+
+class CustomProductCardAtc extends HTMLElement {
+  constructor(){
+    super();
+    this.productId = this.dataset.productId;
+    // console.log(this.productId)
+    this.addEventListener("clcik", this.onProductChange)
+  }
+
+  onProductChange(){
+    let btn = document.querySelectorAll(".custom-atc");
+
+btn.forEach(each=>{
+    each.addEventListener("click",()=>{
+        console.log(each.dataset.productId);
+    })
+})
+
+  }
+}
+customElements.define("custom-add-to-cart", CustomProductCardAtc);
+
+
+
 // class ProductCard extends HTMLElement {
 //   constructor() {
 //     super();
