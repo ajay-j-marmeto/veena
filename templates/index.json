@@ -731,6 +731,132 @@
         "padding_top": 60,
         "padding_bottom": 60
       }
+    },
+    "custom_timeline_hFTxbE": {
+      "type": "custom-timeline",
+      "blocks": {
+        "timeline_item_Ue6J6g": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "1939",
+            "timeline_text": "THE JOURNEY BEGINS",
+            "timeline_description": "Orient Electric Limited,formerly a division of Orient Paper and Industries Limited (OPIL), was incorporated as Orient Paper Mills Ltd. in 1939. The CK Birla Group started Orient Paper with just one paper machine at Brajrajnagar in Orissa, India."
+          }
+        },
+        "timeline_item_NTFWyg": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "1954",
+            "timeline_text": "INDUCTED INTO CK BIRLA GROUP",
+            "timeline_description": "Orient Fans, the erstwhile Calcutta Electrical Manufacturing Company, became a part of the CK Birla Group in 1954 and was subsequently rechristened Orient Electric in 2014."
+          }
+        },
+        "timeline_item_ebFJXJ": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "1990",
+            "timeline_text": "DEVELOPED & PATENTED PSPO TECHNOLOGY",
+            "timeline_description": "Orient Electric developed and patented the revolutionary PSPO (Peak Speed Performance Output) technology in early 90's which changed the industry outlook altogether. In order to improve production, meet the ever-changing needs of the customers, and establish itself as a global market leader, Orient Electric also equipped its manufacturing plants at Faridabad in Haryana and Kolkata in the state of West Bengal with state of the art machinery and technology."
+          }
+        },
+        "timeline_item_gDT3nM": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2008",
+            "timeline_text": "ENTERS INTO LIGHTING BUSINESS",
+            "timeline_description": "Leveraging its strong brand identity developed over the years, Orient Electric forayed into a new range of electrical products. It started trading of CFLs (compact fluorescent) and FTLs (fluorescent tube) in the year 2007. In 2008, the company set up an advanced manufacturing unit at Faridabad in the state of Haryana dedicated to manufacturing of CFLs and FTLs.It later ventured into LED lighting solutions in 2014 and as of today, it is one of the leading lighting companies in India with a diverse LED-centric portfolio."
+          }
+        },
+        "timeline_item_MJt7yG": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2011",
+            "timeline_text": "FORAYS INTO HOME APPLIANCES BUSINESS",
+            "timeline_description": "Orient Electric ventured into the home appliances market in 2011 with a wide range of products including Air Coolers, Water Heaters, Juicer Mixer Grinders, Mixer Grinders, Toasters, Electric Kettles, Coolers, Induction Cookers, Rice Cookers and Electric Irons. Orient Electric's Home Appliances division today enjoys a pan India presence with a strong distribution network."
+          }
+        },
+        "timeline_item_3DQELY": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2014",
+            "timeline_text": "NEW BRAND IDENTITY UNVEILED",
+            "timeline_description": "The company changed its brand name and identity from 'Orient Electricals' to 'Orient Electric' and consolidated its business verticals of Fans, Lighting and Home Appliances. The brand revamp was done with an aim to establish the company's identity as a one-stop home solutions provider with the next generation customers who make informed buying decisions. As part of the brand repositioning plan, the company also launched a new unified communications campaign 'Switch to smart' and its new logo in the vibrant colour 'orange'. The year also marked the launch of BLDC fans and Orient Electric's entry into LED lighting solutions."
+          }
+        },
+        "timeline_item_Qe6F4L": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2015",
+            "timeline_text": "VENTURES INTO SWITCHGEAR BUSINESS",
+            "timeline_description": "Continuing with its efforts to position itself as one-stop solution provider of lifestyle electrical solutions, Orient Electric forayed into the Switchgear market. Orient Electric's smart range of energy-efficient LV Switchgear products includes MCB (Miniature Circuit Breakers), RCCB (Residual Current Circuit Breakers), Isolators and Distribution Boards. The company manufactures the Switchgear range at its state of the art manufacturing facility located at Noida in the state of Uttar Pradesh."
+          }
+        },
+        "timeline_item_8C8J6p": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2016",
+            "timeline_text": "RECEIVES BEE STAR RATING FOR LED LAMPS",
+            "timeline_description": "On January 16, 2019, Orient Electric announced the national launch of India's first smart ceiling fan Aeroslim which set new standards in the segment with its IoT & voice control, one-of-a-kind slim cylindrical design and energy-efficient inverter motor"
+          }
+        },
+        "timeline_item_GkAgMq": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2017",
+            "timeline_text": "ORIENT ELECTRIC DEMERGES AS A SEPARATE ENTITY",
+            "timeline_description": "Your timeline Orient Electric gets demerged from Orient Paper & Industries Limited (OPIL) into a separate listed entity, Orient Electric Limited (OEL). The Scheme of demerger was approved by the Kolkata Bench of the National Company Law Tribunal on November 9, 2017.description goes here"
+          }
+        },
+        "timeline_item_PLthQM": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2018",
+            "timeline_text": "ORIENT ELECTRIC GETS LISTED ON THE STOCK EXCHANGES",
+            "timeline_description": "On 14th May 2018, Orient Electric Limited got listed on the Bombay Stock Exchange (BSE) and the National Stock Exchange (NSE). Orient Electric Ltd. stock trades under the code \"541301\" on BSE and under the code \"ORIENTELEC\" on NSE."
+          }
+        },
+        "timeline_item_HjDJGc": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2019",
+            "timeline_text": "LAUNCHED INDIA'S FIRST SMART CEILING FAN",
+            "timeline_description": "Orient Electric makes its way into the list of 2020 Fortune India 500 - India's Largest Corporations. The recognition validates the robustness of company's business model and is reflective of its ambitious growth journey as a standalone company."
+          }
+        },
+        "timeline_item_d4N7kf": {
+          "type": "timeline_item",
+          "settings": {
+            "timeline_year": "2020",
+            "timeline_text": "ENTERS 'FORTUNE INDIA 500' LIST",
+            "timeline_description": "Orient Electric makes its way into the list of 2020 Fortune India 500 - India's Largest Corporations. The recognition validates the robustness of company's business model and is reflective of its ambitious growth journey as a standalone company.."
+          }
+        }
+      },
+      "block_order": [
+        "timeline_item_Ue6J6g",
+        "timeline_item_NTFWyg",
+        "timeline_item_ebFJXJ",
+        "timeline_item_gDT3nM",
+        "timeline_item_MJt7yG",
+        "timeline_item_3DQELY",
+        "timeline_item_Qe6F4L",
+        "timeline_item_8C8J6p",
+        "timeline_item_GkAgMq",
+        "timeline_item_PLthQM",
+        "timeline_item_HjDJGc",
+        "timeline_item_d4N7kf"
+      ],
+      "settings": {
+        "enable_autoplay": false,
+        "enable_dots": false,
+        "rewind_slides": false,
+        "enable_arrows": true,
+        "slide_animation": "loop",
+        "slides_per_page": 1,
+        "slides_per_move": 1,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
     }
   },
   "order": [
@@ -749,6 +875,7 @@
     "custom_banner_content_DVhECr",
     "custom_testimonial_rJeATm",
     "custom_blogs_y9QpaB",
-    "custom_faq_TfnAQJ"
+    "custom_faq_TfnAQJ",
+    "custom_timeline_hFTxbE"
   ]
 }
