@@ -1,1 +1,93 @@
-<h1>jay</h1>
+{% style %}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+
+<div class="padding-{{section.id}}">
+  <div class="page-width">
+    <form method="POST" action="https://script.google.com/macros/s/AKfycbz7RrIxgHUh2aDXs-y_u4XT0NGj0iaATqtVqYbgJ2gUC4OgxYzSOrqNMbED5rnbMjCRdg/exec">
+      <div class="grid grid--1-col">
+         <div class="field grid__item">
+          <input name="Name" type="text" id="googleName" placeholder="Name" class="field__input" required>
+          <label class="field__label" for="googleName">Name</label>
+        </div>
+        <div class="field grid__item">
+          <input name="Phone" type="tel" id="googlePhone" placeholder="Phone Number" class="field__input" required>
+          <label class="field__label" for="googlePhone">Phone Number</label>
+        </div>
+        <div class="grid__item">
+          <h2 class="h3">Your service rating</h2>
+          <div class="feedback__svg-light">
+
+            {% for i in (1..5) %}
+
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.668 8.626l8.332 1.159-6.065 5.874 1.48 8.341-7.416-3.997-7.416 3.997 1.481-8.341-6.064-5.874 8.331-1.159 3.668-7.626 3.669 7.626zm-6.67.925l-6.818.948 4.963 4.807-1.212 6.825 6.068-3.271 6.069 3.271-1.212-6.826 4.964-4.806-6.819-.948-3.002-6.241-3.001 6.241z"/></svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"/></svg>
+           {% endfor %}
+          </div>
+        </div>
+        <div class="grid__item">
+          <input type="checkbox" id="checkbox" name="agree">
+          <label for="checkbox"> I have read and accept the Privacy Policy</label>
+          
+        </div>
+        <div class="grid__item">
+          <label for="textarea">Additional feedback</label>
+          <textarea id="textarea" name="info" rows="4" cols="50">If You have any additional feedback please type it in hear...</textarea>
+        </div>
+      </div>
+      <button class="button" type="submit">Submit feedback</button>
+    </form>  
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Feedback form",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 20
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Feedback form"
+    }
+  ]
+}
+{% endschema %}
