@@ -10,6 +10,32 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  
+  .rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: left;
+  }
+
+  .rating input {
+    display: none;
+  }
+
+  .rating label {
+    display: inline-block;
+    padding: 5px;
+    font-size: 25px;
+    color: #aaa;
+    cursor: pointer;
+  }
+
+  .rating label:hover,
+  .rating label:hover ~ label,
+  .rating input:checked ~ label {
+    color: #ffdd00;
+  }
+
 {% endstyle %}
 
 
