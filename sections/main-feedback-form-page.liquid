@@ -36,13 +36,17 @@
     color: #ffdd00;
   }
 
+  .feedback-from--container{
+    max-width: 600px;
+  }
+
 {% endstyle %}
 
 
 <div class="padding-{{section.id}}">
   <div class="page-width">
     <form method="POST" action="https://script.google.com/macros/s/AKfycbz7RrIxgHUh2aDXs-y_u4XT0NGj0iaATqtVqYbgJ2gUC4OgxYzSOrqNMbED5rnbMjCRdg/exec">
-      <div class="grid grid--1-col">
+      <div class="grid grid--1-col feedback-from--container">
          <div class="field grid__item">
           <input name="Name" type="text" id="googleName" placeholder="Name" class="field__input" required>
           <label class="field__label" for="googleName">Name</label>
