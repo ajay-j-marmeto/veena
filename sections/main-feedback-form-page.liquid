@@ -36,9 +36,13 @@
     color: #ffdd00;
   }
 
-  .feedback-from--container{
+  .feedback-form--container{
     max-width: 600px;
     margin: 0 auto;
+  }
+  .feedback-form--text-area{
+    display: flex;
+    flex-direction: column;
   }
 
 {% endstyle %}
@@ -47,7 +51,7 @@
 <div class="padding-{{section.id}}">
   <div class="page-width">
     <form method="POST" action="https://script.google.com/macros/s/AKfycbz7RrIxgHUh2aDXs-y_u4XT0NGj0iaATqtVqYbgJ2gUC4OgxYzSOrqNMbED5rnbMjCRdg/exec">
-      <div class="grid grid--1-col feedback-from--container">
+      <div class="grid grid--1-col feedback-form--container">
          <div class="field grid__item">
           <input name="Name" type="text" id="googleName" placeholder="Name" class="field__input" required>
           <label class="field__label" for="googleName">Name</label>
@@ -70,7 +74,7 @@
           <label for="checkbox"> I have read and accept the Privacy Policy</label>
           
         </div>
-        <div class="grid__item">
+        <div class="grid__item feedback-form--text-area">
           <label for="textarea">Additional feedback</label>
           <textarea id="textarea" name="Feedback" rows="4" cols="50" placeholder="If You have any additional feedback please type it in hear..."></textarea>
         </div>
