@@ -60,16 +60,16 @@
 <div class="padding-{{section.id}}">
   <div class="page-width">
     <form method="POST" action="https://script.google.com/macros/s/AKfycbz7RrIxgHUh2aDXs-y_u4XT0NGj0iaATqtVqYbgJ2gUC4OgxYzSOrqNMbED5rnbMjCRdg/exec">
-      <div class="grid grid--1-col feedback-form--container">
-         <div class="field grid__item">
+      <div class="feedback-form--container">
+         <div class="field">
           <input name="Name" type="text" id="googleName" placeholder="Name" class="field__input" required>
           <label class="field__label" for="googleName">Name</label>
         </div>
-        <div class="field grid__item">
+        <div class="field">
           <input name="Phone" type="tel" id="googlePhone" placeholder="Phone Number" class="field__input" required>
           <label class="field__label" for="googlePhone">Phone Number</label>
         </div>
-        <div class="grid__item">
+        <div class="">
           <h2 class="h3">Your service rating</h2>
           <div class="rating">
             <input type="radio" id="star5" name="Rating" value="5" ><label for="star5">☆</label>
@@ -79,11 +79,11 @@
             <input type="radio" id="star1" name="Rating" value="1"><label for="star1">☆</label>
           </div>
         </div>
-        <div class="grid__item feedback-form--text-area">
+        <div class="feedback-form--text-area">
           <label for="textarea" class="h3">Additional feedback</label>
           <textarea id="textarea" name="Feedback" rows="8" cols="50" placeholder="If You have any additional feedback please type it in hear..."></textarea>
         </div>
-        <div class="grid__item">
+        <div class="">
           <input type="checkbox" id="checkbox" name="Policy">
           <label for="checkbox"> I have read and accept the Privacy Policy</label>
         </div>
