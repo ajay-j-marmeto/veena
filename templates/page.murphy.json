@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-murphy-page",
+      "settings": {
+        "heading": "I'm King Murphy",
+        "desktop_image": "shopify:\/\/shop_images\/murphy_flip.png",
+        "mobile_image": "shopify:\/\/shop_images\/murphy_flip.png",
+        "description": "<p>hey hoyo man what are u dng come lets part together<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

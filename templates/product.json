@@ -89,6 +89,11 @@
           "settings": {
             "bundle_heding": "Frequently Bought Together"
           }
+        },
+        "color_family_test_bNtiKz": {
+          "type": "color_family_test",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -103,7 +108,8 @@
         "pincode_checker_6dkPGT",
         "description",
         "share",
-        "custom_bundle_fgAVUx"
+        "custom_bundle_fgAVUx",
+        "color_family_test_bNtiKz"
       ],
       "settings": {
         "enable_sticky_info": true,

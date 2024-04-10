@@ -1415,13 +1415,13 @@
   },
   {
     "name": "Free shipping bar",
-   "settings": [
+    "settings": [
       {
         "type": "text",
-        "id":"free_shipping",
-        "label":"Free shipping limit"
+        "id": "free_shipping",
+        "label": "Free shipping limit"
       }
-  ]
+    ]
   },
   {
     "name": "t:settings_schema.cart.name",

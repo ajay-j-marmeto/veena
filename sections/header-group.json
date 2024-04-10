@@ -36,50 +36,6 @@
     },
     "header": {
       "type": "custom-header",
-      "blocks": {
-        "image_haJ9PX": {
-          "type": "image",
-          "settings": {
-            "text": "Sale",
-            "desktop_image": "shopify:\/\/shop_images\/sale.jpg"
-          }
-        },
-        "image_aJiJBf": {
-          "type": "image",
-          "settings": {
-            "text": "Men",
-            "desktop_image": "shopify:\/\/shop_images\/men.jpg"
-          }
-        },
-        "image_yEctBx": {
-          "type": "image",
-          "settings": {
-            "text": "Women",
-            "desktop_image": "shopify:\/\/shop_images\/women.jpg"
-          }
-        },
-        "image_PhBq3p": {
-          "type": "image",
-          "settings": {
-            "text": "New Arrivals",
-            "desktop_image": "shopify:\/\/shop_images\/new-arrivals.jpg"
-          }
-        },
-        "image_iNmMaW": {
-          "type": "image",
-          "settings": {
-            "text": "Collections",
-            "desktop_image": "shopify:\/\/shop_images\/collections.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_haJ9PX",
-        "image_aJiJBf",
-        "image_yEctBx",
-        "image_PhBq3p",
-        "image_iNmMaW"
-      ],
       "settings": {
         "logo_position": "middle-center",
         "menu": "levis-header-menu",

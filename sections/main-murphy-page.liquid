@@ -1,0 +1,109 @@
+{{ "section-main-murphy-page.css" |  asset_url | stylesheet_tag }}
+
+
+{%- style -%}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+
+
+<div class="page-width">
+  <div class="padding-{{ section.id }}">
+    <div class="text-with-right-image">
+      <div class="text-wrapper">
+        {% if section.settings.heading != blank %}
+          <h2>{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.description != blank %}
+          <div>{{ section.settings.description }}</div>
+        {% endif %}
+      </div>
+      <div class="image-wrapper">
+        
+        {% if section.settings.desktop_image and section.settings.mobile_image != blank %}
+          <div class="murphy__image-container">
+            {% render "responsive-image", class:"", desktopImage:section.settings.desktop_image, mobileImage: section.settings.mobile_image %}
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Text with right image",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "label": "Heading",
+      "id": "heading",
+      "default": "I'm King Murphy"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image",
+      "id": "desktop_image",
+      "info": "Recommended image size should be 1100 x 900 px"
+    },
+    {
+      "type": "image_picker",
+      "label": "Image (mobile)",
+      "id": "mobile_image",
+      "info": "Recommended image size should be 600 x 400 px"
+    },
+    {
+      "type": "richtext",
+      "label": "Description",
+      "id": "description",
+      "default": "<p>hey hoyo man what are u dng come lets part together</p>"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Text with right image"
+    }
+  ]
+}
+{% endschema %}
+
+
+

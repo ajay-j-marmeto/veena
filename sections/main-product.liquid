@@ -136,6 +136,18 @@
                   {%- endform -%}
                 </div>
                 <hr>
+
+              {%  when "color_family_test" %}
+                <div>
+                  <h2 class="h3">color family</h2>
+
+                  {% assign colorField = product.metafields.custom.test_color.value %}
+                {% for item in colorField %}
+                  {{ item.sub_colors }}
+                  
+                {% endfor %}
+
+                </div>  
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -908,6 +920,11 @@
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
+    },
+    {
+      "type": "color_family_test",
+      "name" : "Color Family",
+      "limit": 1
     },
     {
       "type": "title",

@@ -1,0 +1,14 @@
+.text-with-right-image {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.murphy__image-container img{
+    transition: transform all 2s ease-in-out;
+    animation: jay;
+}
+
+.murphy__image-container img{
+    transform: rotate(-90deg) translateX(-50px);
+}
