@@ -1,6 +1,6 @@
 {{ 'section-custom-bundle.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'pincode-checker.js' | asset_url }}" defer="defer"></script>
-<script src="{{ 'custom-bundle.js' | asset_url }}" defer="defer"></script>
+{% comment %} <script src="{{ 'custom-bundle.js' | asset_url }}" defer="defer"></script> {% endcomment %}
 
 <section
   id="MainProduct-{{ section.id }}"
@@ -142,12 +142,21 @@
                   <h2 class="h3">color family</h2>
 
                   {% assign colorField = product.metafields.custom.test_color.value %}
-                {% for item in colorField %}
-                  {{ item.sub_colors }}
-                  
-                {% endfor %}
-
+                  <div class="color-family-main-container">
+                    {% for item in colorField %}
+                      <custom-color-family class="custom-color-family-btn" data-color-obj='{{ item | json }}' 
+                        data-color-family-products='{{ item.color_products.value | json }}'> 
+                        <div class="color-family" style="background-color:{{item.main_color }};">
+                        </div>
+                        <h2 class="h3">
+                          {{ item.main_color  }}
+                        </h2>
+                      </custom-color-family>
+                    {% endfor %}
+                  </div>
+                  <div class="sub-colors-family"></div>
                 </div>  
+
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -575,7 +584,7 @@
                     </span>
                   </p>
                 {%- endif -%}
-              {% when 'custom_bundle' %}
+              {% when 'custom_bundles' %}
                 {% if product.metafields.custom.custom_bundle.value != blank %}
                   <div>
                     <h2 class="h3">{{ block.settings.bundle_heding }}</h2>

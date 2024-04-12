@@ -121,3 +121,99 @@ document.querySelector("#custom-add-to-cart").addEventListener("click", () => {
       console.error("Error:", error);
     });
 });
+
+
+
+// let btns = document.querySelectorAll(".custom-color-family-btn")
+// btns.forEach(each=>{
+  
+//   each.addEventListener("click",()=>{
+//     let subColorsContainer = document.querySelector(".sub-colors-family")
+
+//     subColorsContainer.innerHTML = ""
+
+//     let dataObj = JSON.parse(each.dataset.colorObj);
+//     let colorProductsData = JSON.parse(each.dataset.colorFamilyProducts);
+//     console.log(colorProductsData);
+    
+//     let products = dataObj.color_products
+//     let subColors = dataObj.sub_colors
+//     console.log(products,subColors);
+//     for(let i=0; i<products.length; i++){
+//       subColorsContainer.innerHTML+=`
+//       <a href="/products/full-sleeve-high-neck-t-shirt?variant=43818439999696">
+//         <div style="background-color:${subColors[i]};" class="color-family">
+//         </div>
+//       </a>
+//       `
+//     }
+//     // subColors.forEach(eachColor=>{
+//     //   subColorsContainer.innerHTML+=`
+//     //   <a href="/products/full-sleeve-high-neck-t-shirt?variant=43818439999696">
+//     //     <div style=" background-color:${eachColor}; width:50px; height:50px; border-radius:50%; display:inline-block;">
+//     //     </div>
+//     //   </a>
+//     //   `
+
+//     // })
+    
+//   })
+// })
+
+
+// let btns = document.querySelectorAll(".custom-color-family-btn")
+// btns.forEach(each => {
+//   each.addEventListener("click", () => {
+//     let subColorsContainer = document.querySelector(".sub-colors-family")
+//     subColorsContainer.innerHTML = ""
+    
+//     let dataObj = JSON.parse(each.dataset.colorObj);
+//     let colorProductsData = JSON.parse(each.dataset.colorFamilyProducts);
+
+    
+//     let products = dataObj.color_products;
+//     let subColors = dataObj.sub_colors;
+    
+//     for (let i = 0; i < products.length; i++) {
+
+//       subColorsContainer.innerHTML += `
+//         <a href="/products/${colorProductsData[i].handle}">
+//           <div style="background-color:${subColors[i]};" class="color-family">
+//           </div>
+//         </a>
+//       `;
+//     }
+//   });
+// });
+
+
+// class CustomColorFamily extends HTMLElement {
+//   constructor() {
+//       super();
+//       this.addEventListener("click",()=>{
+//         let subColorsContainer = this.querySelector(".sub-colors-family")
+//         subColorsContainer.innerHTML = ""
+        
+//         let dataObj = JSON.parse(this.dataset.colorObj);
+//         let colorProductsData = JSON.parse(this.dataset.colorFamilyProducts);
+    
+        
+//         let products = dataObj.color_products;
+//         let subColors = dataObj.sub_colors;
+        
+//         for (let i = 0; i < products.length; i++) {
+    
+//           subColorsContainer.innerHTML += `
+//             <a href="/products/${colorProductsData[i].handle}">
+//               <div style="background-color:${subColors[i]};" class="color-family">
+//               </div>
+//             </a>
+//           `;
+//         }
+//       });
+
+//   }
+
+// }
+
+// customElements.define("custom-color-family", CustomColorFamily)

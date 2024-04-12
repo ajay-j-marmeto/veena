@@ -20,11 +20,9 @@
           "settings": {
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
+        "color_family_test_bNtiKz": {
+          "type": "color_family_test",
           "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
           }
         },
         "inventory_m9b3x9": {
@@ -38,6 +36,13 @@
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
           }
         },
         "buy_buttons": {
@@ -89,27 +94,22 @@
           "settings": {
             "bundle_heding": "Frequently Bought Together"
           }
-        },
-        "color_family_test_bNtiKz": {
-          "type": "color_family_test",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "price",
-        "variant_picker",
+        "color_family_test_bNtiKz",
         "inventory_m9b3x9",
         "quantity_selector",
+        "variant_picker",
         "buy_buttons",
         "icon_with_text_DzmAQw",
         "pincode_checker_6dkPGT",
         "description",
         "share",
-        "custom_bundle_fgAVUx",
-        "color_family_test_bNtiKz"
+        "custom_bundle_fgAVUx"
       ],
       "settings": {
         "enable_sticky_info": true,

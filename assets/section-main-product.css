@@ -1500,3 +1500,23 @@ a.product__text {
 .shopify-payment-button__button{
   background: #d03c3f;
 }
+
+.color-family-main-container{
+  display:flex; 
+  gap:20px;
+}
+
+
+.custom-color-family-btn{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.color-family{
+  width:50px;
+  height:50px;
+  border-radius:50%; 
+  display:inline-block;
+}

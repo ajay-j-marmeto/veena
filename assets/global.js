@@ -1575,3 +1575,36 @@ class CustomSlider extends HTMLElement {
 }
 
 customElements.define("custom-slider", CustomSlider);
+
+
+
+class CustomColorFamily extends HTMLElement {
+  constructor() {
+      super();
+      this.addEventListener("click",()=>{
+        let subColorsContainer = document.querySelector(".sub-colors-family")
+        subColorsContainer.innerHTML = ""
+        
+        let dataObj = JSON.parse(this.dataset.colorObj);
+        let colorProductsData = JSON.parse(this.dataset.colorFamilyProducts);
+    
+        
+        let products = dataObj.color_products;
+        let subColors = dataObj.sub_colors;
+        
+        for (let i = 0; i < products.length; i++) {
+    
+          subColorsContainer.innerHTML += `
+            <a href="/products/${colorProductsData[i].handle}">
+              <div style="background-color:${subColors[i]};" class="color-family">
+              </div>
+            </a>
+          `;
+        }
+      });
+
+  }
+
+}
+
+customElements.define("custom-color-family", CustomColorFamily)
