@@ -1112,10 +1112,11 @@ marmeto.Collection = (function () {
   <img src="//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
 </picture>
 
+  ${product}
       </div>
     </div>
 
-    </a><div class="product-card__quick-view"><a href="${product.images[0]}">
+    </a><div class="product-card__quick-view"><a href="/products/${product.handle}">
       </a><a href="#">
         <span class="custom-button-secondary_color"> Quick Look</span>
         <div class="product-card__quick-view-icon">
