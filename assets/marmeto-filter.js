@@ -1115,7 +1115,7 @@ marmeto.Collection = (function () {
       </div>
     </div>
 
-    </a><div class="product-card__quick-view"><a href="/products/full-sleeve-high-neck-t-shirt">
+    </a><div class="product-card__quick-view"><a href="${product.featured_image}">
       </a><a href="#">
         <span class="custom-button-secondary_color"> Quick Look</span>
         <div class="product-card__quick-view-icon">
@@ -1234,7 +1234,7 @@ marmeto.Collection = (function () {
             
           </ul>
         
-      <input type="hidden" name="product-id" value="8001050542288"><input type="hidden" name="section-id" value="template--16394005414096__custom_products_list_k3RkT7"></form>
+      <input type="hidden" name="product-id" value="${product.selected_or_first_available_variant}"><input type="hidden" name="section-id" value="template--16394005414096__custom_products_list_k3RkT7"></form>
     </div>
 
     <h2 class="h5 product-card__vendor">${product.vendor}</h2>
