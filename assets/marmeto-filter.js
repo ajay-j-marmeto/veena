@@ -1241,7 +1241,7 @@ marmeto.Collection = (function () {
     <a class="h3 product-card__link" href="/products/full-sleeve-high-neck-t-shirt?variant=43818439966928"> Full Sleeve High Neck T-Shirt small </a>
     <div class="product-card__prices">
       
-        <span class="h3"> From Rs. 1,600.00</span>
+        <span class="h3"> From Rs. ${ _this.helpers().formatMoney(product.compare_at_price_min)}</span>
       
 
       
