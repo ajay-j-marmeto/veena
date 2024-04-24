@@ -1115,7 +1115,7 @@ marmeto.Collection = (function () {
       </div>
     </div>
 
-    </a><div class="product-card__quick-view"><a href="${product.featured_image}">
+    </a><div class="product-card__quick-view"><a href="${product.images[0]}">
       </a><a href="#">
         <span class="custom-button-secondary_color"> Quick Look</span>
         <div class="product-card__quick-view-icon">
