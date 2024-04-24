@@ -1093,24 +1093,24 @@ marmeto.Collection = (function () {
         // productHtml += '</div>';
         console.log(product)
        productHtml += `
-           <product-card class="product-card" data-product-handle="full-sleeve-high-neck-t-shirt" data-section-id="template--16394005414096__custom_products_list_k3RkT7">
-  <a href="/products/full-sleeve-high-neck-t-shirt">
+           <product-card class="product-card" data-product-handle="${product.handle}" data-section-id="template--16394005414096__custom_products_list_k3RkT7">
+  <a href="/products/${product.handle}">
     <div class="product-card__image custom-border-radius">
       
 <picture class="media media--portrait">
   
-  <source srcset="//b02-ajay.myshopify.com/cdn/shop/products/7_66d1f1b1-a234-4f50-b5b5-b81cc6794395.jpg?v=1708071365&amp;width=375 375w,//b02-ajay.myshopify.com/cdn/shop/products/7_66d1f1b1-a234-4f50-b5b5-b81cc6794395.jpg?v=1708071365&amp;width=550 550w,//b02-ajay.myshopify.com/cdn/shop/products/7_66d1f1b1-a234-4f50-b5b5-b81cc6794395.jpg?v=1708071365 700w
+  <source srcset="${product.featured_image}&amp;width=375 375w,${product.featured_image}&amp;width=550 550w,${product.featured_image} 700w
     " sizes="100vw" width="700" height="800">
-  <img src="//b02-ajay.myshopify.com/cdn/shop/products/7_66d1f1b1-a234-4f50-b5b5-b81cc6794395.jpg?v=1708071365&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
+  <img src="${product.featured_image}&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
 </picture>
 
       <div class="product-card__secondary-image">
         
 <picture class="media media--portrait">
   
-  <source srcset="${product.featured_image}&amp;width=375 375w,${product.featured_image}&amp;width=550 550w,${product.featured_image} 700w
+  <source srcset="//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=375 375w,//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=550 550w,//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365 700w
     " sizes="100vw" width="700" height="800">
-  <img src="${product.featured_image}&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
+  <img src="//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
 </picture>
 
  
@@ -1240,7 +1240,7 @@ marmeto.Collection = (function () {
     </div>
 
     <h2 class="h5 product-card__vendor">${product.vendor}</h2>
-    <a class="h3 product-card__link" href="/products/full-sleeve-high-neck-t-shirt?variant=43818439966928"> ${product.title} </a>
+    <a class="h3 product-card__link" href="/products/${product.handle}?variant=43818439966928"> ${product.title} </a>
     <div class="product-card__prices">
       
         <span class="h3"> From ${ _this.helpers().formatMoney(product.compare_at_price_min)}</span>
