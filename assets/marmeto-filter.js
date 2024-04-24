@@ -1249,7 +1249,7 @@ marmeto.Collection = (function () {
       
         <div class="product-card__inventory-quantity ">
            
-             ${_this.helpers().compareRanges(product.price / 100, prices)}
+            
           
         </div>
       
