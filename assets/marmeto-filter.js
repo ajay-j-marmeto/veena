@@ -1091,8 +1091,8 @@ marmeto.Collection = (function () {
 
         // productHtml += '</div>';
         // productHtml += '</div>';
-        `
-          <product-card class="product-card" data-product-handle="full-sleeve-high-neck-t-shirt" data-section-id="template--16394005414096__custom_products_list_k3RkT7">
+       productHtml += `
+           <product-card class="product-card" data-product-handle="full-sleeve-high-neck-t-shirt" data-section-id="template--16394005414096__custom_products_list_k3RkT7">
   <a href="/products/full-sleeve-high-neck-t-shirt">
     <div class="product-card__image custom-border-radius">
       
