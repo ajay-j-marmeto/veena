@@ -1238,7 +1238,7 @@ marmeto.Collection = (function () {
     </div>
 
     <h2 class="h5 product-card__vendor">Veena Look</h2>
-    <a class="h3 product-card__link" href="/products/full-sleeve-high-neck-t-shirt?variant=43818439966928"> Full Sleeve High Neck T-Shirt small </a>
+    <a class="h3 product-card__link" href="/products/full-sleeve-high-neck-t-shirt?variant=43818439966928"> ${product.title} </a>
     <div class="product-card__prices">
       
         <span class="h3"> From ${ _this.helpers().formatMoney(product.compare_at_price_min)}</span>
