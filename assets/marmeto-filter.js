@@ -1249,7 +1249,7 @@ marmeto.Collection = (function () {
       
         <div class="product-card__inventory-quantity ">
            
-            ${566}
+            ${ _this.helpers().formatMoney(product.price)}
           
         </div>
       
