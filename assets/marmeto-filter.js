@@ -1237,7 +1237,7 @@ marmeto.Collection = (function () {
       <input type="hidden" name="product-id" value="8001050542288"><input type="hidden" name="section-id" value="template--16394005414096__custom_products_list_k3RkT7"></form>
     </div>
 
-    <h2 class="h5 product-card__vendor">Veena Look</h2>
+    <h2 class="h5 product-card__vendor">${product.vendor}</h2>
     <a class="h3 product-card__link" href="/products/full-sleeve-high-neck-t-shirt?variant=43818439966928"> ${product.title} </a>
     <div class="product-card__prices">
       
