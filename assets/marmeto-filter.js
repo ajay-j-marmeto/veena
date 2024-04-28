@@ -1134,49 +1134,24 @@ marmeto.Collection = (function () {
       </a>
     </div>
 
-    <div class="product-card__left-tags">
-      
-
-      
-    </div>
-  
-
-  <div class="product-card__content">
-    
+    <div class="product-card__left-tags"></div>
+    <div class="product-card__content">
     <div class="product-card-varients">
-      <form method="post" action="/cart/add" id="product_form_8001050542288" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
-        
+      <form method="post" action="/cart/add" id="product_form_8001050542288" accept-charset="UTF-8" class="shopify-product-form" enctype="multipart/form-data">
+        <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8" value="✓">
         <input type="hidden" name="id" value="43818439966928">
-
-        
           <ul class="product-card__options">
-            
-              
-
-              <li>
-                
-                <ul class="product-card__option">
-                  
-                    <li>
-                      
-
-                      <label>
-                        <input type="radio" name="color" value="SaddleBrown" checked="">
-       
-                        
-                          
-                          <span data-option-value="SaddleBrown" class="product-card__swatch product-card__color-swatch" style="background-color: saddlebrown;background-image: url(//b02-ajay.myshopify.com/cdn/shop/files/saddlebrown.jpg?v=12246376071205927370);">
-                          </span>
-                        
-                        
-
-                      </label>
-                    </li>
-                  
-                    <li>
-                      
-
-                      <label>
+            <li>
+              <ul class="product-card__option">
+                <li>
+                  <label>
+                    <input type="radio" name="color" value="SaddleBrown" checked="">
+                      <span data-option-value="SaddleBrown" class="product-card__swatch product-card__color-swatch" style="background-color: saddlebrown;background-image: url(//b02-ajay.myshopify.com/cdn/shop/files/saddlebrown.jpg?v=12246376071205927370);">
+                      </span>
+                  </label>
+                </li>
+                <li>
+                  <label>
                         <input type="radio" name="color" value="IndianRed">
        
                         
