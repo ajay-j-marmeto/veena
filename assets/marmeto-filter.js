@@ -1108,9 +1108,9 @@ marmeto.Collection = (function () {
         
 <picture class="media media--portrait">
   
-  <source srcset=" product.images[1]&amp;width=375 375w, product.images[1]&amp;width=550 550w, product.images[1] 700w
+  <source srcset=" $ { product.images[1]}&amp;width=375 375w, $ { product.images[1]}&amp;width=550 550w, $ { product.images[1]} 700w
     " sizes="100vw" width="700" height="800">
-  <img src=" product.images[1]&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
+  <img src=" $ { product.images[1]}&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
 </picture>
 
  
