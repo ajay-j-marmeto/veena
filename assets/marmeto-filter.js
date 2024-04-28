@@ -1108,9 +1108,9 @@ marmeto.Collection = (function () {
         
 <picture class="media media--portrait">
   
-  <source srcset="//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=375 375w,//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=550 550w,//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365 700w
+  <source srcset=" product.images[1]&amp;width=375 375w, product.images[1]&amp;width=550 550w, product.images[1] 700w
     " sizes="100vw" width="700" height="800">
-  <img src="//b02-ajay.myshopify.com/cdn/shop/products/1_b3701fcc-5f4d-4b0b-9feb-41f959ff26f6.jpg?v=1708071365&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
+  <img src=" product.images[1]&amp;width=1500" loading="lazy" width="700" height="800" alt="Full Sleeve High Neck T-Shirt small">
 </picture>
 
  
