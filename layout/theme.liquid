@@ -282,6 +282,16 @@
         onload="this.media='all'"
       >
     {%- endif -%}
+    <style>
+       .box {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    </style>
 
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -289,6 +299,8 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js" defer></script>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
@@ -361,5 +373,24 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <div class="box"></div>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".box", {
+      scrollTrigger: {
+        trigger: "body",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true
+      },
+      x: () => window.innerWidth - 400,
+      y: () => window.innerHeight - 400, // Moving to bottom left corner
+      width: 400,
+      height: 400,
+      duration: 1
+    });
+  </script>
   </body>
 </html>
