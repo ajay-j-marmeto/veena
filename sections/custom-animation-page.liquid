@@ -1,6 +1,77 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+{{ 'custom-animation-gsap.css' |  asset_url |  stylesheet_tag }} 
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js" defer></script>
+<script src="{{ 'custom-animation--gsap.js' | asset_url }}" defer="defer"></script>
+
+{% style %}
+  .padding-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top | divided_by: 2 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | divided_by: 2 }}px;
   }
+
+  @media only screen and (min-width: 750px) {
+    .padding-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+
+
+<div class="padding-{{ section.id }}">
+  <div class="box-container page-width">
+      <div id="box" class="box">
+         <p>Arul</p>
+      </div>
+  </div>
+</div>>
+
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Custom GSAP",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Our Custom GSAP"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom GSAP"
+    }
+  ]
+}
 {% endschema %}
