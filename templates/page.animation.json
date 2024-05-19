@@ -1,12 +1,15 @@
 {
+  "layout": false,
   "sections": {
-    "main": {
+    "custom_gsap_KP68g3": {
       "type": "custom-animation-page",
       "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "custom_gsap_KP68g3"
   ]
 }
