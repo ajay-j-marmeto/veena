@@ -1,0 +1,17 @@
+.box-container {
+  height: 200vh;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #5ce0d1;
+  position: fixed;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+  border-radius: 100%;
+}
