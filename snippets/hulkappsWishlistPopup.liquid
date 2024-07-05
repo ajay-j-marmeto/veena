@@ -211,7 +211,7 @@
                     <form class="input-group search-bar" style="padding: 0;">
                         <input type="text" id="shareURL" value="" class="input-group-field" data-shareURL readonly />
                         <span class="input-group-btn">
-                          <button type="button" class="wishlist-btn hulkBtnStyle" data-copyshareURLButton>                                    </button>
+                          <button type="button" class="wishlist-btn hulkBtnStyle" data-copyshareURLButton></button>
                         </span>
                     </form>
                 </div>
@@ -370,6 +370,33 @@
                             <button class="wishlist-btn hulkBtnStyle" data-unsubscribeCloseBtn style="margin-bottom: -3rem;">Close</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wishlist-popup wishlist-share-popup" data-HulkappsGuestShare>
+        <div class="wishlist-modal modal-small">
+            <div class="wishlist-modal__content">
+                <div class="wishlist-modal__header">
+                    <h5 class="guest-title">Guest shopper</h5>
+                    <button class="close-popup" data-closeWishlistPopup><span class="icon-wishlist-cross"></span></button>
+                </div>
+                <button class="close-popup" data-closewishlistpopup><span class="icon-wishlist-cross" data-closeWishlistPopup></span></button>
+                <div class="wishlist-modal__body">
+                    <div class="Share-content">
+                        <p class="guest_content" style="font-size: 17px;">You are currently shopping anonymously!</p>
+                        <p class="guest_content">Login to save your wishlist.</p>
+                        <a href="/account/login" class="hulkBtnStyle login-drawer" data-loginBtn style="display: none;">Login</a>
+                        <div class="Share-content">
+                            <a href="#" data-copyGuestshareURLButton target="_blank">Copy link to share <img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/share_link.svg" alt="Email Share" title="Copy guest wishlist link" class="guest_share"/></a>
+                        </div>
+                    </div>
+                    <form class="input-group search-bar" style="padding: 0;">
+                        <input type="text" id="guestShareURL" value="" class="input-group-field" data-shareGuestURL readonly />
+                        <span class="input-group-btn">
+                          <button type="button" class="wishlist-btn hulkBtnStyle" data-copyGuestshareURLButton></button>
+                        </span>
+                    </form>
                 </div>
             </div>
         </div>
