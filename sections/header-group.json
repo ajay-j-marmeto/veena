@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "name": "t:sections.header.name",
   "type": "header",
@@ -36,6 +45,18 @@
     },
     "header": {
       "type": "custom-header",
+      "blocks": {
+        "image_jGAD6q": {
+          "type": "image",
+          "settings": {
+            "text": "Sale",
+            "desktop_image": "shopify:\/\/shop_images\/link1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_jGAD6q"
+      ],
       "settings": {
         "logo_position": "middle-center",
         "menu": "levis-header-menu",
