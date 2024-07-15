@@ -401,4 +401,77 @@
             </div>
         </div>
     </div>
+    <!-- Wishlist product share popup design -->
+    <div class="wishlist-popup wishlist-share-popup" data-HulkProductShare>
+        <div class="wishlist-modal modal-small">
+            <div class="wishlist-modal__content">
+                <div class="wishlist-modal__header">
+                    <h5 class="product_share_title">SHARE THIS CREATION</h5>
+                    <button class="close-popup" data-closeWishlistPopup><span class="icon-wishlist-cross"></span></button>
+                </div>
+                <div class="wishlist-modal__body">
+                    <div class="shared-product">
+                        <div class="wishlist-carousel-main carousel" data-mainProduct>
+                            <div class="product-inner">
+                            </div>
+                        </div>
+                        <div class="grid_12">
+                            <div class="popup-details">
+                                <div class="popup-product-info">
+                                    <p style="font-weight: 700; text-align: center;" data-productPrice></p>
+                                    <p style="text-align: center;" class="title" data-productTitle></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wishlist-modal__header" style="margin-bottom: 1rem;">
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.modal_title) %}
+                        <h5 style="font-size: 18px; font-family: Abel,sans-serif;">{{ shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.modal_title }}</h5>
+                        <button class="close-popup" data-closeWishlistPopup><span class="icon-wishlist-cross"></span></button>
+                        {% else %}
+                        <h5 style="font-size: 18px; font-family: Abel,sans-serif;">Share Via</h5>
+                        <button class="close-popup" data-closeWishlistPopup><span class="icon-wishlist-cross"></span></button>
+                        {% endif %}
+                    </div>
+                    {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.set_icon == 'set_1') %}
+                    <ul class="social-list-icon">
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.facebook) %}
+                        <li><a href="#" data-shareFacebook target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/ic_facebook_1.svg" alt="Facebook Share" /></a></li>
+                        {% endif %}
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.pinterest) %}
+                        <li><a href="#" data-sharePintrest target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/ic_pinterest_1.svg" alt="Pinterest Share" /></a></li>
+                        {% endif %}
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.twitter) %}
+                        <li><a href="#" data-shareTwitter target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/ic_twitter_1.svg" alt="Twitter Share" /></a></li>
+                        {% endif %}
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.email) %}
+                        <li><a href="#" data-copyProductShareURLButton target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/share_link.svg" alt="Copy text" title="Copy wishlist link"/></a></li>
+                        {% endif %}
+                    </ul>
+                    {% elsif(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.set_icon == 'set_2') %}
+                    <ul class="social-list-icon">
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.facebook) %}
+                        <li><a href="#" data-shareFacebook target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/ic_facebook_2.svg" alt="Facebook Share" /></a></li>
+                        {% endif %}
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.pinterest) %}
+                        <li><a href="#" data-sharePintrest target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/ic_pinterest_2.svg" alt="Pinterest Share" /></a></li>
+                        {% endif %}
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.twitter) %}
+                        <li><a href="#" data-shareTwitter target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/ic_twitter_2.svg" alt="Twitter Share" /></a></li>
+                        {% endif %}
+                        {% if(shop.metafields.hulkapps_wishlist.hulkapps_wishlist_buttonstyle.email) %}
+                        <li><a href="#" data-copyProductShareURLButton target="_blank"><img src="https://hulkapps-wishlist.nyc3.digitaloceanspaces.com/assets/images/share_link.svg" alt="Email Share" title="Copy wishlist link"/></a></li>
+                        {% endif %}
+                    </ul>
+                    {% endif %}
+                    <form class="input-group search-bar" style="padding: 0;">
+                        <input type="text" id="productShareURL" value="" class="input-group-field" data-productShareURL readonly />
+                        <span class="input-group-btn">
+                          <button type="button" class="wishlist-btn hulkBtnStyle" data-copyProductShareURLButton></button>
+                        </span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
