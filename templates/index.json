@@ -75,7 +75,7 @@
     "custom_rich_text_aRMmKR": {
       "type": "custom-rich-text",
       "settings": {
-        "pre_heading": "What You Wear <br> hello",
+        "pre_heading": "What You Wear  hello",
         "heading": "<h2>Fashion Emerges<br\/>As A Universal <a href=\"https:\/\/veena-theme-fashion.myshopify.com\/collections\" title=\"All collections\">Language<\/a><\/h2>",
         "button_text": "Explore More",
         "button_link": "shopify:\/\/collections\/best-collections",
