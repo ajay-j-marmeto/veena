@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "custom_hero_banner_slide_hJkkgD": {
@@ -66,7 +75,7 @@
     "custom_rich_text_aRMmKR": {
       "type": "custom-rich-text",
       "settings": {
-        "pre_heading": "What You Wear",
+        "pre_heading": "What You Wear <br> hello",
         "heading": "<h2>Fashion Emerges<br\/>As A Universal <a href=\"https:\/\/veena-theme-fashion.myshopify.com\/collections\" title=\"All collections\">Language<\/a><\/h2>",
         "button_text": "Explore More",
         "button_link": "shopify:\/\/collections\/best-collections",
