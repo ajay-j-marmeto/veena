@@ -15,7 +15,7 @@
         "banner_XinJtj": {
           "type": "banner",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/1.png",
+            "desktop_image": "shopify:\/\/shop_images\/Rectangle_4221.png",
             "mobile_image": "shopify:\/\/shop_images\/1.png",
             "banner_caption": "Women's Apparel",
             "banner_heading": "<h1>Elevate your wardrobe with our  <a href=\"\/collections\/best-collections\" title=\"Best Collections\">limited-time<\/a> fashion offer! <\/h1>",
@@ -292,7 +292,7 @@
       ],
       "settings": {
         "image_padding": "image-potrait",
-        "padding_top": 60,
+        "padding_top": 40,
         "padding_bottom": 0
       }
     },
