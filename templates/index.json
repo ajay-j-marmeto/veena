@@ -18,12 +18,12 @@
             "desktop_image": "shopify:\/\/shop_images\/Rectangle_4221.png",
             "mobile_image": "shopify:\/\/shop_images\/1.png",
             "banner_caption": "Women's Apparel",
-            "banner_heading": "<h1>Elevate your wardrobe with our  <a href=\"\/collections\/best-collections\" title=\"Best Collections\">limited-time<\/a> fashion offer! <\/h1>",
+            "banner_heading": "<h1>change<\/h1>",
             "banner_button_text": "Explore more",
             "banner_button_link": "shopify:\/\/collections\/best-collections",
             "banner_color_scheme": "scheme-72e7ba4c-d652-44ca-a280-39e03fdcd4b2",
             "text_alignment": "center",
-            "alignment_position": "align-end justify-center"
+            "alignment_position": "align-start justify-center"
           }
         },
         "banner_EqimEC": {
@@ -61,7 +61,7 @@
         "banner_kg73ib"
       ],
       "settings": {
-        "slider_autoplay": true,
+        "slider_autoplay": false,
         "slide_dots": true,
         "slide_arrows": true,
         "infinite_scroll": true,
@@ -455,13 +455,13 @@
         "lookbook_block_BEE638": {
           "type": "lookbook-block",
           "settings": {
-            "desktop_image": "shopify:\/\/shop_images\/1_86583ec4-835c-45cd-999c-b7e8b1bdc86e.jpg",
+            "desktop_image": "shopify:\/\/shop_images\/new-arrivals.jpg",
             "heading": "Women's Winter Clothes",
             "description": "<p>Welcome the season in style with our Women's Winter Clothes Collection – where warmth meets sophistication.<\/p>",
             "button_text": "Discover More",
             "button_link": "",
             "lookbook_color_scheme": "scheme_1",
-            "tops_top_position": 18,
+            "tops_top_position": 24,
             "tops_left_position": 32,
             "top_product": "full-sleeve-high-neck-t-shirt-1",
             "bottoms_top_position": 70,
