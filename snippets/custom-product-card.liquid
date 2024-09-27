@@ -17,7 +17,7 @@
 
 
 <product-card class="product-card" data-product-handle="{{ product.handle }}" data-section-id="{{ section_id }}">
-  
+  {% render 'hulkapps-wishlist-collection-btn', productId: product.id, variantId: product.selected_or_first_available_variant.id %}
   <a href="{{ product.url }}">
     <div class="product-card__image custom-border-radius">
       {% render 'responsive-image',
