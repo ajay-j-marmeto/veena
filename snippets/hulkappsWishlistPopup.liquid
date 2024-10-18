@@ -79,6 +79,16 @@
                     <h2 data-hulkWishlistHeading>Add to wishlist</h2>
                     <button class="close-popup" data-closeWishlistPopup><span class="icon-wishlist-cross"></span></button>
                 </div>
+                <div class="wishlist-modal__skeleton">
+                   <div class="skeleton-loader">
+                     <div class="skeleton-loader-item"><span></span></div>
+                     <div class="skeleton-loader-item"><span></span></div>
+                     <div class="skeleton-loader-item"><span></span></div>
+                     <div class="skeleton-loader-item"><span></span></div>
+                     <div class="skeleton-loader-item"><span></span></div>
+                     <div class="skeleton-loader-item"><span></span></div>
+                   </div>
+                </div>
                 <div class="wishlist-modal__body">
                     <form action="/search" method="get" class="input-group search__bar" role="search" data-searchWishlist onsubmit="return false;">
                         <input type="search" name="q" value="" placeholder="" class="input-group-field" aria-label="Search our store" data-wishlistSearch tabindex="5">
@@ -406,7 +416,7 @@
         <div class="wishlist-modal modal-small">
             <div class="wishlist-modal__content">
                 <div class="wishlist-modal__header">
-                    <h5 class="product_share_title">SHARE THIS CREATION</h5>
+                    <h5 class="product_share_title">Share this item</h5>
                     <button class="close-popup" data-closeWishlistPopup><span class="icon-wishlist-cross"></span></button>
                 </div>
                 <div class="wishlist-modal__body">
